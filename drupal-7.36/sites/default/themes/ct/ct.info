@@ -1,0 +1,8 @@
+name = Shelepen
+description = The custom theme for the project Shelepen.
+version = VERSION
+core = 7.x
+
+scripts[] = js/behavior.js
+stylesheets[print][] = css/print.css
+stylesheets[screen][] = css/screen.css

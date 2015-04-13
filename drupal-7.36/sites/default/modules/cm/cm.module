@@ -1,0 +1,104 @@
+<?php
+/**
+ * @file The main module file.
+ */
+
+/**
+ * Implements hook_menu.
+ */
+function cm_menu() {
+  $items['cm/test_form'] = array(
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('cm_test_form'),
+    'access callback' => TRUE,
+  );
+
+  return $items;
+}
+
+/**
+ * Processes the page cm/test.
+ */
+function cm_test_form() {
+  $form = [];
+
+  $form['cm_imce'] = array (
+    '#type' => 'cm_imce',
+    '#attributes' => array ('id' => 'urlField'),
+    '#title' => 'fadsf'
+  );
+
+  $form['cm_imce_1'] = array (
+    '#type' => 'cm_imce',
+    '#attributes' => array ('id' => 'urlField'),
+    '#title' => 'Title 1'
+  );
+
+  return $form;
+}
+
+/**
+ * Implements hook_elements.
+ */
+function cm_element_info() {
+  return array (
+    'cm_imce' => array(
+      '#input' => TRUE, 
+      '#process' => array('cm_imce_element_process'),
+      '#example_attribute' => 'Something extra',
+      '#theme_wrappers' => array('form_element'),
+    ),
+  );
+}
+
+/**
+ * Processes the element cm_imce.
+ */
+function cm_imce_element_process($element) {
+  $id = $element['#id'] . '-' . time();
+
+  return array (
+    '#type' => 'container',
+    '#weight' => $element['#weight'],
+    '#attributes' => array (
+      'class' => array ('cm_imce_element'),
+    ),
+    '#attached' => array (
+      'js' => array (
+        drupal_get_path('module', 'cm') . '/js/imce_element.js'
+      ),
+    ),
+    'label' => array (
+      '#markup' => '<label>' . check_plain($element['#title']) . '</lable>',
+    ),
+    'container' => array (
+      '#type' => 'container',
+      '#attributes' => array (
+        'class' => array ('container-inline'),
+      ),
+      $element['#name'] => array (
+        '#type' => 'textfield',
+        '#id' => $id,
+        '#default_value' => $element['#default_value'],
+      ),
+      'browse' => array (
+        '#type' => 'button',
+        '#value' => t('Browse'),
+        '#attributes' => array (
+          'onclick' => 'return (false);',
+          'data-title' => $element['#imce_title'],
+          'data-id' => $id,
+        ),
+      ),
+    ),
+  );
+}
+
+/**
+ * Implements hook_ctools_plugin_directory().
+ */
+function cm_ctools_plugin_directory($module, $plugin) {
+  if (in_array($module, array('ctools', 'panels')) && !empty($plugin)) {
+    return 'plugins/' . $plugin;
+  }
+}

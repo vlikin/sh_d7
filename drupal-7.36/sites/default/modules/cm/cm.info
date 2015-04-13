@@ -1,0 +1,8 @@
+name = Custom module
+description = The main site module.
+version = VERSION
+package = Custom
+core = 7.x
+
+dependencies[] = panels
+dependencies[] = i18n_panels
