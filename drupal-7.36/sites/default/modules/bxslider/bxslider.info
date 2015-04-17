@@ -1,0 +1,4 @@
+name = bxSlider
+description = It defines the JS library bxSlider. It injects into the Drupal.
+version = VERSION
+core = 7.x

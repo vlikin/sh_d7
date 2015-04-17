@@ -1,0 +1,67 @@
+<?php
+/**
+ * @file It contains module hooks.
+ */
+
+// It loads helpers.
+module_load_include('inc', 'bxslider', 'bxslider');
+module_load_include('inc', 'bxslider', 'bxslider.form');
+
+/**
+ * Implements hook_menu.
+ */
+function bxslider_menu() {
+  $items = array ();
+
+  $items['bxslider/test'] = array (
+    'title' => 'Test',
+    'page callback' => 'bxslider_test_page',
+    'access callback' => TRUE,
+  );
+
+  return $items;
+}
+
+/**
+ * Implements hook_theme().
+ */
+function bxslider_theme() {
+  return array(
+    'bxslider_wrapper' => array(
+      'template' => 'theme/bxslider-wrapper',
+      'render element' => 'element',
+     ),
+  );
+}
+
+/**
+ * Implements hook_ctools_plugin_directory().
+ */
+function bxslider_ctools_plugin_directory($module, $plugin) {
+  if (in_array($module, array('ctools', 'panels')) && !empty($plugin)) {
+    return 'plugins/' . $plugin;
+  }
+}
+
+/**
+ * Implements hook_library_info.
+ */
+function bxslider_library() {
+  $libraries_path = 'sites/all/libraries/';
+  $libraries['bxslider'] = array(
+    'title' => 'bxSlider',
+    'website' => 'http://bxslider.com/',
+    'version' => '4.1.1',
+    'js' => array(
+      $libraries_path . 'jquery.bxslider/jquery.bxslider.min.js' => array (),
+    ),
+    'css' => array(
+      $libraries_path . 'jquery.bxslider/jquery.bxslider.css' => array (
+        'type' => 'file',
+        'media' => 'screen',
+      ),
+    ),
+  );
+
+  return $libraries;
+}
