@@ -49,7 +49,7 @@ $aliases['local'] = array(
     ),
   ),
   'path-aliases' => array(
-    '%dump-dir' => $DP . '/../backups',
+    '%dump-dir' => realpath($DP . '/../backups'),
     '%files' => $DP . '/sites/' . $URI . '/files',
     '%sites' => $DP . '/sites/',
     '%all_files' => $DP,
@@ -81,7 +81,7 @@ $aliases['dev'] = array(
   ),
   'path-aliases' => array (
     '%drush-script' => '/home/www-data/github/drush/drush',
-    '%dump-dir' => $DP . '/../backups',
+    '%dump-dir' => realpath($DP . '/../backups'),
     '%files' => $DP . '/sites/' . $URI . '/files',
     '%sites' => $DP . '/sites/',
   )
