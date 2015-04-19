@@ -1,0 +1,34 @@
+.cm_cct_image_text {
+  @include inline-block;
+  width: 960px;
+  clear: both;
+  .image {
+    width: 480px;
+    float: left;
+  }
+  .title {
+    font-weight: bold;
+    font-size: $big-font-size;
+    padding: $padding;
+    width: 480px - 2 * $padding;
+    float: left;
+  }
+  .text {
+    padding: $padding;
+    text-align: justify;
+    width: 480px - 2 * $padding;
+    float: left;
+  }
+
+  &.right {
+    .image {
+      float: right;
+    }
+    .title {
+      float: right;
+    }
+    .text {
+      float: right;
+    }
+  }
+}

@@ -2,6 +2,7 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+@import url(http://fonts.googleapis.com/css?family=Play:400,700&subset=latin,cyrillic);
 /* line 5, ../../../../../../../../lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -67,7 +68,69 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-/* line 8, ../sass/screen.scss */
-body {
-  background: red;
+/* line 1, ../sass/partial/_base.scss */
+.panel-separator {
+  padding: 0;
+  margin: 0;
+}
+
+/* line 6, ../sass/partial/_base.scss */
+.panel-flexible .panel-separator {
+  padding: 0;
+  margin: 0;
+}
+
+/* line 1, ../sass/partial/cct/cm/_image_text.scss */
+.cm_cct_image_text {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  width: 960px;
+  clear: both;
+}
+/* line 5, ../sass/partial/cct/cm/_image_text.scss */
+.cm_cct_image_text .image {
+  width: 480px;
+  float: left;
+}
+/* line 9, ../sass/partial/cct/cm/_image_text.scss */
+.cm_cct_image_text .title {
+  font-weight: bold;
+  font-size: 18px;
+  padding: 5px;
+  width: 470px;
+  float: left;
+}
+/* line 16, ../sass/partial/cct/cm/_image_text.scss */
+.cm_cct_image_text .text {
+  padding: 5px;
+  text-align: justify;
+  width: 470px;
+  float: left;
+}
+/* line 24, ../sass/partial/cct/cm/_image_text.scss */
+.cm_cct_image_text.right .image {
+  float: right;
+}
+/* line 27, ../sass/partial/cct/cm/_image_text.scss */
+.cm_cct_image_text.right .title {
+  float: right;
+}
+/* line 30, ../sass/partial/cct/cm/_image_text.scss */
+.cm_cct_image_text.right .text {
+  float: right;
+}
+
+/* line 3, ../sass/partial/_typography.scss */
+html {
+  font-family: Play;
+  font-size: 14px;
+}
+
+/* line 13, ../sass/screen.scss */
+#page {
+  width: 960px;
+  margin: 0 auto;
 }

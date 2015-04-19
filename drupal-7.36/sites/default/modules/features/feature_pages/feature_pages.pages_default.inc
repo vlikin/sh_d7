@@ -24,7 +24,7 @@ function feature_pages_default_page_manager_handlers() {
     'pipeline' => 'standard',
     'body_classes_to_remove' => '',
     'body_classes_to_add' => '',
-    'css_id' => '',
+    'css_id' => 'page',
     'css' => '',
     'contexts' => array(),
     'relationships' => array(),
@@ -45,32 +45,50 @@ function feature_pages_default_page_manager_handlers() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-b74a2082-61fe-4895-9f61-143badfdfe2e';
+    $pane->pid = 'new-5bc69160-b3d8-4d79-9cd7-5856442d8895';
     $pane->panel = 'middle';
-    $pane->type = 'custom';
-    $pane->subtype = 'custom';
+    $pane->type = 'block';
+    $pane->subtype = 'locale-language';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'admin_title' => 'fasdfasdf',
-      'title' => 'asdfasdf',
-      'body' => 'asdfasdf',
-      'format' => 'filtered_html',
-      'substitute' => 1,
+      'override_title' => 1,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
     );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+      'style' => 'naked',
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '5bc69160-b3d8-4d79-9cd7-5856442d8895';
+    $display->content['new-5bc69160-b3d8-4d79-9cd7-5856442d8895'] = $pane;
+    $display->panels['middle'][0] = 'new-5bc69160-b3d8-4d79-9cd7-5856442d8895';
+    $pane = new stdClass();
+    $pane->pid = 'new-4b058c19-94a0-4e89-a28d-1361693ed455';
+    $pane->panel = 'middle';
+    $pane->type = 'page_messages';
+    $pane->subtype = 'page_messages';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 1;
     $pane->locks = array();
-    $pane->uuid = 'b74a2082-61fe-4895-9f61-143badfdfe2e';
-    $display->content['new-b74a2082-61fe-4895-9f61-143badfdfe2e'] = $pane;
-    $display->panels['middle'][0] = 'new-b74a2082-61fe-4895-9f61-143badfdfe2e';
+    $pane->uuid = '4b058c19-94a0-4e89-a28d-1361693ed455';
+    $display->content['new-4b058c19-94a0-4e89-a28d-1361693ed455'] = $pane;
+    $display->panels['middle'][1] = 'new-4b058c19-94a0-4e89-a28d-1361693ed455';
     $pane = new stdClass();
-    $pane->pid = 'new-d1ed299c-0aeb-4a47-bb1e-8277a3010215';
+    $pane->pid = 'new-16214b96-0ceb-4c1d-bd89-95d004e174c9';
     $pane->panel = 'middle';
     $pane->type = 'page_content';
     $pane->subtype = 'page_content';
@@ -78,7 +96,7 @@ function feature_pages_default_page_manager_handlers() {
     $pane->access = array();
     $pane->configuration = array(
       'context' => 'argument_page_content_1',
-      'override_title' => 0,
+      'override_title' => 1,
       'override_title_text' => '',
       'override_title_heading' => 'h2',
     );
@@ -88,13 +106,13 @@ function feature_pages_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 2;
     $pane->locks = array();
-    $pane->uuid = 'd1ed299c-0aeb-4a47-bb1e-8277a3010215';
-    $display->content['new-d1ed299c-0aeb-4a47-bb1e-8277a3010215'] = $pane;
-    $display->panels['middle'][1] = 'new-d1ed299c-0aeb-4a47-bb1e-8277a3010215';
+    $pane->uuid = '16214b96-0ceb-4c1d-bd89-95d004e174c9';
+    $display->content['new-16214b96-0ceb-4c1d-bd89-95d004e174c9'] = $pane;
+    $display->panels['middle'][2] = 'new-16214b96-0ceb-4c1d-bd89-95d004e174c9';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-b74a2082-61fe-4895-9f61-143badfdfe2e';
+  $display->title_pane = '0';
   $handler->conf['display'] = $display;
   $export['site_template__common'] = $handler;
 
@@ -166,29 +184,29 @@ function feature_pages_default_page_manager_pages() {
       'override_title' => 0,
       'override_title_text' => '',
       'override_title_heading' => 'h2',
-      'vertical_tabs__active_tab' => 'edit-block-text',
+      'vertical_tabs__active_tab' => 'edit-image',
       'image' => array(
-        'path' => '/sites/default/files/images/00118217.jpg 3x4-2 left 3x4-2 left  left',
+        'path' => '/sites/default/files/images/00118217.jpg',
         'style' => '3x4-2',
-        'side' => 'right',
+        'side' => 'left',
       ),
-      'image[path]' => '/sites/default/files/images/00118217.jpg 3x4-2 left 3x4-2 left  left',
+      'image[path]' => '/sites/default/files/images/00118217.jpg',
       'browse' => 'Browse',
       'block_title' => array(
-        'en' => 'title en',
-        'ru' => 'title tu',
+        'en' => 'About us',
+        'ru' => 'Про нас',
       ),
       'block_text' => array(
         'en' => array(
-          'value' => 'text en',
+          'value' => 'Hello! “Shelepen” is a small ukrainian company, located in Chernigiv, Ukraine. We are founders  (Viktor, Elena) of the company. We are also employeers of the company. We are persons of different branches of life and can consult you how to create and support your business in wide world of Internet.  Yes, we create web sites by ourselves, from one side. From another side we investigate your business togather and create tools for your business, support it and modify it under changable conditions. So we earn money by making your business efficient. We almost always use open source tecknolodgies. It helps us to work legally. It reduces money usage. Regards, Viktor and Elena',
           'format' => 'filtered_html',
         ),
         'ru' => array(
-          'value' => 'tet ru',
+          'value' => 'Здравствуйте! "Шелепень" - это небольшая украинская компания, расположенная в Чернигове, Украине. Мы учредители (Виктор, Елена) этой компании. Мы также сотрудники компании. Мы личности с различных отраслей жизни и можем проконсультировать вас как создать и поддерживать свой ​​бизнес в широком мире Интернета. Да, мы создаем веб-сайты сами, с одной стороны. С другой стороны, мы исследуем ваш ​​бизнес вместе и создаем инструменты для вашего бизнеса, поддерживаем и изменяем их в соответствии с изменением условий. Таким образом мы зарабатываем деньги, делая ваш бизнес эффективным. Мы почти всегда используем открытые технологии. Это помогает нам работать легально. Это уменьшает денежные затраты нашей работы, делая наши услуги дешевле. С уважением, Виктор и Елена',
           'format' => 'filtered_html',
         ),
       ),
-      'form_build_id' => 'form-YkUsFAEfzdHznvqhGVaYEJD6ZEoSOj5oV6BDKLALdhk',
+      'form_build_id' => 'form-hRDtLywFY4CSmunkW4TBHMewFYySCONN_54LpMW06Ag',
       'form_token' => 'wVwJQkc7tLUXJ7wwHO1yCc55PCu8X678oHuUSFzXrxQ',
       'form_id' => 'cm_cct_image_text_edit_form',
       'op' => 'Finish',
@@ -203,28 +221,62 @@ function feature_pages_default_page_manager_pages() {
     $display->content['new-9da22f39-30a9-4486-a9db-5b5a87df5f64'] = $pane;
     $display->panels['center'][0] = 'new-9da22f39-30a9-4486-a9db-5b5a87df5f64';
     $pane = new stdClass();
-    $pane->pid = 'new-6dc351cb-1cbe-4ead-80bd-4321376097b3';
+    $pane->pid = 'new-d1afcda0-7d84-4c8f-858f-dcabcffaac29';
     $pane->panel = 'center';
-    $pane->type = 'block';
-    $pane->subtype = 'locale-language';
+    $pane->type = 'image_text';
+    $pane->subtype = 'image_text';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
+      'return' => 'Finish',
+      'cancel' => 'Cancel',
       'override_title' => 0,
       'override_title_text' => '',
       'override_title_heading' => 'h2',
+      'vertical_tabs__active_tab' => 'edit-image',
+      'image' => array(
+        'path' => '/sites/default/files/images/00118217.jpg',
+        'style' => '3x4-2',
+        'side' => 'right',
+      ),
+      'image[path]' => '/sites/default/files/images/00118217.jpg',
+      'browse' => 'Browse',
+      'block_title' => array(
+        'en' => 'Chernigiv',
+        'ru' => 'Чернигов',
+      ),
+      'block_text' => array(
+        'en' => array(
+          'value' => 'Chernigiv is the capital of the northern region of Ukraine, is situated on the right (western) bank of the Desna River 89 miles (144 km) north of the Ukrainian capital Kyiv along the international highway Odessa – St.Petersburg.
+
+Present-day Chernigov is an important industrial center of Ukraine. Main industries of Chernigov are chemical and food. There are 34 industrial plants in the city (2006), a worsted-cloth mill, bread making plant, meat and poultry plants.
+
+Among the ancient churches of Chernigov there are the following: Assumption church of Yeletsky monastery (12th century), Trinity church of Trinity-Ilyinsky monastery (17th century) and Savior-Transfiguration church built in 11th century as well as Boris and Gleb church (12th century).',
+          'format' => 'filtered_html',
+        ),
+        'ru' => array(
+          'value' => 'Чернигов — это столица северного региона Украины. Он находится на правом (западном) берегу речки Десна, севернее столицы Украины Киева— на расстоянии 89 миль (144 км) по международной трассе Одесса — Санкт-Петербург.
+
+Современный Чернигов — важный промышленный центр Украины. Наиболее важные ветви — химическая и пищевая промышленности. В городе 34 промышленные предприятия (состоянием на 2006 год), камвольно-суконный комбинат, хлебобулочный завод, мясокомбинат и птицефабрика.
+
+Среди древнейших церквей наиболее известные - это Успенская церковь Елицкого монастыря 12-го века, Троицкая церковь Троицко-Іллинского монастыря 17-го века и Спасо-Преображенский собор, построенный в 11 веке, а также Борисоглебский собор 12-го века.',
+          'format' => 'filtered_html',
+        ),
+      ),
+      'form_build_id' => 'form-ncILMEufU6ibY3IgpmVazi2n4YsuBujSb-bwLeYZqWA',
+      'form_token' => 'wVwJQkc7tLUXJ7wwHO1yCc55PCu8X678oHuUSFzXrxQ',
+      'form_id' => 'cm_cct_image_text_edit_form',
+      'op' => 'Finish',
     );
     $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
+    $pane->style = array();
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $pane->uuid = '6dc351cb-1cbe-4ead-80bd-4321376097b3';
-    $display->content['new-6dc351cb-1cbe-4ead-80bd-4321376097b3'] = $pane;
-    $display->panels['center'][1] = 'new-6dc351cb-1cbe-4ead-80bd-4321376097b3';
+    $pane->uuid = 'd1afcda0-7d84-4c8f-858f-dcabcffaac29';
+    $display->content['new-d1afcda0-7d84-4c8f-858f-dcabcffaac29'] = $pane;
+    $display->panels['center'][1] = 'new-d1afcda0-7d84-4c8f-858f-dcabcffaac29';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;

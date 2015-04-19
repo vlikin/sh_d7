@@ -4,8 +4,14 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
 @import "compass/reset";
+@import "compass";
+@import "partial/variable";
+@import "partial/base";
+@import "partial/cct/cm/image_text";
+@import "partial/typography";
 
-body {
-  background: red;
+#page {
+  width: 960px;
+  margin: 0 auto;
 }
 

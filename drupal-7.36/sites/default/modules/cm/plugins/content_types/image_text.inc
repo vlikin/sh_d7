@@ -27,19 +27,44 @@ function cm_cct_image_text_render($subtype, $conf, $args, $context) {
   $langcode = $language->language;
 
   $block = new stdClass();
-  $block->content = array (
+  $block->content = [
     '#type' => 'container',
-    'text' => array (
-      '#markup' => check_markup($conf['block_text'][$langcode]['value'], $conf['block_text'][$langcode]['format']),
-      '#weight' => $conf['image']['side'] == 'left' ? 2 : 1,
-    ),
-    'image' => array (
-      '#theme' => 'image_formatter',
-      '#item' => array ('uri' => str_replace('/sites/default/files/', 'public://', $conf['image']['path'])),
-      '#image_style' => $conf['image']['style'],
-      '#weight' => $conf['image']['side'] == 'left' ? 1 : 2,
-    ),
-  );
+    '#attributes' => [
+      'class' => ['cm_cct_image_text', $conf['image']['side']]
+    ],
+    'image' => [
+      '#type' => 'container',
+      'image' => [
+        '#theme' => 'image_formatter',
+        '#item' => array ('uri' => str_replace('/sites/default/files/', 'public://', $conf['image']['path'])),
+        '#image_style' => $conf['image']['style'],
+        // '#weight' => $conf['image']['side'] == 'left' ? 1 : 3,
+      ],
+      '#attributes' => [
+        'class' => ['image']
+      ],
+    ],
+    'title' => [
+      '#type' => 'container',
+      'text' => [
+        '#markup' => check_markup($conf['block_title'][$langcode])
+      ],
+      // '#weight' => $conf['image']['side'] == 'left' ? 2 : 1,
+      '#attributes' => [
+        'class' => ['title']
+      ],
+    ],
+    'text' => [
+      '#type' => 'container',
+      'text' => [
+        '#markup' => check_markup($conf['block_text'][$langcode]['value'], $conf['block_text'][$langcode]['format'])
+      ],
+      // '#weight' => $conf['image']['side'] == 'left' ? 3 : 2,
+      '#attributes' => [
+        'class' => ['text']
+      ],
+    ],
+  ];
 
   return $block;
 }
