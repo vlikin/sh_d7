@@ -95,6 +95,10 @@ function cm_cct_image_text_edit_form($form, &$form_state) {
   $form['vertical_tabs'] = array(
     '#type' => 'vertical_tabs',
   );
+  $style_options = [];
+  foreach(image_styles() as $key => $style) {
+    $style_options[$key] = $style['label'];
+  }
 
   $form['image'] = [
     '#type' => 'fieldset',
@@ -107,8 +111,9 @@ function cm_cct_image_text_edit_form($form, &$form_state) {
       '#default_value' => $values['image']['path'],
      ],
     'style' => [
-      '#type' => 'textfield',
+      '#type' => 'select',
       '#title' => t('Image style'),
+      '#options' => $style_options,
       '#default_value' => $values['image']['style'],
     ],
     'side' => [

@@ -80,6 +80,16 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   margin: 0;
 }
 
+/* line 11, ../sass/partial/_base.scss */
+.bx-wrapper .bx-loading {
+  z-index: 300;
+}
+
+/* line 15, ../sass/partial/_base.scss */
+.bx-wrapper .bx-controls-direction a {
+  z-index: 300;
+}
+
 /* line 1, ../sass/partial/cct/cm/_image_text.scss */
 .cm_cct_image_text {
   display: inline-block;
@@ -133,4 +143,20 @@ html {
 #page {
   width: 960px;
   margin: 0 auto;
+}
+/* line 17, ../sass/screen.scss */
+#page > header {
+  background: green;
+}
+/* line 21, ../sass/screen.scss */
+#page > main {
+  background: blue;
+}
+/* line 25, ../sass/screen.scss */
+#page > footer {
+  background: red;
+}
+/* line 29, ../sass/screen.scss */
+#page div.copyright {
+  background: navy;
 }

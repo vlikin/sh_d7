@@ -13,5 +13,21 @@
 #page {
   width: 960px;
   margin: 0 auto;
+
+  >header {
+    background: green;
+  }
+
+  >main {
+    background: blue;
+  }
+
+  >footer {
+    background: red;
+  }
+
+  div.copyright {
+    background: navy;
+  }
 }
 

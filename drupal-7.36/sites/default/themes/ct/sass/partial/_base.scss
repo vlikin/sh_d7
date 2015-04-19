@@ -7,3 +7,11 @@
   padding: 0;
   margin: 0;
 }
+
+.bx-wrapper .bx-loading {
+  z-index: 300;
+}
+
+.bx-wrapper .bx-controls-direction a {
+  z-index: 300;
+}

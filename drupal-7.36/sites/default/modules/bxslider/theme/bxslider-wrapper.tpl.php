@@ -5,6 +5,6 @@
 ?>
 <ul class="bxslider" data-ukey="<?= $element['#ukey'] ?>">
   <? foreach($element['items'] as $item): ?>
-    <li><?= $item ?></li>
+    <li><?= render($item) ?></li>
   <? endforeach ?>
 </ul>
