@@ -17,6 +17,12 @@ function cm_menu() {
 }
 
 /**
+ * Implements hook_form_alter.
+ */
+function cm_form_alter(&$form, &$form_state, $form_id) {
+}
+
+/**
  * Processes the page cm/test.
  */
 function cm_test_form() {

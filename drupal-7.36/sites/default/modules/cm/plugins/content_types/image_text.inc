@@ -14,6 +14,7 @@ $plugin = array (
   'cct' => array('cm_cct_image_text'),
   'render callback' => 'cm_cct_image_text_render',
   'edit form' => 'cm_cct_image_text_edit_form',
+  'admin info' => 'cm_cct_image_text_admin_info',
   'icon' => 'icon.png',
   'category' => 'Shelepen',
 );
@@ -23,23 +24,36 @@ $plugin = array (
  */
 function cm_cct_image_text_render($subtype, $conf, $args, $context) {
   global $language;
+  $langcode = $language->language;
 
   $block = new stdClass();
   $block->content = array (
     '#type' => 'container',
     'text' => array (
-      '#markup' => check_markup($conf['text']['value'], $conf['text']['format']),
-      '#weight' => $conf['side'] == 'left' ? 2 : 1,
+      '#markup' => check_markup($conf['block_text'][$langcode]['value'], $conf['block_text'][$langcode]['format']),
+      '#weight' => $conf['image']['side'] == 'left' ? 2 : 1,
     ),
     'image' => array (
       '#theme' => 'image_formatter',
-      '#item' => array ('uri' => str_replace('/sites/default/files/', 'public://', $conf['image'])),
-      '#image_style' => $conf['image_style'],
-      '#weight' => $conf['side'] == 'left' ? 1 : 2,
+      '#item' => array ('uri' => str_replace('/sites/default/files/', 'public://', $conf['image']['path'])),
+      '#image_style' => $conf['image']['style'],
+      '#weight' => $conf['image']['side'] == 'left' ? 1 : 2,
     ),
   );
 
   return $block;
+}
+
+/**
+ * 'admin info' callback for panel pane.
+ */
+function cm_cct_image_text_admin_info($subtype, $conf, $contexts) {
+  if (!empty($conf)) {
+    $block = new stdClass;
+    $block->title = $conf['block_title']['en'];
+
+    return $block;
+  }
 }
 
 /**
@@ -48,34 +62,69 @@ function cm_cct_image_text_render($subtype, $conf, $args, $context) {
 function cm_cct_image_text_edit_form($form, &$form_state) {
   $values = $form_state['conf'];
 
-  $form['image'] = array (
-    '#type' => 'cm_imce',
+  hide($form['override_title']);
+  hide($form['override_title_text']);
+  hide($form['override_title_heading']);
+  hide($form['override_title_markup']);
+
+  $form['vertical_tabs'] = array(
+    '#type' => 'vertical_tabs',
+  );
+
+  $form['image'] = [
+    '#type' => 'fieldset',
     '#title' => t('Image'),
-    '#default_value' => $values['image'],
-  );
+    '#tree' => TRUE,
+    '#group' => 'vertical_tabs',
+    'path' => [
+      '#type' => 'cm_imce',
+      '#title' => t('Image'),
+      '#default_value' => $values['image']['path'],
+     ],
+    'style' => [
+      '#type' => 'textfield',
+      '#title' => t('Image style'),
+      '#default_value' => $values['image']['style'],
+    ],
+    'side' => [
+      '#type' => 'select',
+      '#title' => t('Side'),
+      '#options' => array (
+        'left' => t('Left'),
+        'right' => t('Right'),
+      ),
+      '#default_value' => $values['image']['side'],
+    ],
+  ];
 
-  $form['image_style'] = array (
-    '#type' => 'textfield',
-    '#title' => t('Image style'),
-    '#default_value' => $values['image_style'],
+  $form['block_title'] = array (
+    '#type' => 'fieldset',
+    '#title' => t('Title'),
+    '#tree' => TRUE,
+    '#group' => 'vertical_tabs',
   );
+  foreach (language_list() as $langcode => $lang) {
+    $form['block_title'][$langcode] = array (
+      '#type' => 'textfield',
+      '#title' => $lang->name,
+      '#default_value' => $values['block_title'][$langcode]
+    );
+  }
 
-  $form['side'] = array (
-    '#type' => 'select',
-    '#title' => t('Side'),
-    '#options' => array (
-      'left' => t('Left'),
-      'right' => t('Right'),
-    ),
-    '#default_value' => $values['side'],
-  );
-
-  $form['text'] = array (
-    '#type' => 'text_format',
+  $form['block_text'] = array (
+    '#type' => 'fieldset',
     '#title' => t('Text'),
-    '#default_value' => $values['text']['value'],
-    '#format' => $values['text']['format']
+    '#tree' => TRUE,
+    '#group' => 'vertical_tabs',
   );
+  foreach (language_list() as $langcode => $lang) {
+    $form['block_text'][$langcode] = array (
+      '#type' => 'text_format',
+      '#title' => $lang->name,
+      '#default_value' => $values['block_text'][$langcode]['value'],
+      '#format' => $values['block_text'][$langcode]['format']
+    );
+  }
 
   return $form;
 }
