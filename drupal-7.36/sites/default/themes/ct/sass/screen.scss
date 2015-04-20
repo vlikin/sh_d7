@@ -19,6 +19,34 @@
     height: 130px;
     position: relative;
 
+    .cm_cct_logo {
+      @include inline-block;
+      color: $p1-color;
+      width: 400px;
+      margin: 15px;
+
+      >.image {
+        float: left;
+        width: 100px;
+      }
+
+      >.site_name {
+        font-size: $biggest-font-size;
+        font-weight: bolder;
+        float: left;
+        height: 50px - 30px;
+        padding-top: 30px;
+        width: 300px;
+      }
+
+      >.site_slogan {
+        font-size: $smaller-font-size;
+        float: left;
+        height:50px;
+        width: 300px;
+      }
+    }
+
     .cm_cct_menu {
       @include inline-block;
       @include border-top-left-radius;
