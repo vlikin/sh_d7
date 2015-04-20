@@ -227,16 +227,17 @@ input[type=button]:hover, input[type=submit]:hover {
   *display: inline;
   width: 960px;
   min-height: 100px;
+  color: #F6FFF2;
   background: #050117;
   text-align: left;
 }
-/* line 72, ../sass/screen.scss */
+/* line 73, ../sass/screen.scss */
 #page > footer > .col {
   float: left;
   min-height: 100px;
   width: 240px;
 }
-/* line 79, ../sass/screen.scss */
+/* line 80, ../sass/screen.scss */
 #page div.copyright {
   min-height: 100px;
   background: #050117;
