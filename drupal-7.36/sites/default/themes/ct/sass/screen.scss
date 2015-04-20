@@ -72,7 +72,6 @@
       }
     }
 
-
     .language-switcher-locale-url {
       @extend .cm_cct_menu;
       @include border-top-left-radius(0);
@@ -88,6 +87,7 @@
 
   >main {
     background: $p1-color;
+    min-height: 200px;
   }
 
   >footer {
@@ -101,13 +101,15 @@
     >.col {
       float: left;
       min-height: 100px;
-      width: 240px;
+      width: 240px - 2 * $padding;
+      padding: $padding;
     }
   }
 
   div.copyright {
-    min-height: 100px;
+    color: $p1-color;
     background: $p2-color;
+    padding: $padding;
   }
 }
 

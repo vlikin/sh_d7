@@ -30,7 +30,7 @@ function cm_cct_logo_render($subtype, $conf, $args, $context) {
   $block->content = [
     '#type' => 'container',
     '#attributes' => [
-      'class' => ['cm_cct_logo', $conf['image']['side']]
+      'class' => ['cm_cct_logo']
     ],
     'image' => [
       '#type' => 'container',

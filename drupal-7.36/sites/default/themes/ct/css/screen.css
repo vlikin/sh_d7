@@ -227,7 +227,7 @@ input[type=button]:hover, input[type=submit]:hover {
 #page > header .cm_cct_menu a:hover, #page > header .language-switcher-locale-url a:hover {
   color: #F6FFF2;
 }
-/* line 76, ../sass/screen.scss */
+/* line 75, ../sass/screen.scss */
 #page > header .language-switcher-locale-url {
   -moz-border-radius-topleft: 0;
   -webkit-border-top-left-radius: 0;
@@ -238,7 +238,7 @@ input[type=button]:hover, input[type=submit]:hover {
   bottom: auto;
   top: 0;
 }
-/* line 83, ../sass/screen.scss */
+/* line 82, ../sass/screen.scss */
 #page > header .language-switcher-locale-url li {
   display: inline-block;
   vertical-align: middle;
@@ -246,9 +246,10 @@ input[type=button]:hover, input[type=submit]:hover {
   *zoom: 1;
   *display: inline;
 }
-/* line 89, ../sass/screen.scss */
+/* line 88, ../sass/screen.scss */
 #page > main {
   background: #F6FFF2;
+  min-height: 200px;
 }
 /* line 93, ../sass/screen.scss */
 #page > footer {
@@ -267,10 +268,12 @@ input[type=button]:hover, input[type=submit]:hover {
 #page > footer > .col {
   float: left;
   min-height: 100px;
-  width: 240px;
+  width: 230px;
+  padding: 5px;
 }
-/* line 108, ../sass/screen.scss */
+/* line 109, ../sass/screen.scss */
 #page div.copyright {
-  min-height: 100px;
+  color: #F6FFF2;
   background: #050117;
+  padding: 5px;
 }
