@@ -95,6 +95,160 @@ function feature_pages_default_page_manager_handlers() {
     $display->content['new-16214b96-0ceb-4c1d-bd89-95d004e174c9'] = $pane;
     $display->panels['content'][1] = 'new-16214b96-0ceb-4c1d-bd89-95d004e174c9';
     $pane = new stdClass();
+    $pane->pid = 'new-110104fe-1fb5-4fc2-8aae-88f0189035ea';
+    $pane->panel = 'copyright';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => '',
+      'title' => '',
+      'body' => '<p style="text-align: center;">2013-2015</p>',
+      'format' => 'full_html',
+      'substitute' => 1,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '110104fe-1fb5-4fc2-8aae-88f0189035ea';
+    $display->content['new-110104fe-1fb5-4fc2-8aae-88f0189035ea'] = $pane;
+    $display->panels['copyright'][0] = 'new-110104fe-1fb5-4fc2-8aae-88f0189035ea';
+    $pane = new stdClass();
+    $pane->pid = 'new-e048f540-a0de-4e0b-baf0-7952e042fd48';
+    $pane->panel = 'footer_block_1';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => '',
+      'title' => '',
+      'body' => '<p><img src="/sites/default/files/images/technologies/d8.png" height="183" width="240"></p>',
+      'format' => 'full_html',
+      'substitute' => 1,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'e048f540-a0de-4e0b-baf0-7952e042fd48';
+    $display->content['new-e048f540-a0de-4e0b-baf0-7952e042fd48'] = $pane;
+    $display->panels['footer_block_1'][0] = 'new-e048f540-a0de-4e0b-baf0-7952e042fd48';
+    $pane = new stdClass();
+    $pane->pid = 'new-9ec5ba8c-f611-4936-b5a5-7ff7b83aec1b';
+    $pane->panel = 'footer_block_2';
+    $pane->type = 'text';
+    $pane->subtype = 'text';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'buttons' => array(
+        'return' => 'Finish',
+        'cancel' => 'Cancel',
+      ),
+      'override_title' => 0,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+      'vertical_tabs' => array(
+        'vertical_tabs__active_tab' => 'edit-uk',
+      ),
+      'en' => array(
+        'text' => array(
+          'value' => '<p>Drupal 8 Road. We try Drupal 8. We help the society. Help us. Support our sandboxes:</p><ul style="list-style-type: disc;"><li><a href="https://drupal.org/sandbox/likin/2151701" target="_blank" title="Styleguide">Styleguide</a>,</li><li><a href="https://drupal.org/sandbox/likin/2161645" target="_blank" title="bxSlider">bxSlider</a>.<a href="https://drupal.org/sandbox/likin/2151701" target="_blank" title="Styleguide" class="links"></a></li></ul>',
+          'format' => 'full_html',
+        ),
+      ),
+      'ru' => array(
+        'text' => array(
+          'value' => '<p>Путь Drupal 8. Мы пытаемся использовать Drupal 8. Мы помогаем сообществу. Помогите продвинуть нас. Поддержите наши проекты:</p><ul style="list-style-type: disc;"><li><a href="https://drupal.org/sandbox/likin/2151701" target="_blank" title="Styleguide">Styleguide</a>,</li><li><a href="https://drupal.org/sandbox/likin/2161645" target="_blank" title="bxSlider">bxSlider</a>.</li></ul>',
+          'format' => 'full_html',
+        ),
+      ),
+      'uk' => array(
+        'text' => array(
+          'value' => '<p>Шлях Drupal 8. Ми намагаемося выкористовувати Drupal 8. Ми допомагаємо спільноті. Допоможіть нам просунутися далі. Підтримайте наші проекти:</p><ul style="list-style-type: disc;"><li><a href="https://drupal.org/sandbox/likin/2151701" target="_blank" title="Styleguide">Styleguide</a>,</li><li><a href="https://drupal.org/sandbox/likin/2161645" target="_blank" title="bxSlider">bxSlider</a>.</li></ul>',
+          'format' => 'full_html',
+        ),
+      ),
+      'form_build_id' => 'form-0qqc5JEgawGk_ILvuhuhn4uV_p19SKne3z0F_b9Zdmo',
+      'form_token' => 'N64TGDBblRvr9Goak5SuhAngVCpW2GfclNI_eIeOgI4',
+      'form_id' => 'cm_cct_text_edit_form',
+      'op' => 'Finish',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '9ec5ba8c-f611-4936-b5a5-7ff7b83aec1b';
+    $display->content['new-9ec5ba8c-f611-4936-b5a5-7ff7b83aec1b'] = $pane;
+    $display->panels['footer_block_2'][0] = 'new-9ec5ba8c-f611-4936-b5a5-7ff7b83aec1b';
+    $pane = new stdClass();
+    $pane->pid = 'new-e542bc9a-c926-4ee2-a3be-78a2dacce8d7';
+    $pane->panel = 'footer_block_4';
+    $pane->type = 'text';
+    $pane->subtype = 'text';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'buttons' => array(
+        'return' => 'Finish',
+        'cancel' => 'Cancel',
+      ),
+      'override_title' => 0,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+      'vertical_tabs' => array(
+        'vertical_tabs__active_tab' => 'edit-uk',
+      ),
+      'en' => array(
+        'text' => array(
+          'value' => 'text en',
+          'format' => 'filtered_html',
+        ),
+      ),
+      'ru' => array(
+        'text' => array(
+          'value' => 'text ru',
+          'format' => 'filtered_html',
+        ),
+      ),
+      'uk' => array(
+        'text' => array(
+          'value' => 'text ua',
+          'format' => 'filtered_html',
+        ),
+      ),
+      'form_build_id' => 'form-1xdtVjwerFmPQD9E9RlnPa0oG6d_yB4VghvscK5EAbc',
+      'form_token' => 'N64TGDBblRvr9Goak5SuhAngVCpW2GfclNI_eIeOgI4',
+      'form_id' => 'cm_cct_text_edit_form',
+      'op' => 'Finish',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'e542bc9a-c926-4ee2-a3be-78a2dacce8d7';
+    $display->content['new-e542bc9a-c926-4ee2-a3be-78a2dacce8d7'] = $pane;
+    $display->panels['footer_block_4'][0] = 'new-e542bc9a-c926-4ee2-a3be-78a2dacce8d7';
+    $pane = new stdClass();
     $pane->pid = 'new-5bc69160-b3d8-4d79-9cd7-5856442d8895';
     $pane->panel = 'header';
     $pane->type = 'block';
@@ -183,6 +337,52 @@ function feature_pages_default_page_manager_handlers() {
     $pane->uuid = '70f2264d-ded3-4727-8b86-084b8a01d3a4';
     $display->content['new-70f2264d-ded3-4727-8b86-084b8a01d3a4'] = $pane;
     $display->panels['header'][1] = 'new-70f2264d-ded3-4727-8b86-084b8a01d3a4';
+    $pane = new stdClass();
+    $pane->pid = 'new-6b1839ae-2ce1-4dc7-a849-64f984723f96';
+    $pane->panel = 'header';
+    $pane->type = 'logo';
+    $pane->subtype = 'logo';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'return' => 'Finish',
+      'cancel' => 'Cancel',
+      'override_title' => 0,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+      'vertical_tabs__active_tab' => 'edit-site-slogan',
+      'image' => array(
+        'path' => '/sites/default/files/images/logo.png',
+        'style' => 'thumbnail',
+      ),
+      'image[path]' => '',
+      'browse' => 'Browse',
+      'site_name' => array(
+        'en' => 'Shelepen',
+        'ru' => 'Шелепень',
+        'uk' => 'Шелепень',
+      ),
+      'site_slogan' => array(
+        'en' => 'A Rough Road Leads to the Stars',
+        'ru' => 'Путь к звёздам лежит через тернии',
+        'uk' => 'Тернистий шлях веде до зірок',
+      ),
+      'form_build_id' => 'form-j8N6Jc639gLiAE783qX2L98LmqeGqVLqigDsKp2UCho',
+      'form_token' => 'Bev4AukodxUdXRA36Sd8roAewUGuqXkYjz-jYATDWyc',
+      'form_id' => 'cm_cct_logo_edit_form',
+      'op' => 'Finish',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 2;
+    $pane->locks = array();
+    $pane->uuid = '6b1839ae-2ce1-4dc7-a849-64f984723f96';
+    $display->content['new-6b1839ae-2ce1-4dc7-a849-64f984723f96'] = $pane;
+    $display->panels['header'][2] = 'new-6b1839ae-2ce1-4dc7-a849-64f984723f96';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -263,37 +463,37 @@ function feature_pages_default_page_manager_pages() {
       'list' => array(
         0 => array(
           'enabled' => 1,
-          'image' => '/sites/default/files/images/technologies/php-digest-6.png',
+          'image' => '/sites/default/files/images/technologies/php.png',
           'weight' => '-10',
         ),
         1 => array(
           'enabled' => 1,
-          'image' => '/sites/default/files/images/technologies/nginx-logo.jpg',
+          'image' => '/sites/default/files/images/technologies/nginx.jpg',
           'weight' => '-10',
         ),
         2 => array(
           'enabled' => 1,
-          'image' => '/sites/default/files/images/technologies/Mysql.png',
+          'image' => '/sites/default/files/images/technologies/mysql.png',
           'weight' => '-10',
         ),
         3 => array(
           'enabled' => 1,
-          'image' => '/sites/default/files/images/technologies/logo-ubuntu_st_no%C2%AE-black_orange-hex.png',
+          'image' => '/sites/default/files/images/technologies/ubuntu.png',
           'weight' => '-10',
         ),
         4 => array(
           'enabled' => 1,
-          'image' => '/sites/default/files/images/technologies/Linux.jpg',
+          'image' => '/sites/default/files/images/technologies/linux.jpg',
           'weight' => '-10',
         ),
         5 => array(
           'enabled' => 1,
-          'image' => '/sites/default/files/images/technologies/inkscape-draw-freely-program-LOGO.png',
+          'image' => '/sites/default/files/images/technologies/inkscape.png',
           'weight' => '-10',
         ),
         6 => array(
           'enabled' => 1,
-          'image' => '/sites/default/files/images/technologies/html%2C%20css.png',
+          'image' => '/sites/default/files/images/technologies/html_css.png',
           'weight' => '-10',
         ),
         7 => array(
@@ -303,15 +503,15 @@ function feature_pages_default_page_manager_pages() {
         ),
         8 => array(
           'enabled' => 1,
-          'image' => '/sites/default/files/images/technologies/d8%204x3.png',
+          'image' => '/sites/default/files/images/technologies/d8.png',
           'weight' => '-10',
         ),
         9 => array(
           'enabled' => 1,
-          'image' => '/sites/default/files/images/technologies/3012_gimp_2.8_logo.png',
+          'image' => '/sites/default/files/images/technologies/gimp.png',
           'weight' => '-10',
         ),
-        'list__active_tab' => 'edit-list-0',
+        'list__active_tab' => 'edit-list-9',
       ),
       'list[0][image]' => '/sites/default/files/images/technologies/php-digest-6.png',
       'browse' => 'Browse',
@@ -332,8 +532,8 @@ function feature_pages_default_page_manager_pages() {
         'pager' => 0,
         'js_settings' => '',
       ),
-      'form_build_id' => 'form-oYrBZ_RpAmGgZvdAVjvcCeRuMSyuGU4zijHxnlsRiBE',
-      'form_token' => 'etiq0xqbXo4LsSg82ghthi8Ur1oyDN0V5S4FfChcTQc',
+      'form_build_id' => 'form-Iyw7FLi8J68Z8wKaz1McGrwZryUYLT9neNLNdgap2rw',
+      'form_token' => '9g-lgpPoQZ-QdchY0o7KT8P-z6RTz1RoLGi4xbA2yHk',
       'form_id' => 'bxslider_cct_image_edit_form',
       'op' => 'Finish',
     );
