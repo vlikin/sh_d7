@@ -9,6 +9,7 @@
 @import "partial/base";
 @import "partial/cct/cm/image_text";
 @import "partial/typography";
+@import "partial/node";
 
 #page {
   width: 960px;
@@ -66,7 +67,7 @@
           margin: 0;
         }
 
-        &:hover {
+        &:hover, &.active {
           color: $p1-color;
         }
       }

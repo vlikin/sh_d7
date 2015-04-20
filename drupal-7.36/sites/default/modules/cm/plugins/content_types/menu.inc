@@ -25,6 +25,7 @@ $plugin = array (
 function cm_cct_menu_render($subtype, $conf, $args, $context) {
   global $language;
   $langcode = $language->language;
+  $menu_item = menu_get_item();
 
   $block = new stdClass();
   $block->content = [
@@ -35,7 +36,11 @@ function cm_cct_menu_render($subtype, $conf, $args, $context) {
   ];
   foreach ($conf['items'] as $key => $item) {
     if (is_numeric($key) && $item['enabled']) {
-      $block->content[]['#markup'] = l($item['title'][$langcode], $item['path']);
+      $options = [];
+      if ($item['path'] == $menu_item['path']) {
+        $options['#attributes']['class'] = 'active';
+      }
+      $block->content[]['#markup'] = l($item['title'][$langcode], $item['path'], $options);
     }
   }
 

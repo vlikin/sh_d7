@@ -1,0 +1,31 @@
+.node.node-article {
+  @include inline-block;
+  width: 960px;
+
+  .image-container {
+    float: left;
+    width: 480px;
+  }
+
+  .text-container {
+    float: left;
+    padding: $padding;
+    width: 480px - 2 * $padding;
+
+    >h2 {
+      font-size: $bigger-font-size;
+      font-weight: bold;
+      padding-bottom: $padding;
+    }
+  }
+
+  &:nth-child(2n) {
+    .image-container {
+      float: right;
+    }
+
+    .text-container {
+      float: right;
+    }
+  }
+}

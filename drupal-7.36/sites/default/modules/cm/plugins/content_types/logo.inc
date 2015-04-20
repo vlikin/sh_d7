@@ -29,6 +29,8 @@ function cm_cct_logo_render($subtype, $conf, $args, $context) {
   $block = new stdClass();
   $block->content = [
     '#type' => 'container',
+    '#prefix' => '<a href="' . url('/') . '">',
+    '#suffix' => '</a>',
     '#attributes' => [
       'class' => ['cm_cct_logo']
     ],
