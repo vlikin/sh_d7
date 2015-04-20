@@ -108,16 +108,16 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /* line 9, ../sass/partial/cct/cm/_image_text.scss */
 .cm_cct_image_text .title {
   font-weight: bold;
-  font-size: 18px;
-  padding: 5px;
-  width: 470px;
+  font-size: 20px;
+  padding: 10px;
+  width: 460px;
   float: left;
 }
 /* line 16, ../sass/partial/cct/cm/_image_text.scss */
 .cm_cct_image_text .text {
-  padding: 5px;
+  padding: 10px;
   text-align: justify;
-  width: 470px;
+  width: 460px;
   float: left;
 }
 /* line 24, ../sass/partial/cct/cm/_image_text.scss */
@@ -136,7 +136,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /* line 3, ../sass/partial/_typography.scss */
 html {
   font-family: Play;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 /* line 11, ../sass/partial/_typography.scss */
@@ -171,14 +171,14 @@ input[type=button]:hover, input[type=submit]:hover {
 /* line 10, ../sass/partial/_node.scss */
 .node.node-article .text-container {
   float: left;
-  padding: 5px;
-  width: 470px;
+  padding: 10px;
+  width: 460px;
 }
 /* line 15, ../sass/partial/_node.scss */
 .node.node-article .text-container > h2 {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
-  padding-bottom: 5px;
+  padding-bottom: 10px;
 }
 /* line 23, ../sass/partial/_node.scss */
 .node.node-article:nth-child(2n) .image-container {
@@ -218,7 +218,7 @@ input[type=button]:hover, input[type=submit]:hover {
 }
 /* line 34, ../sass/screen.scss */
 #page > header .cm_cct_logo > .site_name {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: bolder;
   float: left;
   height: 20px;
@@ -227,7 +227,7 @@ input[type=button]:hover, input[type=submit]:hover {
 }
 /* line 43, ../sass/screen.scss */
 #page > header .cm_cct_logo > .site_slogan {
-  font-size: 12px;
+  font-size: 14px;
   float: left;
   height: 50px;
   width: 300px;
@@ -239,19 +239,19 @@ input[type=button]:hover, input[type=submit]:hover {
   *vertical-align: auto;
   *zoom: 1;
   *display: inline;
-  -moz-border-radius-topleft: 5px;
-  -webkit-border-top-left-radius: 5px;
-  border-top-left-radius: 5px;
+  -moz-border-radius-topleft: 10px;
+  -webkit-border-top-left-radius: 10px;
+  border-top-left-radius: 10px;
   background: #3f7fff;
   bottom: 0;
   right: 0;
-  padding: 5px;
+  padding: 10px;
   position: absolute;
 }
 /* line 61, ../sass/screen.scss */
 #page > header .cm_cct_menu a, #page > header .language-switcher-locale-url a {
   color: #050117;
-  margin-right: 5px;
+  margin-right: 10px;
   text-decoration: none;
 }
 /* line 66, ../sass/screen.scss */
@@ -267,9 +267,9 @@ input[type=button]:hover, input[type=submit]:hover {
   -moz-border-radius-topleft: 0;
   -webkit-border-top-left-radius: 0;
   border-top-left-radius: 0;
-  -moz-border-radius-bottomleft: 5px;
-  -webkit-border-bottom-left-radius: 5px;
-  border-bottom-left-radius: 5px;
+  -moz-border-radius-bottomleft: 10px;
+  -webkit-border-bottom-left-radius: 10px;
+  border-bottom-left-radius: 10px;
   bottom: auto;
   top: 0;
 }
@@ -303,12 +303,12 @@ input[type=button]:hover, input[type=submit]:hover {
 #page > footer > .col {
   float: left;
   min-height: 100px;
-  width: 230px;
-  padding: 5px;
+  width: 220px;
+  padding: 10px;
 }
 /* line 110, ../sass/screen.scss */
 #page div.copyright {
   color: #F6FFF2;
   background: #050117;
-  padding: 5px;
+  padding: 10px;
 }
