@@ -139,6 +139,21 @@ html {
   font-size: 14px;
 }
 
+/* line 11, ../sass/partial/_typography.scss */
+input {
+  border: solid 1px #0048D8;
+}
+/* line 14, ../sass/partial/_typography.scss */
+input[type=button], input[type=submit] {
+  font-weight: bold;
+  color: #F6FFF2;
+  background: #0048D8;
+}
+/* line 19, ../sass/partial/_typography.scss */
+input[type=button]:hover, input[type=submit]:hover {
+  background: #002672;
+}
+
 /* line 13, ../sass/screen.scss */
 #page {
   width: 960px;
@@ -146,17 +161,83 @@ html {
 }
 /* line 17, ../sass/screen.scss */
 #page > header {
-  background: green;
+  background: #0048D8;
+  height: 130px;
+  position: relative;
 }
-/* line 21, ../sass/screen.scss */
+/* line 22, ../sass/screen.scss */
+#page > header .cm_cct_menu, #page > header .language-switcher-locale-url {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  -moz-border-radius-topleft: 5px;
+  -webkit-border-top-left-radius: 5px;
+  border-top-left-radius: 5px;
+  background: #3f7fff;
+  bottom: 0;
+  right: 0;
+  padding: 5px;
+  position: absolute;
+}
+/* line 32, ../sass/screen.scss */
+#page > header .cm_cct_menu a, #page > header .language-switcher-locale-url a {
+  color: #050117;
+  margin-right: 5px;
+  text-decoration: none;
+}
+/* line 37, ../sass/screen.scss */
+#page > header .cm_cct_menu a:last-child, #page > header .language-switcher-locale-url a:last-child {
+  margin: 0;
+}
+/* line 41, ../sass/screen.scss */
+#page > header .cm_cct_menu a:hover, #page > header .language-switcher-locale-url a:hover {
+  color: #F6FFF2;
+}
+/* line 48, ../sass/screen.scss */
+#page > header .language-switcher-locale-url {
+  -moz-border-radius-topleft: 0;
+  -webkit-border-top-left-radius: 0;
+  border-top-left-radius: 0;
+  -moz-border-radius-bottomleft: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  bottom: auto;
+  top: 0;
+}
+/* line 55, ../sass/screen.scss */
+#page > header .language-switcher-locale-url li {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+}
+/* line 61, ../sass/screen.scss */
 #page > main {
-  background: blue;
+  background: #F6FFF2;
 }
-/* line 25, ../sass/screen.scss */
+/* line 65, ../sass/screen.scss */
 #page > footer {
-  background: red;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  width: 960px;
+  min-height: 100px;
+  background: #050117;
+  text-align: left;
 }
-/* line 29, ../sass/screen.scss */
+/* line 72, ../sass/screen.scss */
+#page > footer > .col {
+  float: left;
+  min-height: 100px;
+  width: 240px;
+}
+/* line 79, ../sass/screen.scss */
 #page div.copyright {
-  background: navy;
+  min-height: 100px;
+  background: #050117;
 }

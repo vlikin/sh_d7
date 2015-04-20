@@ -7,3 +7,17 @@ html {
 
 body {
 }
+
+input {
+  border: solid 1px $p3-color;
+
+  &[type=button], &[type=submit] {
+    font-weight: bold;
+    color: $p1-color;
+    background: $p3-color;
+
+    &:hover {
+      background: adjust-lightness($p3-color, -20);
+    }
+  }
+}

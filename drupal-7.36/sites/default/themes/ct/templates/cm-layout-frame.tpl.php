@@ -14,5 +14,5 @@
     <div class="col"><?= $content['footer_block_3'] ?></div>
     <div class="col"><?= $content['footer_block_4'] ?></div>
   </footer>
-  <div class="copyright"><?= $content['copyright'] ?><div>
+  <div class="copyright"><?= $content['copyright'] ?></div>
 </div>

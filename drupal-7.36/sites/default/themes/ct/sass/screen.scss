@@ -4,8 +4,8 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
 @import "compass/reset";
-@import "compass";
 @import "partial/variable";
+@import "compass";
 @import "partial/base";
 @import "partial/cct/cm/image_text";
 @import "partial/typography";
@@ -15,19 +15,70 @@
   margin: 0 auto;
 
   >header {
-    background: green;
+    background: $p3-color;
+    height: 130px;
+    position: relative;
+
+    .cm_cct_menu {
+      @include inline-block;
+      @include border-top-left-radius;
+
+      background:  adjust-lightness($p3-color, 20);
+      bottom: 0;
+      right: 0;
+      padding: $padding;
+      position: absolute;
+
+      a {
+        color: $p2-color;
+        margin-right: $padding;
+        text-decoration: none;
+
+        &:last-child {
+          margin: 0;
+        }
+
+        &:hover {
+          color: $p1-color;
+        }
+      }
+    }
+
+
+    .language-switcher-locale-url {
+      @extend .cm_cct_menu;
+      @include border-top-left-radius(0);
+      @include border-bottom-left-radius;
+      bottom: auto;
+      top: 0;
+
+      li {
+        @include inline-block;
+      }
+    }
   }
 
   >main {
-    background: blue;
+    background: $p1-color;
   }
 
   >footer {
-    background: red;
+    @include inline-block;
+    width: 960px;
+    min-height: 100px;
+    background: $p2-color;
+    text-align: left;
+
+    >.col {
+      float: left;
+      min-height: 100px;
+      width: 240px;
+    }
   }
 
   div.copyright {
-    background: navy;
+    min-height: 100px;
+    background: $p2-color;
   }
 }
 
