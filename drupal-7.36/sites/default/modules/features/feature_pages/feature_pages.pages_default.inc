@@ -200,9 +200,9 @@ function feature_pages_default_page_manager_pages() {
   $page->api_version = 1;
   $page->name = 'about';
   $page->task = 'page';
-  $page->admin_title = 'ABout';
+  $page->admin_title = 'About';
   $page->admin_description = '';
-  $page->path = 'about';
+  $page->path = 'we_are';
   $page->access = array();
   $page->menu = array();
   $page->arguments = array();
