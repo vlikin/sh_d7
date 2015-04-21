@@ -4,8 +4,13 @@
   }
 
   @include inline-block;
-  width: 960px;
+  width: 480px;
   clear: both;
+
+  @media all and (min-device-width: 700px) {
+    width: 960px;
+  }
+
   .image {
     width: 480px;
     float: left;

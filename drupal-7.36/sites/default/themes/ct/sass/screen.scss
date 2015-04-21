@@ -14,9 +14,9 @@
 @import "partial/media";
 
 #page {
-  @include cell {
-    width: 480px;
-  }
+  //@include cell {
+  //  width: 480px;
+  //}
 
   width: 960px;
   margin: 0 auto;
