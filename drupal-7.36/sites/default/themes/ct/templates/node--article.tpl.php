@@ -3,11 +3,6 @@
 /**
  * @file Overrides node--artcle.tpl.php
  */
-
-// It closes the rabbit hole.
-if (!$teaser) {
-  drupal_goto('/');
-}
 ?>
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
   <div class="image-container">
@@ -15,9 +10,9 @@ if (!$teaser) {
   </div>
   <div class="text-container">
     <?php print render($title_prefix); ?>
-    <?php if (!$page): ?>
-      <h2<?php print $title_attributes; ?>><?= $title; ?></h2>
-    <?php endif; ?>
+      <h2<?php print $title_attributes; ?>>
+        <?= l($title, $node_url) ?>
+      </h2>
     <?php print render($title_suffix); ?>
 
     <?php if ($display_submitted): ?>

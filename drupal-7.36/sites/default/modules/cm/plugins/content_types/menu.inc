@@ -64,7 +64,6 @@ function cm_cct_menu_admin_info($subtype, $conf, $contexts) {
  */
 function cm_cct_menu_edit_form($form, &$form_state) {
   $values = $form_state['conf'];
-  dpm($values);
 
   hide($form['override_title']);
   hide($form['override_title_text']);
