@@ -71,6 +71,31 @@ function feature_pages_default_page_manager_handlers() {
     $display->content['new-4b058c19-94a0-4e89-a28d-1361693ed455'] = $pane;
     $display->panels['content'][0] = 'new-4b058c19-94a0-4e89-a28d-1361693ed455';
     $pane = new stdClass();
+    $pane->pid = 'new-0ba1f9bc-698a-4fe1-888b-4f978a986a3d';
+    $pane->panel = 'content';
+    $pane->type = 'page_tabs';
+    $pane->subtype = 'page_tabs';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'type' => 'both',
+      'id' => 'tabs',
+      'override_title' => 0,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = '0ba1f9bc-698a-4fe1-888b-4f978a986a3d';
+    $display->content['new-0ba1f9bc-698a-4fe1-888b-4f978a986a3d'] = $pane;
+    $display->panels['content'][1] = 'new-0ba1f9bc-698a-4fe1-888b-4f978a986a3d';
+    $pane = new stdClass();
     $pane->pid = 'new-16214b96-0ceb-4c1d-bd89-95d004e174c9';
     $pane->panel = 'content';
     $pane->type = 'page_content';
@@ -89,11 +114,11 @@ function feature_pages_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 2;
     $pane->locks = array();
     $pane->uuid = '16214b96-0ceb-4c1d-bd89-95d004e174c9';
     $display->content['new-16214b96-0ceb-4c1d-bd89-95d004e174c9'] = $pane;
-    $display->panels['content'][1] = 'new-16214b96-0ceb-4c1d-bd89-95d004e174c9';
+    $display->panels['content'][2] = 'new-16214b96-0ceb-4c1d-bd89-95d004e174c9';
     $pane = new stdClass();
     $pane->pid = 'new-110104fe-1fb5-4fc2-8aae-88f0189035ea';
     $pane->panel = 'copyright';
@@ -311,7 +336,7 @@ function feature_pages_default_page_manager_handlers() {
         ),
         2 => array(
           'enabled' => 1,
-          'path' => 'notes',
+          'path' => '<front>',
           'title' => array(
             'en' => 'Notes',
             'ru' => 'Записки',
@@ -321,8 +346,8 @@ function feature_pages_default_page_manager_handlers() {
         ),
         'items__active_tab' => 'edit-items-2',
       ),
-      'form_build_id' => 'form-3AVTBdHlKT6rcK1Vtk027ZfvMU7o9--E-bbEcHMj9sA',
-      'form_token' => 'nLYEomgXGiyZHRwneI_cOtpJEQU4XLCg7qveZcO5f4Q',
+      'form_build_id' => 'form-BvMX_tAVEhb73t30_PzcupS4aAqHwMAlIQdyKzRlW14',
+      'form_token' => 'ul6I-Xx3_aq2LRdjFMSpNSP9ObxhdCaBQ485Ugu3fn8',
       'form_id' => 'cm_cct_menu_edit_form',
       'op' => 'Finish',
     );
@@ -444,6 +469,60 @@ function feature_pages_default_page_manager_pages() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
+    $pane->pid = 'new-9da22f39-30a9-4486-a9db-5b5a87df5f64';
+    $pane->panel = 'center';
+    $pane->type = 'image_text';
+    $pane->subtype = 'image_text';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'return' => 'Finish',
+      'cancel' => 'Cancel',
+      'override_title' => 0,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+      'vertical_tabs__active_tab' => 'edit-block-text',
+      'image' => array(
+        'path' => '/sites/default/files/images/we_are.jpg',
+        'style' => '3x4-2',
+        'side' => 'left',
+      ),
+      'image[path]' => '/sites/default/files/images/we_are.jpg',
+      'browse' => 'Browse',
+      'block_title' => array(
+        'en' => 'About us',
+        'ru' => 'О нас',
+        'uk' => 'Про нас',
+      ),
+      'block_text' => array(
+        'en' => array(
+          'value' => 'Hello! “Shelepen” is a small ukrainian company, located in Chernigiv, Ukraine. We are founders  (Viktor, Elena) of the company. We are also employeers of the company. We are persons of different branches of life and can consult you how to create and support your business in wide world of Internet.  Yes, we create web sites by ourselves, from one side. From another side we investigate your business togather and create tools for your business, support it and modify it under changable conditions. So we earn money by making your business efficient. We almost always use open source tecknolodgies. It helps us to work legally. It reduces money usage. Regards, Viktor and Elena',
+          'format' => 'filtered_html',
+        ),
+        'ru' => array(
+          'value' => 'Здравствуйте! "Шелепень" - это небольшая украинская компания, расположенная в Чернигове, Украине. Мы учредители (Виктор, Елена) этой компании. Мы также сотрудники компании. Мы личности с различных отраслей жизни и можем проконсультировать вас как создать и поддерживать свой ​​бизнес в широком мире Интернета. Да, мы создаем веб-сайты сами, с одной стороны. С другой стороны, мы исследуем ваш ​​бизнес вместе и создаем инструменты для вашего бизнеса, поддерживаем и изменяем их в соответствии с изменением условий. Таким образом мы зарабатываем деньги, делая ваш бизнес эффективным. Мы почти всегда используем открытые технологии. Это помогает нам работать легально. Это уменьшает денежные затраты нашей работы, делая наши услуги дешевле. С уважением, Виктор и Елена',
+          'format' => 'filtered_html',
+        ),
+        'uk' => array(
+          'value' => 'Вітаємо! "Шелепень" - це невелика українська компанія, що знаходиться в Чернігові, Україні. Ми засновники (Віктор, Олена) цієї компанії. Ми також співробітники компанії. Ми особистості з різних галузей життя й можемо проконсультувати вас як створити та підтримувати свій бізнес в широкому світі Інтернету. Так, ми створюємо веб-сайти самі, з одного боку. З іншого боку, ми досліджуємо ваш ​​бізнес разом і створюємо інструменти для вашого бізнесу, підтримуємо та змінюємо їх у відповідності до змінних умов. Таким чином ми заробляємо гроші, роблячи ваш бізнес ефективним. Ми майже завжди використовуємо відкриті технології. Це домогає нам працювати легально. Це зменшує грошові витрати нашої праці, що робить наші послуги більш дешевими. З повагою, Віктор і Олена',
+          'format' => 'filtered_html',
+        ),
+      ),
+      'form_build_id' => 'form-6vBcc_cHozfm14pIwx3DueJMR7bTdySBXkaoHBjQSo4',
+      'form_token' => 'iODV9cGlTyJRpAwXMinaJVjzdHzYi1E4mcFUQ8qYjQk',
+      'form_id' => 'cm_cct_image_text_edit_form',
+      'op' => 'Finish',
+    );
+    $pane->cache = array();
+    $pane->style = array();
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '9da22f39-30a9-4486-a9db-5b5a87df5f64';
+    $display->content['new-9da22f39-30a9-4486-a9db-5b5a87df5f64'] = $pane;
+    $display->panels['center'][0] = 'new-9da22f39-30a9-4486-a9db-5b5a87df5f64';
+    $pane = new stdClass();
     $pane->pid = 'new-a3f7e7ad-6f43-45f4-89b6-6044b4bc145f';
     $pane->panel = 'center';
     $pane->type = 'image';
@@ -541,65 +620,11 @@ function feature_pages_default_page_manager_pages() {
     $pane->style = array();
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 1;
     $pane->locks = array();
     $pane->uuid = 'a3f7e7ad-6f43-45f4-89b6-6044b4bc145f';
     $display->content['new-a3f7e7ad-6f43-45f4-89b6-6044b4bc145f'] = $pane;
-    $display->panels['center'][0] = 'new-a3f7e7ad-6f43-45f4-89b6-6044b4bc145f';
-    $pane = new stdClass();
-    $pane->pid = 'new-9da22f39-30a9-4486-a9db-5b5a87df5f64';
-    $pane->panel = 'center';
-    $pane->type = 'image_text';
-    $pane->subtype = 'image_text';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'return' => 'Finish',
-      'cancel' => 'Cancel',
-      'override_title' => 0,
-      'override_title_text' => '',
-      'override_title_heading' => 'h2',
-      'vertical_tabs__active_tab' => 'edit-block-text',
-      'image' => array(
-        'path' => '/sites/default/files/images/we_are.jpg',
-        'style' => '3x4-2',
-        'side' => 'left',
-      ),
-      'image[path]' => '/sites/default/files/images/we_are.jpg',
-      'browse' => 'Browse',
-      'block_title' => array(
-        'en' => 'About us',
-        'ru' => 'О нас',
-        'uk' => 'Про нас',
-      ),
-      'block_text' => array(
-        'en' => array(
-          'value' => 'Hello! “Shelepen” is a small ukrainian company, located in Chernigiv, Ukraine. We are founders  (Viktor, Elena) of the company. We are also employeers of the company. We are persons of different branches of life and can consult you how to create and support your business in wide world of Internet.  Yes, we create web sites by ourselves, from one side. From another side we investigate your business togather and create tools for your business, support it and modify it under changable conditions. So we earn money by making your business efficient. We almost always use open source tecknolodgies. It helps us to work legally. It reduces money usage. Regards, Viktor and Elena',
-          'format' => 'filtered_html',
-        ),
-        'ru' => array(
-          'value' => 'Здравствуйте! "Шелепень" - это небольшая украинская компания, расположенная в Чернигове, Украине. Мы учредители (Виктор, Елена) этой компании. Мы также сотрудники компании. Мы личности с различных отраслей жизни и можем проконсультировать вас как создать и поддерживать свой ​​бизнес в широком мире Интернета. Да, мы создаем веб-сайты сами, с одной стороны. С другой стороны, мы исследуем ваш ​​бизнес вместе и создаем инструменты для вашего бизнеса, поддерживаем и изменяем их в соответствии с изменением условий. Таким образом мы зарабатываем деньги, делая ваш бизнес эффективным. Мы почти всегда используем открытые технологии. Это помогает нам работать легально. Это уменьшает денежные затраты нашей работы, делая наши услуги дешевле. С уважением, Виктор и Елена',
-          'format' => 'filtered_html',
-        ),
-        'uk' => array(
-          'value' => 'Вітаємо! "Шелепень" - це невелика українська компанія, що знаходиться в Чернігові, Україні. Ми засновники (Віктор, Олена) цієї компанії. Ми також співробітники компанії. Ми особистості з різних галузей життя й можемо проконсультувати вас як створити та підтримувати свій бізнес в широкому світі Інтернету. Так, ми створюємо веб-сайти самі, з одного боку. З іншого боку, ми досліджуємо ваш ​​бізнес разом і створюємо інструменти для вашого бізнесу, підтримуємо та змінюємо їх у відповідності до змінних умов. Таким чином ми заробляємо гроші, роблячи ваш бізнес ефективним. Ми майже завжди використовуємо відкриті технології. Це домогає нам працювати легально. Це зменшує грошові витрати нашої праці, що робить наші послуги більш дешевими. З повагою, Віктор і Олена',
-          'format' => 'filtered_html',
-        ),
-      ),
-      'form_build_id' => 'form-6vBcc_cHozfm14pIwx3DueJMR7bTdySBXkaoHBjQSo4',
-      'form_token' => 'iODV9cGlTyJRpAwXMinaJVjzdHzYi1E4mcFUQ8qYjQk',
-      'form_id' => 'cm_cct_image_text_edit_form',
-      'op' => 'Finish',
-    );
-    $pane->cache = array();
-    $pane->style = array();
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 1;
-    $pane->locks = array();
-    $pane->uuid = '9da22f39-30a9-4486-a9db-5b5a87df5f64';
-    $display->content['new-9da22f39-30a9-4486-a9db-5b5a87df5f64'] = $pane;
-    $display->panels['center'][1] = 'new-9da22f39-30a9-4486-a9db-5b5a87df5f64';
+    $display->panels['center'][1] = 'new-a3f7e7ad-6f43-45f4-89b6-6044b4bc145f';
     $pane = new stdClass();
     $pane->pid = 'new-d1afcda0-7d84-4c8f-858f-dcabcffaac29';
     $pane->panel = 'center';
@@ -630,9 +655,9 @@ function feature_pages_default_page_manager_pages() {
         'en' => array(
           'value' => 'Chernigiv is the capital of the northern region of Ukraine, is situated on the right (western) bank of the Desna River 89 miles (144 km) north of the Ukrainian capital Kyiv along the international highway Odessa – St.Petersburg.
 
-Present-day Chernigov is an important industrial center of Ukraine. Main industries of Chernigov are chemical and food. There are 34 industrial plants in the city (2006), a worsted-cloth mill, bread making plant, meat and poultry plants.
+Present-day Chernigiv is an important industrial center of Ukraine. Main industries of Chernigiv are chemical and food. There are 34 industrial plants in the city (2006), a worsted-cloth mill, bread making plant, meat and poultry plants.
 
-Among the ancient churches of Chernigov there are the following: Assumption church of Yeletsky monastery (12th century), Trinity church of Trinity-Ilyinsky monastery (17th century) and Savior-Transfiguration church built in 11th century as well as Boris and Gleb church (12th century).',
+Among the ancient churches of Chernigiv there are the following: Assumption church of Yeletsky monastery (12th century), Trinity church of Trinity-Ilyinsky monastery (17th century) and Savior-Transfiguration church built in 11th century as well as Boris and Gleb church (12th century).',
           'format' => 'filtered_html',
         ),
         'ru' => array(
@@ -654,8 +679,8 @@ Among the ancient churches of Chernigov there are the following: Assumption chur
           'format' => 'filtered_html',
         ),
       ),
-      'form_build_id' => 'form-551ZR19-nnfCqU8zFODPR-wxVEbd6Usnxhq9O9U7moY',
-      'form_token' => 'iODV9cGlTyJRpAwXMinaJVjzdHzYi1E4mcFUQ8qYjQk',
+      'form_build_id' => 'form-JP4QTXsUBSEZbHdPtqzCbWRVKLuCAiDqYawhF5kIrO0',
+      'form_token' => 'f5aimW02RIkTlpKsYbwo4YaAtbvC5E1i78eAew9ayjQ',
       'form_id' => 'cm_cct_image_text_edit_form',
       'op' => 'Finish',
     );
