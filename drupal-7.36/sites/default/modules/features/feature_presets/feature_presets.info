@@ -1,0 +1,11 @@
+name = Presets
+description = It keeps image styles/presets.
+core = 7.x
+package = Shelepen
+version = 7.x-1.0
+project = feature_presets
+dependencies[] = image
+features[features_api][] = api:2
+features[image][] = 3x4-2
+features[image][] = 3x4-4
+project path = sites/default/modules/features/
