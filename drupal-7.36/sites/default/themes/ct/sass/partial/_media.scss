@@ -1,7 +1,7 @@
 $desktop-width: 700px;
 
 @mixin cell {
-  @media screen and (max-width: #{$desktop-width}) {
+  @media only screen and (max-device-width: #{$desktop-width}) {
     @content;
   }
 }

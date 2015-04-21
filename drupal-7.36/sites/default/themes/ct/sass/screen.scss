@@ -15,6 +15,7 @@
 #page {
   @include cell {
     width: 480px;
+    margin: 0 auto;
   }
 
   width: 960px;
