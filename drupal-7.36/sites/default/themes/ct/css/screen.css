@@ -100,7 +100,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   width: 960px;
   clear: both;
 }
-@media screen and (max-width: 960px) {
+@media all and (max-device-width: 960px) {
   /* line 1, ../sass/partial/cct/cm/_image_text.scss */
   .cm_cct_image_text {
     width: 480px;
@@ -168,7 +168,7 @@ input[type=button]:hover, input[type=submit]:hover {
   *zoom: 1;
   *display: inline;
 }
-@media screen and (max-width: 960px) {
+@media all and (max-device-width: 960px) {
   /* line 1, ../sass/partial/_node.scss */
   .node.node-article {
     width: 480px;
@@ -200,16 +200,15 @@ input[type=button]:hover, input[type=submit]:hover {
   float: right;
 }
 
-/* line 15, ../sass/screen.scss */
+/* line 16, ../sass/screen.scss */
 #page {
   width: 960px;
   margin: 0 auto;
 }
-@media screen and (max-width: 960px) {
-  /* line 15, ../sass/screen.scss */
+@media all and (max-device-width: 960px) {
+  /* line 16, ../sass/screen.scss */
   #page {
     width: 480px;
-    margin: 0 auto;
   }
 }
 /* line 24, ../sass/screen.scss */
@@ -317,7 +316,7 @@ input[type=button]:hover, input[type=submit]:hover {
   background: #050117;
   text-align: left;
 }
-@media screen and (max-width: 960px) {
+@media all and (max-device-width: 960px) {
   /* line 100, ../sass/screen.scss */
   #page > footer {
     width: 480px;

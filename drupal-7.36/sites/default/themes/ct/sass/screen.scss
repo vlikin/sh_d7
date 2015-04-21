@@ -11,11 +11,11 @@
 @import "partial/cct/cm/image_text";
 @import "partial/typography";
 @import "partial/node";
+@import "partial/media";
 
 #page {
   @include cell {
     width: 480px;
-    margin: 0 auto;
   }
 
   width: 960px;
