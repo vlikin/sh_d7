@@ -1,4 +1,8 @@
 .cm_cct_image_text {
+  @include cell {
+    width: 480px;
+  }
+
   @include inline-block;
   width: 960px;
   clear: both;

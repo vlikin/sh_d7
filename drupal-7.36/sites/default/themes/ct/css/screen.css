@@ -100,12 +100,18 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   width: 960px;
   clear: both;
 }
-/* line 5, ../sass/partial/cct/cm/_image_text.scss */
+@media screen and (max-width: 700px) {
+  /* line 1, ../sass/partial/cct/cm/_image_text.scss */
+  .cm_cct_image_text {
+    width: 480px;
+  }
+}
+/* line 9, ../sass/partial/cct/cm/_image_text.scss */
 .cm_cct_image_text .image {
   width: 480px;
   float: left;
 }
-/* line 9, ../sass/partial/cct/cm/_image_text.scss */
+/* line 13, ../sass/partial/cct/cm/_image_text.scss */
 .cm_cct_image_text .title {
   font-weight: bold;
   font-size: 20px;
@@ -113,22 +119,22 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   width: 460px;
   float: left;
 }
-/* line 16, ../sass/partial/cct/cm/_image_text.scss */
+/* line 20, ../sass/partial/cct/cm/_image_text.scss */
 .cm_cct_image_text .text {
   padding: 10px;
   text-align: justify;
   width: 460px;
   float: left;
 }
-/* line 24, ../sass/partial/cct/cm/_image_text.scss */
+/* line 28, ../sass/partial/cct/cm/_image_text.scss */
 .cm_cct_image_text.right .image {
   float: right;
 }
-/* line 27, ../sass/partial/cct/cm/_image_text.scss */
+/* line 31, ../sass/partial/cct/cm/_image_text.scss */
 .cm_cct_image_text.right .title {
   float: right;
 }
-/* line 30, ../sass/partial/cct/cm/_image_text.scss */
+/* line 34, ../sass/partial/cct/cm/_image_text.scss */
 .cm_cct_image_text.right .text {
   float: right;
 }
@@ -161,46 +167,57 @@ input[type=button]:hover, input[type=submit]:hover {
   *vertical-align: auto;
   *zoom: 1;
   *display: inline;
-  width: 960px;
 }
-/* line 5, ../sass/partial/_node.scss */
+@media screen and (max-width: 700px) {
+  /* line 1, ../sass/partial/_node.scss */
+  .node.node-article {
+    width: 480px;
+  }
+}
+/* line 7, ../sass/partial/_node.scss */
 .node.node-article .image-container {
   float: left;
   width: 480px;
 }
-/* line 10, ../sass/partial/_node.scss */
+/* line 12, ../sass/partial/_node.scss */
 .node.node-article .text-container {
   float: left;
   padding: 10px;
   width: 460px;
 }
-/* line 15, ../sass/partial/_node.scss */
+/* line 17, ../sass/partial/_node.scss */
 .node.node-article .text-container > h2 {
   font-size: 18px;
   font-weight: bold;
   padding-bottom: 10px;
 }
-/* line 23, ../sass/partial/_node.scss */
+/* line 25, ../sass/partial/_node.scss */
 .node.node-article:nth-child(2n) .image-container {
   float: right;
 }
-/* line 27, ../sass/partial/_node.scss */
+/* line 29, ../sass/partial/_node.scss */
 .node.node-article:nth-child(2n) .text-container {
   float: right;
 }
 
-/* line 14, ../sass/screen.scss */
+/* line 15, ../sass/screen.scss */
 #page {
   width: 960px;
   margin: 0 auto;
 }
-/* line 18, ../sass/screen.scss */
+@media screen and (max-width: 700px) {
+  /* line 15, ../sass/screen.scss */
+  #page {
+    width: 480px;
+  }
+}
+/* line 23, ../sass/screen.scss */
 #page > header {
   background: #0048D8;
   height: 130px;
   position: relative;
 }
-/* line 23, ../sass/screen.scss */
+/* line 28, ../sass/screen.scss */
 #page > header .cm_cct_logo {
   display: inline-block;
   vertical-align: middle;
@@ -211,12 +228,12 @@ input[type=button]:hover, input[type=submit]:hover {
   width: 400px;
   margin: 15px;
 }
-/* line 29, ../sass/screen.scss */
+/* line 34, ../sass/screen.scss */
 #page > header .cm_cct_logo > .image {
   float: left;
   width: 100px;
 }
-/* line 34, ../sass/screen.scss */
+/* line 39, ../sass/screen.scss */
 #page > header .cm_cct_logo > .site_name {
   font-size: 22px;
   font-weight: bolder;
@@ -225,14 +242,14 @@ input[type=button]:hover, input[type=submit]:hover {
   padding-top: 30px;
   width: 300px;
 }
-/* line 43, ../sass/screen.scss */
+/* line 48, ../sass/screen.scss */
 #page > header .cm_cct_logo > .site_slogan {
   font-size: 14px;
   float: left;
   height: 50px;
   width: 300px;
 }
-/* line 51, ../sass/screen.scss */
+/* line 56, ../sass/screen.scss */
 #page > header .cm_cct_menu, #page > header .language-switcher-locale-url {
   display: inline-block;
   vertical-align: middle;
@@ -248,21 +265,21 @@ input[type=button]:hover, input[type=submit]:hover {
   padding: 10px;
   position: absolute;
 }
-/* line 61, ../sass/screen.scss */
+/* line 66, ../sass/screen.scss */
 #page > header .cm_cct_menu a, #page > header .language-switcher-locale-url a {
   color: #050117;
   margin-right: 10px;
   text-decoration: none;
 }
-/* line 66, ../sass/screen.scss */
+/* line 71, ../sass/screen.scss */
 #page > header .cm_cct_menu a:last-child, #page > header .language-switcher-locale-url a:last-child {
   margin: 0;
 }
-/* line 70, ../sass/screen.scss */
+/* line 75, ../sass/screen.scss */
 #page > header .cm_cct_menu a:hover, #page > header .language-switcher-locale-url a:hover, #page > header .cm_cct_menu a.active, #page > header .language-switcher-locale-url a.active {
   color: #F6FFF2;
 }
-/* line 76, ../sass/screen.scss */
+/* line 81, ../sass/screen.scss */
 #page > header .language-switcher-locale-url {
   -moz-border-radius-topleft: 0;
   -webkit-border-top-left-radius: 0;
@@ -273,7 +290,7 @@ input[type=button]:hover, input[type=submit]:hover {
   bottom: auto;
   top: 0;
 }
-/* line 83, ../sass/screen.scss */
+/* line 88, ../sass/screen.scss */
 #page > header .language-switcher-locale-url li {
   display: inline-block;
   vertical-align: middle;
@@ -281,12 +298,12 @@ input[type=button]:hover, input[type=submit]:hover {
   *zoom: 1;
   *display: inline;
 }
-/* line 89, ../sass/screen.scss */
+/* line 94, ../sass/screen.scss */
 #page > main {
   background: #F6FFF2;
   min-height: 200px;
 }
-/* line 94, ../sass/screen.scss */
+/* line 99, ../sass/screen.scss */
 #page > footer {
   display: inline-block;
   vertical-align: middle;
@@ -299,14 +316,20 @@ input[type=button]:hover, input[type=submit]:hover {
   background: #050117;
   text-align: left;
 }
-/* line 102, ../sass/screen.scss */
+@media screen and (max-width: 700px) {
+  /* line 99, ../sass/screen.scss */
+  #page > footer {
+    width: 480px;
+  }
+}
+/* line 111, ../sass/screen.scss */
 #page > footer > .col {
   float: left;
   min-height: 100px;
   width: 220px;
   padding: 10px;
 }
-/* line 110, ../sass/screen.scss */
+/* line 119, ../sass/screen.scss */
 #page div.copyright {
   color: #F6FFF2;
   background: #050117;

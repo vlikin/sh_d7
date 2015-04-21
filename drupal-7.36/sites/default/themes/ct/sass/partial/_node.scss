@@ -1,6 +1,8 @@
 .node.node-article {
   @include inline-block;
-  width: 960px;
+  @include cell {
+    width: 480px;
+  }
 
   .image-container {
     float: left;

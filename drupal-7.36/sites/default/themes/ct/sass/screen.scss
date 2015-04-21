@@ -6,12 +6,17 @@
 @import "compass/reset";
 @import "partial/variable";
 @import "compass";
+@import "partial/media";
 @import "partial/base";
 @import "partial/cct/cm/image_text";
 @import "partial/typography";
 @import "partial/node";
 
 #page {
+  @include cell {
+    width: 480px;
+  }
+
   width: 960px;
   margin: 0 auto;
 
@@ -92,6 +97,10 @@
   }
 
   >footer {
+    @include cell {
+      width: 480px;
+    }
+
     @include inline-block;
     width: 960px;
     min-height: 100px;
