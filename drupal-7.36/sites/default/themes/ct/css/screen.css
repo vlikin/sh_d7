@@ -100,7 +100,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   width: 960px;
   clear: both;
 }
-@media all and (max-device-width: 960px) {
+@media all and (max-device-width: 700px) {
   /* line 1, ../sass/partial/cct/cm/_image_text.scss */
   .cm_cct_image_text {
     width: 480px;
@@ -168,7 +168,7 @@ input[type=button]:hover, input[type=submit]:hover {
   *zoom: 1;
   *display: inline;
 }
-@media all and (max-device-width: 960px) {
+@media all and (max-device-width: 700px) {
   /* line 1, ../sass/partial/_node.scss */
   .node.node-article {
     width: 480px;
@@ -205,7 +205,7 @@ input[type=button]:hover, input[type=submit]:hover {
   width: 960px;
   margin: 0 auto;
 }
-@media all and (max-device-width: 960px) {
+@media all and (max-device-width: 700px) {
   /* line 16, ../sass/screen.scss */
   #page {
     width: 480px;
@@ -316,7 +316,7 @@ input[type=button]:hover, input[type=submit]:hover {
   background: #050117;
   text-align: left;
 }
-@media all and (max-device-width: 960px) {
+@media all and (max-device-width: 700px) {
   /* line 100, ../sass/screen.scss */
   #page > footer {
     width: 480px;
