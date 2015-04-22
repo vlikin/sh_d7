@@ -8,6 +8,11 @@ html {
 body {
 }
 
+h2 {
+  font-size: $bigger-font-size;
+  font-weight: bold;
+}
+
 input {
   border: solid 1px $p3-color;
 
