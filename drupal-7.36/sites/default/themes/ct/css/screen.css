@@ -152,16 +152,30 @@ h2 {
 }
 
 /* line 16, ../sass/partial/_typography.scss */
+a {
+  color: #0048D8;
+  text-decoration: none;
+}
+/* line 20, ../sass/partial/_typography.scss */
+a:hover {
+  color: #FF2119;
+}
+/* line 24, ../sass/partial/_typography.scss */
+a:visited {
+  color: #0048D8;
+}
+
+/* line 29, ../sass/partial/_typography.scss */
 input {
   border: solid 1px #0048D8;
 }
-/* line 19, ../sass/partial/_typography.scss */
+/* line 32, ../sass/partial/_typography.scss */
 input[type=button], input[type=submit] {
   font-weight: bold;
   color: #F6FFF2;
   background: #0048D8;
 }
-/* line 24, ../sass/partial/_typography.scss */
+/* line 37, ../sass/partial/_typography.scss */
 input[type=button]:hover, input[type=submit]:hover {
   background: #002672;
 }

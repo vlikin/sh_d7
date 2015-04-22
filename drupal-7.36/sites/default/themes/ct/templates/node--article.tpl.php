@@ -11,7 +11,7 @@
   <div class="text-container">
     <?php print render($title_prefix); ?>
       <h2<?php print $title_attributes; ?>>
-        <?= l($title, $node_url) ?>
+        <a href="<?= $node_url ?>"><?= $title ?></a>
       </h2>
     <?php print render($title_suffix); ?>
 
