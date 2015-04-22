@@ -33,6 +33,9 @@ input {
     font-weight: bold;
     color: $p1-color;
     background: $p3-color;
+    margin-right: $padding;
+    padding: $padding;
+    cursor: pointer;
 
     &:hover {
       background: adjust-lightness($p3-color, -20);
