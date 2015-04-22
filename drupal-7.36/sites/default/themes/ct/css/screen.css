@@ -224,6 +224,22 @@ input[type=button]:hover, input[type=submit]:hover {
 body.page-node .pane-nnn {
   margin-top: 20px;
 }
+/* line 6, ../sass/partial/page/_node.scss */
+body.page-node .pane-nnn .node.node-article .image-container {
+  float: right;
+}
+/* line 10, ../sass/partial/page/_node.scss */
+body.page-node .pane-nnn .node.node-article .text-container {
+  float: right;
+}
+/* line 14, ../sass/partial/page/_node.scss */
+body.page-node .pane-nnn .node.node-article:nth-child(2n) .image-container {
+  float: left;
+}
+/* line 18, ../sass/partial/page/_node.scss */
+body.page-node .pane-nnn .node.node-article:nth-child(2n) .text-container {
+  float: left;
+}
 
 /* line 17, ../sass/screen.scss */
 #page {
