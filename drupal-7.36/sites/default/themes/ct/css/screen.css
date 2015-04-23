@@ -183,6 +183,26 @@ input[type=button]:hover, input[type=submit]:hover {
   background: #002672;
 }
 
+/* line 46, ../sass/partial/_typography.scss */
+.button {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  border: solid 1px #0048D8;
+  font-weight: bold;
+  color: #F6FFF2;
+  background: #0048D8;
+  margin-right: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+/* line 56, ../sass/partial/_typography.scss */
+.button:hover {
+  background: #002672;
+}
+
 /* line 1, ../sass/partial/_node.scss */
 .node.node-article {
   display: inline-block;

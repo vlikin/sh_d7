@@ -42,3 +42,18 @@ input {
     }
   }
 }
+
+.button {
+  @include inline-block;
+  border: solid 1px $p3-color;
+  font-weight: bold;
+  color: $p1-color;
+  background: $p3-color;
+  margin-right: $padding;
+  padding: $padding;
+  cursor: pointer;
+
+  &:hover {
+    background: adjust-lightness($p3-color, -20);
+  }
+}
