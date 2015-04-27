@@ -217,28 +217,34 @@ input[type=button]:hover, input[type=submit]:hover {
     width: 480px;
   }
 }
-/* line 7, ../sass/partial/_node.scss */
+/* line 9, ../sass/partial/_node.scss */
 .node.node-article .image-container {
   float: left;
   width: 480px;
 }
-/* line 12, ../sass/partial/_node.scss */
+/* line 14, ../sass/partial/_node.scss */
 .node.node-article .text-container {
   float: left;
   padding: 10px;
   width: 460px;
 }
-/* line 17, ../sass/partial/_node.scss */
+/* line 19, ../sass/partial/_node.scss */
 .node.node-article .text-container > h2 {
   font-size: 18px;
   font-weight: bold;
   padding-bottom: 10px;
 }
 /* line 25, ../sass/partial/_node.scss */
+.node.node-article .text-container > .submitted {
+  color: #1a0579;
+  font-size: 14px;
+  padding: 10px;
+}
+/* line 33, ../sass/partial/_node.scss */
 .node.node-article:nth-child(2n) .image-container {
   float: right;
 }
-/* line 29, ../sass/partial/_node.scss */
+/* line 37, ../sass/partial/_node.scss */
 .node.node-article:nth-child(2n) .text-container {
   float: right;
 }
