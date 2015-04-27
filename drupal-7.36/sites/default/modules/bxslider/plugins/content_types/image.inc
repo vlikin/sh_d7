@@ -108,5 +108,9 @@ function bxslider_cct_image_edit_form($form, &$form_state) {
  * It is the config form of the content type.
  */
 function bxslider_cct_image_edit_form_submit($form, &$form_state) {
-  $form_state['conf'] = $form_state['values'];
+  $form_state['conf'] = [];
+  $keys = ['image_style', 'item_limit', 'list', 'settings'];
+  foreach ($keys as $key) {
+    $form_state['conf'][$key] = $form_state['values'][$key];
+  }
 }
