@@ -957,14 +957,7 @@ Ukraine is a member of the United Nation Organization and takes part in the work
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'buttons' => array(
-        'return' => 'Finish',
-        'cancel' => 'Cancel',
-      ),
-      'override_title' => 0,
-      'override_title_text' => '',
-      'override_title_heading' => 'h2',
-      'image_style' => '4x3-4',
+      'image_style' => '4x3-2',
       'item_limit' => '13',
       'list' => array(
         0 => array(
@@ -1034,32 +1027,17 @@ Ukraine is a member of the United Nation Organization and takes part in the work
         ),
         'list__active_tab' => 'edit-list-0',
       ),
-      'list[0][image]' => '/sites/default/files/car_budget/screenshots/0-menu.png',
-      'browse' => 'Browse',
-      'list[1][image]' => '/sites/default/files/car_budget/screenshots/1-calculator.png',
-      'list[2][image]' => '/sites/default/files/car_budget/screenshots/2-statistics.png',
-      'list[3][image]' => '/sites/default/files/car_budget/screenshots/3-chart_price.png',
-      'list[4][image]' => '/sites/default/files/car_budget/screenshots/4-usage_chart.png',
-      'list[5][image]' => '/sites/default/files/car_budget/screenshots/5-about.png',
-      'list[6][image]' => '/sites/default/files/car_budget/screenshots/6-create_car.png',
-      'list[7][image]' => '/sites/default/files/car_budget/screenshots/7-activate_car.png',
-      'list[8][image]' => '/sites/default/files/car_budget/screenshots/8-popup_create.png',
-      'list[9][image]' => '/sites/default/files/car_budget/screenshots/9-loads.png',
-      'list[10][image]' => '/sites/default/files/car_budget/screenshots/10-new_load.png',
-      'list[11][image]' => '/sites/default/files/car_budget/screenshots/11-setings.png',
-      'list[12][image]' => '/sites/default/files/car_budget/screenshots/12-languages.png',
       'settings' => array(
-        'slideWidth' => '240',
-        'minSlides' => '2',
-        'maxSlides' => '4',
+        'slideWidth' => '480',
+        'minSlides' => '1',
+        'maxSlides' => '2',
         'slideMargin' => '10',
         'pager' => 0,
         'js_settings' => '{"mode": "horizontal", "controls": "false", "auto": "true"}',
       ),
-      'form_build_id' => 'form-OR9F-Iy0caf5dY1n32khusOdkVFYwE6LR38hRtRpLus',
-      'form_token' => 'hFeKzpBglaLaqLphFYU3UnzI-OtIDxyuPeIs6FZvFgc',
-      'form_id' => 'bxslider_cct_image_edit_form',
-      'op' => 'Finish',
+      'override_title' => 0,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
     );
     $pane->cache = array();
     $pane->style = array();

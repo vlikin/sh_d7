@@ -40,5 +40,35 @@ function feature_presets_image_default_styles() {
     ),
   );
 
+  // Exported image style: 4x3-2.
+  $styles['4x3-2'] = array(
+    'label' => '4x3-2',
+    'effects' => array(
+      4 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 480,
+          'height' => 640,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  // Exported image style: 4x3-4.
+  $styles['4x3-4'] = array(
+    'label' => '4x3-4',
+    'effects' => array(
+      3 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 240,
+          'height' => 320,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
   return $styles;
 }
