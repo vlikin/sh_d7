@@ -366,6 +366,7 @@ function feature_permissins_user_default_permissions() {
     'name' => 'administer url aliases',
     'roles' => array(
       'administrator' => 'administrator',
+      'manager' => 'manager',
     ),
     'module' => 'path',
   );
@@ -452,6 +453,7 @@ function feature_permissins_user_default_permissions() {
     'name' => 'create url aliases',
     'roles' => array(
       'administrator' => 'administrator',
+      'manager' => 'manager',
     ),
     'module' => 'path',
   );

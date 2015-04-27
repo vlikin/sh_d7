@@ -45,6 +45,9 @@ function feature_pages_default_page_manager_handlers() {
       'footer_block_4' => NULL,
       'copyright' => NULL,
     ),
+    'header' => array(
+      'style' => 'naked',
+    ),
   );
   $display->cache = array();
   $display->title = '';
@@ -201,12 +204,12 @@ function feature_pages_default_page_manager_handlers() {
       ),
       'uk' => array(
         'text' => array(
-          'value' => '<p>Шлях Drupal 8. Ми намагаемося выкористовувати Drupal 8. Ми допомагаємо спільноті. Допоможіть нам просунутися далі. Підтримайте наші проекти:</p><ul style="list-style-type: disc;"><li><a href="https://drupal.org/sandbox/likin/2151701" target="_blank" title="Styleguide">Styleguide</a>,</li><li><a href="https://drupal.org/sandbox/likin/2161645" target="_blank" title="bxSlider">bxSlider</a>.</li></ul>',
+          'value' => '<p>Шлях Drupal 8. Ми намагаємося використовувати Drupal 8. Ми допомагаємо спільноті. Допоможіть нам просунутися далі. Підтримайте наші проекти:</p><ul style="list-style-type: disc;"><li><a href="https://drupal.org/sandbox/likin/2151701" target="_blank" title="Styleguide">Styleguide</a>,</li><li><a href="https://drupal.org/sandbox/likin/2161645" target="_blank" title="bxSlider">bxSlider</a>.</li></ul>',
           'format' => 'full_html',
         ),
       ),
-      'form_build_id' => 'form-0qqc5JEgawGk_ILvuhuhn4uV_p19SKne3z0F_b9Zdmo',
-      'form_token' => 'N64TGDBblRvr9Goak5SuhAngVCpW2GfclNI_eIeOgI4',
+      'form_build_id' => 'form-IYRwImynDErvbD7mUufLIM8WjaBGTfI3LLk9yieQNcQ',
+      'form_token' => 'jO-NWdZruVQodS_9O3Ehk4gOW8LYku03QY5nb6z05Go',
       'form_id' => 'cm_cct_text_edit_form',
       'op' => 'Finish',
     );
@@ -221,58 +224,6 @@ function feature_pages_default_page_manager_handlers() {
     $pane->uuid = '9ec5ba8c-f611-4936-b5a5-7ff7b83aec1b';
     $display->content['new-9ec5ba8c-f611-4936-b5a5-7ff7b83aec1b'] = $pane;
     $display->panels['footer_block_2'][0] = 'new-9ec5ba8c-f611-4936-b5a5-7ff7b83aec1b';
-    $pane = new stdClass();
-    $pane->pid = 'new-e542bc9a-c926-4ee2-a3be-78a2dacce8d7';
-    $pane->panel = 'footer_block_4';
-    $pane->type = 'text';
-    $pane->subtype = 'text';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'buttons' => array(
-        'return' => 'Finish',
-        'cancel' => 'Cancel',
-      ),
-      'override_title' => 0,
-      'override_title_text' => '',
-      'override_title_heading' => 'h2',
-      'vertical_tabs' => array(
-        'vertical_tabs__active_tab' => 'edit-uk',
-      ),
-      'en' => array(
-        'text' => array(
-          'value' => 'text en',
-          'format' => 'filtered_html',
-        ),
-      ),
-      'ru' => array(
-        'text' => array(
-          'value' => 'text ru',
-          'format' => 'filtered_html',
-        ),
-      ),
-      'uk' => array(
-        'text' => array(
-          'value' => 'text ua',
-          'format' => 'filtered_html',
-        ),
-      ),
-      'form_build_id' => 'form-1xdtVjwerFmPQD9E9RlnPa0oG6d_yB4VghvscK5EAbc',
-      'form_token' => 'N64TGDBblRvr9Goak5SuhAngVCpW2GfclNI_eIeOgI4',
-      'form_id' => 'cm_cct_text_edit_form',
-      'op' => 'Finish',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $pane->uuid = 'e542bc9a-c926-4ee2-a3be-78a2dacce8d7';
-    $display->content['new-e542bc9a-c926-4ee2-a3be-78a2dacce8d7'] = $pane;
-    $display->panels['footer_block_4'][0] = 'new-e542bc9a-c926-4ee2-a3be-78a2dacce8d7';
     $pane = new stdClass();
     $pane->pid = 'new-5bc69160-b3d8-4d79-9cd7-5856442d8895';
     $pane->panel = 'header';
@@ -312,13 +263,13 @@ function feature_pages_default_page_manager_handlers() {
       'override_title' => 0,
       'override_title_text' => '',
       'override_title_heading' => 'h2',
-      'item_limit' => '3',
+      'item_limit' => '4',
       'items' => array(
         0 => array(
           'enabled' => 1,
           'path' => 'we_are',
           'title' => array(
-            'en' => 'We_are',
+            'en' => 'We are',
             'ru' => 'О нас',
             'uk' => 'Про нас',
           ),
@@ -344,10 +295,20 @@ function feature_pages_default_page_manager_handlers() {
           ),
           'weight' => '-10',
         ),
-        'items__active_tab' => 'edit-items-2',
+        3 => array(
+          'enabled' => 1,
+          'path' => 'car_budget',
+          'title' => array(
+            'en' => 'Car budget',
+            'ru' => 'Автомобильный бюджет',
+            'uk' => 'Автомобільний бюджет',
+          ),
+          'weight' => '-10',
+        ),
+        'items__active_tab' => 'edit-items-3',
       ),
-      'form_build_id' => 'form-BvMX_tAVEhb73t30_PzcupS4aAqHwMAlIQdyKzRlW14',
-      'form_token' => 'ul6I-Xx3_aq2LRdjFMSpNSP9ObxhdCaBQ485Ugu3fn8',
+      'form_build_id' => 'form-kEo5kMSSMo3gYqbH6CLsZAKYJRd3ND_rGAg2vzn6wIs',
+      'form_token' => 'rbYS-ahVwcwGsvgIfz7R7Rj9YAu5IFJCfPGL8D7dXnA',
       'form_id' => 'cm_cct_menu_edit_form',
       'op' => 'Finish',
     );
@@ -455,12 +416,15 @@ function feature_pages_default_page_manager_pages() {
     'relationships' => array(),
   );
   $display = new panels_display();
-  $display->layout = 'flexible';
+  $display->layout = 'single';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
       'default' => NULL,
       'center' => NULL,
+    ),
+    'center' => array(
+      'style' => 'naked',
     ),
   );
   $display->cache = array();
@@ -470,7 +434,7 @@ function feature_pages_default_page_manager_pages() {
   $display->panels = array();
     $pane = new stdClass();
     $pane->pid = 'new-9da22f39-30a9-4486-a9db-5b5a87df5f64';
-    $pane->panel = 'center';
+    $pane->panel = 'content';
     $pane->type = 'image_text';
     $pane->subtype = 'image_text';
     $pane->shown = TRUE;
@@ -514,17 +478,19 @@ function feature_pages_default_page_manager_pages() {
       'op' => 'Finish',
     );
     $pane->cache = array();
-    $pane->style = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
     $pane->uuid = '9da22f39-30a9-4486-a9db-5b5a87df5f64';
     $display->content['new-9da22f39-30a9-4486-a9db-5b5a87df5f64'] = $pane;
-    $display->panels['center'][0] = 'new-9da22f39-30a9-4486-a9db-5b5a87df5f64';
+    $display->panels['content'][0] = 'new-9da22f39-30a9-4486-a9db-5b5a87df5f64';
     $pane = new stdClass();
     $pane->pid = 'new-a3f7e7ad-6f43-45f4-89b6-6044b4bc145f';
-    $pane->panel = 'center';
+    $pane->panel = 'content';
     $pane->type = 'image';
     $pane->subtype = 'image';
     $pane->shown = TRUE;
@@ -590,44 +556,46 @@ function feature_pages_default_page_manager_pages() {
           'image' => '/sites/default/files/images/technologies/gimp.png',
           'weight' => '-10',
         ),
-        'list__active_tab' => 'edit-list-9',
+        'list__active_tab' => 'edit-list-0',
       ),
-      'list[0][image]' => '/sites/default/files/images/technologies/php-digest-6.png',
+      'list[0][image]' => '/sites/default/files/images/technologies/php.png',
       'browse' => 'Browse',
-      'list[1][image]' => '/sites/default/files/images/technologies/nginx-logo.jpg',
-      'list[2][image]' => '/sites/default/files/images/technologies/Mysql.png',
-      'list[3][image]' => '/sites/default/files/images/technologies/logo-ubuntu_st_no%C2%AE-black_orange-hex.png',
-      'list[4][image]' => '/sites/default/files/images/technologies/Linux.jpg',
-      'list[5][image]' => '/sites/default/files/images/technologies/inkscape-draw-freely-program-LOGO.png',
-      'list[6][image]' => '/sites/default/files/images/technologies/html%2C%20css.png',
+      'list[1][image]' => '/sites/default/files/images/technologies/nginx.jpg',
+      'list[2][image]' => '/sites/default/files/images/technologies/mysql.png',
+      'list[3][image]' => '/sites/default/files/images/technologies/ubuntu.png',
+      'list[4][image]' => '/sites/default/files/images/technologies/linux.jpg',
+      'list[5][image]' => '/sites/default/files/images/technologies/inkscape.png',
+      'list[6][image]' => '/sites/default/files/images/technologies/html_css.png',
       'list[7][image]' => '/sites/default/files/images/technologies/apache.png',
-      'list[8][image]' => '/sites/default/files/images/technologies/d8%204x3.png',
-      'list[9][image]' => '/sites/default/files/images/technologies/3012_gimp_2.8_logo.png',
+      'list[8][image]' => '/sites/default/files/images/technologies/d8.png',
+      'list[9][image]' => '/sites/default/files/images/technologies/gimp.png',
       'settings' => array(
         'slideWidth' => '240',
-        'minSlides' => '4',
+        'minSlides' => '2',
         'maxSlides' => '4',
         'slideMargin' => '0',
         'pager' => 0,
         'js_settings' => '',
       ),
-      'form_build_id' => 'form-Iyw7FLi8J68Z8wKaz1McGrwZryUYLT9neNLNdgap2rw',
-      'form_token' => '9g-lgpPoQZ-QdchY0o7KT8P-z6RTz1RoLGi4xbA2yHk',
+      'form_build_id' => 'form-XLqpFkhvRqDQm1ZDCYPXuADhatj7aP_BcPIDaDrUd4c',
+      'form_token' => 'WF3j8TYw1mD5lrc4JOxvNP0aNwRKrNRcfCta0OME-Ao',
       'form_id' => 'bxslider_cct_image_edit_form',
       'op' => 'Finish',
     );
     $pane->cache = array();
-    $pane->style = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
     $pane->uuid = 'a3f7e7ad-6f43-45f4-89b6-6044b4bc145f';
     $display->content['new-a3f7e7ad-6f43-45f4-89b6-6044b4bc145f'] = $pane;
-    $display->panels['center'][1] = 'new-a3f7e7ad-6f43-45f4-89b6-6044b4bc145f';
+    $display->panels['content'][1] = 'new-a3f7e7ad-6f43-45f4-89b6-6044b4bc145f';
     $pane = new stdClass();
     $pane->pid = 'new-d1afcda0-7d84-4c8f-858f-dcabcffaac29';
-    $pane->panel = 'center';
+    $pane->panel = 'content';
     $pane->type = 'image_text';
     $pane->subtype = 'image_text';
     $pane->shown = TRUE;
@@ -685,17 +653,19 @@ Among the ancient churches of Chernigiv there are the following: Assumption chur
       'op' => 'Finish',
     );
     $pane->cache = array();
-    $pane->style = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 2;
     $pane->locks = array();
     $pane->uuid = 'd1afcda0-7d84-4c8f-858f-dcabcffaac29';
     $display->content['new-d1afcda0-7d84-4c8f-858f-dcabcffaac29'] = $pane;
-    $display->panels['center'][2] = 'new-d1afcda0-7d84-4c8f-858f-dcabcffaac29';
+    $display->panels['content'][2] = 'new-d1afcda0-7d84-4c8f-858f-dcabcffaac29';
     $pane = new stdClass();
     $pane->pid = 'new-1915463f-00f2-44fe-8884-c8e38c86ebc6';
-    $pane->panel = 'center';
+    $pane->panel = 'content';
     $pane->type = 'image_text';
     $pane->subtype = 'image_text';
     $pane->shown = TRUE;
@@ -759,14 +729,16 @@ Ukraine is a member of the United Nation Organization and takes part in the work
       'op' => 'Finish',
     );
     $pane->cache = array();
-    $pane->style = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 3;
     $pane->locks = array();
     $pane->uuid = '1915463f-00f2-44fe-8884-c8e38c86ebc6';
     $display->content['new-1915463f-00f2-44fe-8884-c8e38c86ebc6'] = $pane;
-    $display->panels['center'][3] = 'new-1915463f-00f2-44fe-8884-c8e38c86ebc6';
+    $display->panels['content'][3] = 'new-1915463f-00f2-44fe-8884-c8e38c86ebc6';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -808,7 +780,7 @@ Ukraine is a member of the United Nation Organization and takes part in the work
     'relationships' => array(),
   );
   $display = new panels_display();
-  $display->layout = 'onecol';
+  $display->layout = 'single';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
@@ -823,7 +795,7 @@ Ukraine is a member of the United Nation Organization and takes part in the work
   $display->panels = array();
     $pane = new stdClass();
     $pane->pid = 'new-294adc3b-66cb-47df-9ea4-853a95d751e5';
-    $pane->panel = 'middle';
+    $pane->panel = 'content';
     $pane->type = 'image_text';
     $pane->subtype = 'image_text';
     $pane->shown = TRUE;
@@ -849,23 +821,20 @@ Ukraine is a member of the United Nation Organization and takes part in the work
       ),
       'block_text' => array(
         'en' => array(
-          'value' => 'Email: viktor.likin@gmail.com; pogodaelena@gmail.com.
-Skype: vlikin; s10061988.',
+          'value' => '<p style="text-align: justify;">Viktor:</p><p style="text-align: center;">&nbsp;</p><p>email: viktor.likin@gmail.com;</p><p>&nbsp;</p><p>phone: +38(063)8867177;</p><p>&nbsp;</p><p>Skype: vlikin;</p><p>&nbsp;</p><p style="text-align: justify;">Elena:</p><p style="text-align: center;">&nbsp;</p><p>email: pogodaelena@gmail.com;</p><p>&nbsp;</p><p>phone: +38(063)4191476;</p><p>&nbsp;</p><p>Skype: s10061988.</p>',
           'format' => 'full_html',
         ),
         'ru' => array(
-          'value' => 'Email: viktor.likin@gmail.com; pogodaelena@gmail.com.
-Skype: vlikin; s10061988.',
+          'value' => '<p style="text-align: justify;">Виктор:</p><p style="text-align: center;">&nbsp;</p><p>email: viktor.likin@gmail.com;</p><p>&nbsp;</p><p>телефон: +38(063)8867177;</p><p>&nbsp;</p><p>Skype: vlikin;</p><p>&nbsp;</p><p style="text-align: justify;">Елена:</p><p style="text-align: center;">&nbsp;</p><p>email: pogodaelena@gmail.com;</p><p>&nbsp;</p><p>телефон: +38(063)4191476;</p><p>&nbsp;</p><p>Skype: s10061988.</p>',
           'format' => 'full_html',
         ),
         'uk' => array(
-          'value' => 'Email: viktor.likin@gmail.com; pogodaelena@gmail.com.
-Skype: vlikin; s10061988.',
+          'value' => '<p style="text-align: justify;">Віктор:</p><p style="text-align: center;">&nbsp;</p><p>email: viktor.likin@gmail.com;</p><p>&nbsp;</p><p>телефон: +38(063)8867177;</p><p>&nbsp;</p><p>Skype: vlikin;</p><p>&nbsp;</p><p style="text-align: justify;">Олена:</p><p style="text-align: center;">&nbsp;</p><p>email: pogodaelena@gmail.com;</p><p>&nbsp;</p><p>телефон: +38(063)4191476;</p><p>&nbsp;</p><p>Skype: s10061988.</p>',
           'format' => 'full_html',
         ),
       ),
-      'form_build_id' => 'form-7S4XqiQTQMwwd-weSCJUbwyRuFZlW3mwjjX_29eXhvM',
-      'form_token' => 'iODV9cGlTyJRpAwXMinaJVjzdHzYi1E4mcFUQ8qYjQk',
+      'form_build_id' => 'form-J3akC0uEV_jQd5J63u616IEkQv80Y6OK6CNTbY4Sdvs',
+      'form_token' => 'f5aimW02RIkTlpKsYbwo4YaAtbvC5E1i78eAew9ayjQ',
       'form_id' => 'cm_cct_image_text_edit_form',
       'op' => 'Finish',
     );
@@ -877,10 +846,10 @@ Skype: vlikin; s10061988.',
     $pane->locks = array();
     $pane->uuid = '294adc3b-66cb-47df-9ea4-853a95d751e5';
     $display->content['new-294adc3b-66cb-47df-9ea4-853a95d751e5'] = $pane;
-    $display->panels['middle'][0] = 'new-294adc3b-66cb-47df-9ea4-853a95d751e5';
+    $display->panels['content'][0] = 'new-294adc3b-66cb-47df-9ea4-853a95d751e5';
     $pane = new stdClass();
     $pane->pid = 'new-bb194754-bf97-4492-b2a1-ffa552cc2b9b';
-    $pane->panel = 'middle';
+    $pane->panel = 'content';
     $pane->type = 'image_text';
     $pane->subtype = 'image_text';
     $pane->shown = TRUE;
@@ -906,26 +875,38 @@ Skype: vlikin; s10061988.',
       ),
       'block_text' => array(
         'en' => array(
-          'value' => 'Chernigiv Oblpotrebsoyuz
+          'value' => 'We work remotely, at the moment.
+ 
+Address of the previous office:
 
-14038, Chernigiv, Victory Avenue, 139, office 702 (04622) 7-89-22, (fax) 7-51-08, 27-14-04',
+Chernigiv Oblpotrebsoyuz
+
+14038, Chernigiv, Victory Avenue, 139, office 702.',
           'format' => 'filtered_html',
         ),
         'ru' => array(
-          'value' => 'Черниговский облпотребсоюз
+          'value' => 'На данный момент работаем удаленно. 
 
-14038,     Чернигов,   проспект Победы, 139, офис 702 (04622)   7-89-22,   (факс)  7-51-08, 27-14-04',
+Адрес предыдущего офиса:
+
+Черниговский облпотребсоюз
+
+14038,     Чернигов,   проспект Победы, 139, офис 702.',
           'format' => 'filtered_html',
         ),
         'uk' => array(
-          'value' => 'Чернігівська облспоживспілка
+          'value' => 'На даний час працюємо віддалено. 
 
-14038,     Чернігів,   проспект Перемоги, 139, офіс 702 (04622)   7-89-22,   (факс)  7-51-08, 27-14-04',
+Адреса попереднього офісу:
+
+Чернігівська облспоживспілка
+
+14038,Чернігів,проспект Перемоги, 139, офіс 702.',
           'format' => 'filtered_html',
         ),
       ),
-      'form_build_id' => 'form-jZ2tcFs-xN5p1JPnkFf0b83LNp9dBoYQ6-t65n7ZiAo',
-      'form_token' => 'iODV9cGlTyJRpAwXMinaJVjzdHzYi1E4mcFUQ8qYjQk',
+      'form_build_id' => 'form-WHfQXcY_C-XsURHW7Izy9ivE4ZJYYZyxnRdGe3nc_mg',
+      'form_token' => 'f5aimW02RIkTlpKsYbwo4YaAtbvC5E1i78eAew9ayjQ',
       'form_id' => 'cm_cct_image_text_edit_form',
       'op' => 'Finish',
     );
@@ -937,7 +918,7 @@ Skype: vlikin; s10061988.',
     $pane->locks = array();
     $pane->uuid = 'bb194754-bf97-4492-b2a1-ffa552cc2b9b';
     $display->content['new-bb194754-bf97-4492-b2a1-ffa552cc2b9b'] = $pane;
-    $display->panels['middle'][1] = 'new-bb194754-bf97-4492-b2a1-ffa552cc2b9b';
+    $display->panels['content'][1] = 'new-bb194754-bf97-4492-b2a1-ffa552cc2b9b';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
