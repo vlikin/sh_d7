@@ -13,6 +13,106 @@ function feature_pages_default_page_manager_handlers() {
   $handler = new stdClass();
   $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
   $handler->api_version = 1;
+  $handler->name = 'node_view__article';
+  $handler->task = 'node_view';
+  $handler->subtask = '';
+  $handler->handler = 'panel_context';
+  $handler->weight = 0;
+  $handler->conf = array(
+    'title' => 'Article',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => '',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'name' => 'article',
+  );
+  $display = new panels_display();
+  $display->layout = 'single';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'middle' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '';
+  $display->uuid = 'e12c9b6b-d54d-456f-a80d-c47921e9d848';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-47c57255-a79b-4f3e-a958-45d0086a7936';
+    $pane->panel = 'content';
+    $pane->type = 'node_content';
+    $pane->subtype = 'node_content';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'links' => 1,
+      'no_extras' => 1,
+      'override_title' => 1,
+      'override_title_text' => '',
+      'identifier' => '',
+      'link' => 1,
+      'leave_node_title' => 1,
+      'build_mode' => 'teaser',
+      'context' => 'argument_entity_id:node_1',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '47c57255-a79b-4f3e-a958-45d0086a7936';
+    $display->content['new-47c57255-a79b-4f3e-a958-45d0086a7936'] = $pane;
+    $display->panels['content'][0] = 'new-47c57255-a79b-4f3e-a958-45d0086a7936';
+    $pane = new stdClass();
+    $pane->pid = 'new-33ab83ab-e251-4cbd-ac8b-5a46d4520e84';
+    $pane->panel = 'content';
+    $pane->type = 'nnn';
+    $pane->subtype = 'nnn';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'buttons' => array(
+        'return' => 'Finish',
+        'cancel' => 'Cancel',
+      ),
+      'override_title' => 1,
+      'override_title_text' => 'Last notes',
+      'override_title_heading' => 'h2',
+      'form_build_id' => 'form-E2pw8Hk7bTofN3B2YcHvJFNeARn85wAk6BO9-N8JTRU',
+      'form_token' => '8fB8fdtH9rR38uPFUp3dynk-j5iY_r6PdY0fZxJjdLk',
+      'form_id' => 'cm_cct_nnn_edit_form',
+      'op' => 'Finish',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = '33ab83ab-e251-4cbd-ac8b-5a46d4520e84';
+    $display->content['new-33ab83ab-e251-4cbd-ac8b-5a46d4520e84'] = $pane;
+    $display->panels['content'][1] = 'new-33ab83ab-e251-4cbd-ac8b-5a46d4520e84';
+  $display->hide_title = PANELS_TITLE_NONE;
+  $display->title_pane = '0';
+  $handler->conf['display'] = $display;
+  $export['node_view__article'] = $handler;
+
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
   $handler->name = 'site_template__common';
   $handler->task = 'site_template';
   $handler->subtask = '';
@@ -744,6 +844,287 @@ Ukraine is a member of the United Nation Organization and takes part in the work
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
   $pages['about'] = $page;
+
+  $page = new stdClass();
+  $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
+  $page->api_version = 1;
+  $page->name = 'car_budget';
+  $page->task = 'page';
+  $page->admin_title = 'Car budget';
+  $page->admin_description = 'This is a page that describes the mobile application "Car budget"';
+  $page->path = 'car_budget';
+  $page->access = array();
+  $page->menu = array();
+  $page->arguments = array();
+  $page->conf = array(
+    'admin_paths' => FALSE,
+  );
+  $page->default_handlers = array();
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'page_car_budget__panel_context_f9842f32-8765-4066-a6b0-b667687d3e11';
+  $handler->task = 'page';
+  $handler->subtask = 'car_budget';
+  $handler->handler = 'panel_context';
+  $handler->weight = 0;
+  $handler->conf = array(
+    'title' => 'Panel',
+    'no_blocks' => 1,
+    'pipeline' => 'ipe',
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => '',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+  );
+  $display = new panels_display();
+  $display->layout = 'single';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'middle' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '';
+  $display->uuid = '14a0ffe4-4414-4606-ae10-b457e71fbb69';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-04ca5c69-ff9a-44e7-a567-b7a78afffce3';
+    $pane->panel = 'content';
+    $pane->type = 'image_text';
+    $pane->subtype = 'image_text';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'return' => 'Finish',
+      'cancel' => 'Cancel',
+      'override_title' => 0,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+      'vertical_tabs__active_tab' => 'edit-block-text',
+      'image' => array(
+        'path' => '/sites/default/files/car_budget/site_icon.png',
+        'style' => '3x4-2',
+        'side' => 'left',
+      ),
+      'image[path]' => '/sites/default/files/car_budget/site_icon.png',
+      'browse' => 'Browse',
+      'block_title' => array(
+        'en' => 'Car budget project - Hybryd mobile application',
+        'ru' => 'Автомобильный бюджет - гибридное мобильное приложение',
+        'uk' => 'Автомобільний бюджет - гібридний мобільний додаток',
+      ),
+      'block_text' => array(
+        'en' => array(
+          'value' => '<p style="text-align: justify;">Hello! The idea of the creation of this application appeared under our needs. We hope it will be useful for everyone. This project gathers fuel statistics, saves it and visualizes some analyzes. Furthermore you will calculate fuel consumption. It helps you to have own car budget! This is the mobile application, that is based on IONIC and related technologies. This is the hybrid mobile application. We hope it is the long support application. We develop this to prove that our team is able to create a such project.</p><p style="text-align: justify;">Check code on <a href="https://github.com/vlikin/car_budget" target="_blank" title="car_budget_github">Github</a>. <a href="https://docs.google.com/document/d/17sNJZM8rLPqjfdqgPdXcbV9CuBEwasf7NYrtBSO8ekQ/edit?usp=sharing">Technical description of the project</a>.</p>',
+          'format' => 'full_html',
+        ),
+        'ru' => array(
+          'value' => '<p style="text-align: justify;">Здравствуйте! Идея создания этого приложения возникла, исходя из наших потребностей. Мы надеемся, что оно будет полезным и для Вас. Этот проект собирает и сохраняет топливную статистику ваших машин, а также визуализирует анализ, основываясь на статистических данных по конкретному автомобилю. Более того Вы с его помощью посчитаете расход топлива. Это поможет Вам вести бюджет собственного автомобиля! Это мобильное приложение основывается на IONIC и связанных с ним технологиях. Это гибридное мобильное приложение. Мы надеемся, что это долгосрочно поддерживаемое приложение. Мы разрабатываем его, чтобы доказать, что наша команда способна создавать такого рода проекты.</p><p style="text-align: justify;">Смотрите код на <a href="https://github.com/vlikin/car_budget" target="_blank" title="автобольный_бюджет_на_Github">Github</a>. <a href="https://docs.google.com/document/d/17sNJZM8rLPqjfdqgPdXcbV9CuBEwasf7NYrtBSO8ekQ/edit?usp=sharing">Техническое описание проекта</a>.</p>',
+          'format' => 'full_html',
+        ),
+        'uk' => array(
+          'value' => '<p style="text-align: justify;">Вітаємо! Ідея створення цього мобільного додатку виникла для врахування наших нагальних потреб. Ми сподіваємося, що воно буде корисним і для Вас. Цей проект збирає та зберігає статистику палива ваших машин, а також візуалізує аналіз, базуючись на статистичних даних конкретного автомобіля. Більше того Ви з його допомогою порахуєте витрати палива. Це допоможе Вам вести бюджет власного авто! Цей мобільний додаток базується на IONIC та пов’язаних з ним технологіях. Це гібридний мобільний додаток. Ми сподіваємося, що це додаток, який ми будемо постійно піддтримувати. Ми розроблюємо його, щоб довести, що наша команда здатна створюавати такого роду проекти.</p><p style="text-align: justify;">Дивіться код на <a href="https://github.com/vlikin/car_budget" target="_blank" title="автомобільний_бюджет_на_Github">Github</a>. <a href="https://docs.google.com/document/d/17sNJZM8rLPqjfdqgPdXcbV9CuBEwasf7NYrtBSO8ekQ/edit?usp=sharing">Технічний опис проекту</a>.</p>',
+          'format' => 'full_html',
+        ),
+      ),
+      'form_build_id' => 'form-TyIB_MqxTkRGItCVEK4t7d82wh1_agouk1iga8SzLa4',
+      'form_token' => 'bXBNaaVhDlGp0k2qSKS_YhHRSrGYS_O0skLJoO6cMvg',
+      'form_id' => 'cm_cct_image_text_edit_form',
+      'op' => 'Finish',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '04ca5c69-ff9a-44e7-a567-b7a78afffce3';
+    $display->content['new-04ca5c69-ff9a-44e7-a567-b7a78afffce3'] = $pane;
+    $display->panels['content'][0] = 'new-04ca5c69-ff9a-44e7-a567-b7a78afffce3';
+    $pane = new stdClass();
+    $pane->pid = 'new-38b953cf-2852-4eb7-b99d-f551ac76b287';
+    $pane->panel = 'content';
+    $pane->type = 'image';
+    $pane->subtype = 'image';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'buttons' => array(
+        'return' => 'Finish',
+        'cancel' => 'Cancel',
+      ),
+      'override_title' => 0,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+      'image_style' => '4x3-4',
+      'item_limit' => '13',
+      'list' => array(
+        0 => array(
+          'enabled' => 1,
+          'image' => '/sites/default/files/car_budget/screenshots/0-menu.png',
+          'weight' => '-10',
+        ),
+        1 => array(
+          'enabled' => 1,
+          'image' => '/sites/default/files/car_budget/screenshots/1-calculator.png',
+          'weight' => '-10',
+        ),
+        2 => array(
+          'enabled' => 1,
+          'image' => '/sites/default/files/car_budget/screenshots/2-statistics.png',
+          'weight' => '-10',
+        ),
+        3 => array(
+          'enabled' => 1,
+          'image' => '/sites/default/files/car_budget/screenshots/3-chart_price.png',
+          'weight' => '-10',
+        ),
+        4 => array(
+          'enabled' => 1,
+          'image' => '/sites/default/files/car_budget/screenshots/4-usage_chart.png',
+          'weight' => '-10',
+        ),
+        5 => array(
+          'enabled' => 1,
+          'image' => '/sites/default/files/car_budget/screenshots/5-about.png',
+          'weight' => '-10',
+        ),
+        6 => array(
+          'enabled' => 1,
+          'image' => '/sites/default/files/car_budget/screenshots/6-create_car.png',
+          'weight' => '-10',
+        ),
+        7 => array(
+          'enabled' => 1,
+          'image' => '/sites/default/files/car_budget/screenshots/7-activate_car.png',
+          'weight' => '-10',
+        ),
+        8 => array(
+          'enabled' => 1,
+          'image' => '/sites/default/files/car_budget/screenshots/8-popup_create.png',
+          'weight' => '-10',
+        ),
+        9 => array(
+          'enabled' => 1,
+          'image' => '/sites/default/files/car_budget/screenshots/9-loads.png',
+          'weight' => '-10',
+        ),
+        10 => array(
+          'enabled' => 1,
+          'image' => '/sites/default/files/car_budget/screenshots/10-new_load.png',
+          'weight' => '-10',
+        ),
+        11 => array(
+          'enabled' => 1,
+          'image' => '/sites/default/files/car_budget/screenshots/11-setings.png',
+          'weight' => '-10',
+        ),
+        12 => array(
+          'enabled' => 1,
+          'image' => '/sites/default/files/car_budget/screenshots/12-languages.png',
+          'weight' => '-10',
+        ),
+        'list__active_tab' => 'edit-list-0',
+      ),
+      'list[0][image]' => '/sites/default/files/car_budget/screenshots/0-menu.png',
+      'browse' => 'Browse',
+      'list[1][image]' => '/sites/default/files/car_budget/screenshots/1-calculator.png',
+      'list[2][image]' => '/sites/default/files/car_budget/screenshots/2-statistics.png',
+      'list[3][image]' => '/sites/default/files/car_budget/screenshots/3-chart_price.png',
+      'list[4][image]' => '/sites/default/files/car_budget/screenshots/4-usage_chart.png',
+      'list[5][image]' => '/sites/default/files/car_budget/screenshots/5-about.png',
+      'list[6][image]' => '/sites/default/files/car_budget/screenshots/6-create_car.png',
+      'list[7][image]' => '/sites/default/files/car_budget/screenshots/7-activate_car.png',
+      'list[8][image]' => '/sites/default/files/car_budget/screenshots/8-popup_create.png',
+      'list[9][image]' => '/sites/default/files/car_budget/screenshots/9-loads.png',
+      'list[10][image]' => '/sites/default/files/car_budget/screenshots/10-new_load.png',
+      'list[11][image]' => '/sites/default/files/car_budget/screenshots/11-setings.png',
+      'list[12][image]' => '/sites/default/files/car_budget/screenshots/12-languages.png',
+      'settings' => array(
+        'slideWidth' => '240',
+        'minSlides' => '2',
+        'maxSlides' => '4',
+        'slideMargin' => '10',
+        'pager' => 0,
+        'js_settings' => '{"mode": "horizontal", "controls": "false", "auto": "true"}',
+      ),
+      'form_build_id' => 'form-OR9F-Iy0caf5dY1n32khusOdkVFYwE6LR38hRtRpLus',
+      'form_token' => 'hFeKzpBglaLaqLphFYU3UnzI-OtIDxyuPeIs6FZvFgc',
+      'form_id' => 'bxslider_cct_image_edit_form',
+      'op' => 'Finish',
+    );
+    $pane->cache = array();
+    $pane->style = array();
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = '38b953cf-2852-4eb7-b99d-f551ac76b287';
+    $display->content['new-38b953cf-2852-4eb7-b99d-f551ac76b287'] = $pane;
+    $display->panels['content'][1] = 'new-38b953cf-2852-4eb7-b99d-f551ac76b287';
+    $pane = new stdClass();
+    $pane->pid = 'new-8b0567e1-9dfa-47c7-8548-df93f80fb41e';
+    $pane->panel = 'content';
+    $pane->type = 'text';
+    $pane->subtype = 'text';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'buttons' => array(
+        'return' => 'Finish',
+        'cancel' => 'Cancel',
+      ),
+      'override_title' => 0,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+      'vertical_tabs' => array(
+        'vertical_tabs__active_tab' => 'edit-uk',
+      ),
+      'en' => array(
+        'text' => array(
+          'value' => '<p style="text-align: center;">&nbsp;</p><p style="text-align: center;">&nbsp;</p><p style="text-align: center;"><a href="/sites/default/files/car_budget/releases/MainActivity-debug.apk" class="button"><strong>Download Car Budget v0.0.1 Android application</strong></a></p><p style="text-align: center;">&nbsp;</p><p style="text-align: center;">&nbsp;</p>',
+          'format' => 'full_html',
+        ),
+      ),
+      'ru' => array(
+        'text' => array(
+          'value' => '<p style="text-align: center;">&nbsp;</p><p style="text-align: center;">&nbsp;</p><p style="text-align: center;"><a href="/sites/default/files/car_budget/releases/car_budget-0.0.1.apk" class="button"><strong>Загрузить Автомобильный Бюджет v0.0.1 под Android<br></strong></a></p><p style="text-align: center;">&nbsp;</p><p style="text-align: center;">&nbsp;</p>',
+          'format' => 'full_html',
+        ),
+      ),
+      'uk' => array(
+        'text' => array(
+          'value' => '<p style="text-align: center;">&nbsp;</p><p style="text-align: center;">&nbsp;</p><p style="text-align: center;"><a href="/sites/default/files/car_budget/releases/car_budget-0.0.1.apk" class="button"><strong>Завантажити додаток Автомобільний Бюджет v0.0.1 під Андроїд</strong></a></p><p style="text-align: center;">&nbsp;</p><p style="text-align: center;">&nbsp;</p><p style="text-align: center;">&nbsp;</p><p style="text-align: center;">&nbsp;</p>',
+          'format' => 'full_html',
+        ),
+      ),
+      'form_build_id' => 'form-GxAniZJqXmGF2gqyqp_zhZ0KGgM0yU9DstHQu2YV9rA',
+      'form_token' => '4f5xgDbQolTOKBu4ynYeOvdDTnMbPi_3VKqPLsmcz98',
+      'form_id' => 'cm_cct_text_edit_form',
+      'op' => 'Finish',
+    );
+    $pane->cache = array();
+    $pane->style = array();
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 2;
+    $pane->locks = array();
+    $pane->uuid = '8b0567e1-9dfa-47c7-8548-df93f80fb41e';
+    $display->content['new-8b0567e1-9dfa-47c7-8548-df93f80fb41e'] = $pane;
+    $display->panels['content'][2] = 'new-8b0567e1-9dfa-47c7-8548-df93f80fb41e';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = 'new-04ca5c69-ff9a-44e7-a567-b7a78afffce3';
+  $handler->conf['display'] = $display;
+  $page->default_handlers[$handler->name] = $handler;
+  $pages['car_budget'] = $page;
 
   $page = new stdClass();
   $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
