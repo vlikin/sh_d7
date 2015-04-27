@@ -96,7 +96,7 @@ function bxslider_cct_image_edit_form($form, &$form_state) {
       ),
       'weight' => array (
         '#type' => 'weight',
-        '#default_value' => $values['list'][$i]['weight'],
+        '#default_value' => $values['list'][$i]['weight'] ? $values['list'][$i]['weight'] : 0,
       ),
     );
   }
@@ -113,4 +113,7 @@ function bxslider_cct_image_edit_form_submit($form, &$form_state) {
   foreach ($keys as $key) {
     $form_state['conf'][$key] = $form_state['values'][$key];
   }
+  unset($form_state['conf']['list']['list__active_tab']);
+  uasort($form_state['conf']['list'], 'drupal_sort_weight');
+  $form_state['conf']['list'] = array_values($form_state['conf']['list']);
 }
