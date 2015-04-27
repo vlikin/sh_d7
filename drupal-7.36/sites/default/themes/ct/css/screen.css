@@ -90,6 +90,54 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   z-index: 300;
 }
 
+/* line 19, ../sass/partial/_base.scss */
+ul.primary.tabs {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  border: none;
+  padding: 0px;
+}
+/* line 24, ../sass/partial/_base.scss */
+ul.primary.tabs li {
+  float: left;
+  background: #3f7fff;
+  color: #050117;
+  padding: 10px;
+}
+/* line 30, ../sass/partial/_base.scss */
+ul.primary.tabs li:first-child {
+  -moz-border-radius-topleft: 10px;
+  -webkit-border-top-left-radius: 10px;
+  border-top-left-radius: 10px;
+  -moz-border-radius-bottomleft: 10px;
+  -webkit-border-bottom-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+/* line 34, ../sass/partial/_base.scss */
+ul.primary.tabs li:last-child {
+  -moz-border-radius-topright: 10px;
+  -webkit-border-top-right-radius: 10px;
+  border-top-right-radius: 10px;
+  -moz-border-radius-bottomright: 10px;
+  -webkit-border-bottom-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+/* line 38, ../sass/partial/_base.scss */
+ul.primary.tabs li.active, ul.primary.tabs li:hover {
+  background: #a5c3ff;
+  color: #2f0ada;
+}
+/* line 46, ../sass/partial/_base.scss */
+ul.primary.tabs li a {
+  background: transparent;
+  border: 0;
+  color: #050117;
+  padding: 0;
+}
+
 /* line 1, ../sass/partial/cct/cm/_image_text.scss */
 .cm_cct_image_text {
   display: inline-block;

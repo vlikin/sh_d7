@@ -15,3 +15,40 @@
 .bx-wrapper .bx-controls-direction a {
   z-index: 300;
 }
+
+ul.primary.tabs {
+  @include inline-block;
+  border: none;
+  padding: 0px;
+
+  li {
+    float: left;
+    background: adjust-lightness($p3-color, 20);
+    color: $p2-color;
+    padding: $padding;
+
+    &:first-child {
+      @include border-left-radius;
+    }
+
+    &:last-child {
+      @include border-right-radius;
+    }
+
+    &.active, &:hover {
+      background: adjust-lightness($p3-color, 40);
+      color: adjust-lightness($p2-color, 40);
+
+      a {
+      }
+    }
+
+    a {
+      background: transparent;
+      border: 0;
+      color: $p2-color;
+      padding: 0;
+    }
+    
+  }
+}
