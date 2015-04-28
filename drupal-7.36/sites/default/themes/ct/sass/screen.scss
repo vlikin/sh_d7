@@ -16,9 +16,9 @@
 @import "partial/page/car_budget";
 
 #page {
-  //@include cell {
-  //  width: 480px;
-  //}
+  @include cell {
+    width: 100%;
+  }
 
   width: 960px;
   margin: 0 auto;
@@ -100,22 +100,23 @@
   }
 
   >footer {
-    @include cell {
-      width: 480px;
-    }
-
     @include inline-block;
-    width: 960px;
-    min-height: 100px;
+    width: grid(960);
+    min-height: grid(100);
     color: $p1-color;
     background: $p2-color;
     text-align: left;
 
     >.col {
+      box-sizing: border-box;
       float: left;
-      min-height: 100px;
-      width: 240px - 2 * $padding;
+      min-height: grid(100);
+      width: grid(240);
       padding: $padding;
+
+      @include cell {
+        width: grid(480);
+      }
     }
   }
 

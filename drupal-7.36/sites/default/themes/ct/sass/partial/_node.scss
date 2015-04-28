@@ -1,20 +1,16 @@
 .node.node-article {
   @include inline-block;
-  @include cell {
-    width: 480px;
-  }
-
-
 
   .image-container {
     float: left;
-    width: 480px;
+    width: grid(480);
   }
 
   .text-container {
+    box-sizing: border-box;
     float: left;
     padding: $padding;
-    width: 480px - 2 * $padding;
+    width: grid(480);
 
     >h2 {
       font-size: $bigger-font-size;

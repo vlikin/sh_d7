@@ -1,27 +1,44 @@
 .cm_cct_image_text {
-  @include cell {
-    width: 480px;
-  }
-
   @include inline-block;
-  width: 960px;
+
+  width: grid(960);
   clear: both;
   .image {
-    width: 480px;
+    box-sizing: border-box;
+    width: grid(480);
     float: left;
+
+    >img {
+      width: 100%;
+      height: auto;
+    }
+
+    @include cell {
+      width: grid(960);
+    }
   }
   .title {
+    box-sizing: border-box;
     font-weight: bold;
     font-size: $big-font-size;
     padding: $padding;
-    width: 480px - 2 * $padding;
+    width: grid(480);
     float: left;
+
+    @include cell {
+      width: grid(960);
+    }
   }
   .text {
+    box-sizing: border-box;
     padding: $padding;
     text-align: justify;
-    width: 480px - 2 * $padding;
+    width: grid(480);
     float: left;
+
+    @include cell {
+      width: grid(960);
+    }
   }
 
   &.right {

@@ -3,3 +3,7 @@
     @content;
   }
 }
+
+@function grid($value){
+  @return percentage($value / 960);
+}
