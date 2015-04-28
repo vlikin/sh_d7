@@ -4,6 +4,15 @@
   .image-container {
     float: left;
     width: grid(480);
+
+    @include cell {
+      width: grid(960);
+
+      img {
+        width: grid(960);
+        height: auto;
+      }
+    }
   }
 
   .text-container {
@@ -11,6 +20,10 @@
     float: left;
     padding: $padding;
     width: grid(480);
+
+    @include cell {
+      width: grid(960);
+    }
 
     >h2 {
       font-size: $bigger-font-size;

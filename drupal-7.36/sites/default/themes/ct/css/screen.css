@@ -297,30 +297,47 @@ input[type=button]:hover, input[type=submit]:hover {
   float: left;
   width: 50%;
 }
-/* line 9, ../sass/partial/_node.scss */
+@media all and (max-width: 600px) {
+  /* line 4, ../sass/partial/_node.scss */
+  .node.node-article .image-container {
+    width: 100%;
+  }
+  /* line 11, ../sass/partial/_node.scss */
+  .node.node-article .image-container img {
+    width: 100%;
+    height: auto;
+  }
+}
+/* line 18, ../sass/partial/_node.scss */
 .node.node-article .text-container {
   box-sizing: border-box;
   float: left;
   padding: 10px;
   width: 50%;
 }
-/* line 15, ../sass/partial/_node.scss */
+@media all and (max-width: 600px) {
+  /* line 18, ../sass/partial/_node.scss */
+  .node.node-article .text-container {
+    width: 100%;
+  }
+}
+/* line 28, ../sass/partial/_node.scss */
 .node.node-article .text-container > h2 {
   font-size: 1.1em;
   font-weight: bold;
   padding-bottom: 10px;
 }
-/* line 21, ../sass/partial/_node.scss */
+/* line 34, ../sass/partial/_node.scss */
 .node.node-article .text-container > .submitted {
   color: #1a0579;
   font-size: 0.9em;
   padding: 10px;
 }
-/* line 29, ../sass/partial/_node.scss */
+/* line 42, ../sass/partial/_node.scss */
 .node.node-article:nth-child(2n) .image-container {
   float: right;
 }
-/* line 33, ../sass/partial/_node.scss */
+/* line 46, ../sass/partial/_node.scss */
 .node.node-article:nth-child(2n) .text-container {
   float: right;
 }

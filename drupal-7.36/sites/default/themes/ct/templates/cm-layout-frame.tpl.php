@@ -3,6 +3,7 @@
  * @file It overrides a base template
  */
 ?>
+<meta name=viewport content="width=device-width, initial-scale=1">
 <div id="<?= $css_id ?>">
   <header>
     <div colspan="8"><?= $content['header'] ?></div>
