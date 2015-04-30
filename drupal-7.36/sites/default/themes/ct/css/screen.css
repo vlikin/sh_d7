@@ -308,7 +308,14 @@ input[type=button]:hover, input[type=submit]:hover {
     height: auto;
   }
 }
-/* line 18, ../sass/partial/_node.scss */
+@media all and (min-width: 601px) and (max-width: 959px) {
+  /* line 18, ../sass/partial/_node.scss */
+  .node.node-article .image-container img {
+    width: 100%;
+    height: auto;
+  }
+}
+/* line 25, ../sass/partial/_node.scss */
 .node.node-article .text-container {
   box-sizing: border-box;
   float: left;
@@ -316,28 +323,28 @@ input[type=button]:hover, input[type=submit]:hover {
   width: 50%;
 }
 @media all and (max-width: 600px) {
-  /* line 18, ../sass/partial/_node.scss */
+  /* line 25, ../sass/partial/_node.scss */
   .node.node-article .text-container {
     width: 100%;
   }
 }
-/* line 28, ../sass/partial/_node.scss */
+/* line 35, ../sass/partial/_node.scss */
 .node.node-article .text-container > h2 {
   font-size: 1.1em;
   font-weight: bold;
   padding-bottom: 10px;
 }
-/* line 34, ../sass/partial/_node.scss */
+/* line 41, ../sass/partial/_node.scss */
 .node.node-article .text-container > .submitted {
   color: #1a0579;
   font-size: 0.9em;
   padding: 10px;
 }
-/* line 42, ../sass/partial/_node.scss */
+/* line 49, ../sass/partial/_node.scss */
 .node.node-article:nth-child(2n) .image-container {
   float: right;
 }
-/* line 46, ../sass/partial/_node.scss */
+/* line 53, ../sass/partial/_node.scss */
 .node.node-article:nth-child(2n) .text-container {
   float: right;
 }
@@ -379,13 +386,19 @@ body.page-car-budget .bx-wrapper .bx-viewport {
     width: 100%;
   }
 }
-/* line 26, ../sass/screen.scss */
+@media all and (min-width: 601px) and (max-width: 959px) {
+  /* line 18, ../sass/screen.scss */
+  #page {
+    width: 100%;
+  }
+}
+/* line 30, ../sass/screen.scss */
 #page > header {
   background: #0048D8;
   height: 130px;
   position: relative;
 }
-/* line 31, ../sass/screen.scss */
+/* line 35, ../sass/screen.scss */
 #page > header .cm_cct_logo {
   display: inline-block;
   vertical-align: middle;
@@ -396,12 +409,12 @@ body.page-car-budget .bx-wrapper .bx-viewport {
   width: 400px;
   margin: 15px;
 }
-/* line 37, ../sass/screen.scss */
+/* line 41, ../sass/screen.scss */
 #page > header .cm_cct_logo > .image {
   float: left;
   width: 100px;
 }
-/* line 42, ../sass/screen.scss */
+/* line 46, ../sass/screen.scss */
 #page > header .cm_cct_logo > .site_name {
   font-size: 1.3em;
   font-weight: bolder;
@@ -410,14 +423,14 @@ body.page-car-budget .bx-wrapper .bx-viewport {
   padding-top: 30px;
   width: 300px;
 }
-/* line 51, ../sass/screen.scss */
+/* line 55, ../sass/screen.scss */
 #page > header .cm_cct_logo > .site_slogan {
   font-size: 0.9em;
   float: left;
   height: 50px;
   width: 300px;
 }
-/* line 59, ../sass/screen.scss */
+/* line 63, ../sass/screen.scss */
 #page > header .cm_cct_menu, #page > header .language-switcher-locale-url {
   display: inline-block;
   vertical-align: middle;
@@ -433,21 +446,21 @@ body.page-car-budget .bx-wrapper .bx-viewport {
   padding: 10px;
   position: absolute;
 }
-/* line 69, ../sass/screen.scss */
+/* line 73, ../sass/screen.scss */
 #page > header .cm_cct_menu a, #page > header .language-switcher-locale-url a {
   color: #050117;
   margin-right: 10px;
   text-decoration: none;
 }
-/* line 74, ../sass/screen.scss */
+/* line 78, ../sass/screen.scss */
 #page > header .cm_cct_menu a:last-child, #page > header .language-switcher-locale-url a:last-child {
   margin: 0;
 }
-/* line 78, ../sass/screen.scss */
+/* line 82, ../sass/screen.scss */
 #page > header .cm_cct_menu a:hover, #page > header .language-switcher-locale-url a:hover, #page > header .cm_cct_menu a.active, #page > header .language-switcher-locale-url a.active {
   color: #F6FFF2;
 }
-/* line 84, ../sass/screen.scss */
+/* line 88, ../sass/screen.scss */
 #page > header .language-switcher-locale-url {
   -moz-border-radius-topleft: 0;
   -webkit-border-top-left-radius: 0;
@@ -458,7 +471,7 @@ body.page-car-budget .bx-wrapper .bx-viewport {
   bottom: auto;
   top: 0;
 }
-/* line 91, ../sass/screen.scss */
+/* line 95, ../sass/screen.scss */
 #page > header .language-switcher-locale-url li {
   display: inline-block;
   vertical-align: middle;
@@ -466,12 +479,12 @@ body.page-car-budget .bx-wrapper .bx-viewport {
   *zoom: 1;
   *display: inline;
 }
-/* line 97, ../sass/screen.scss */
+/* line 101, ../sass/screen.scss */
 #page > main {
   background: #F6FFF2;
   min-height: 200px;
 }
-/* line 102, ../sass/screen.scss */
+/* line 106, ../sass/screen.scss */
 #page > footer {
   display: inline-block;
   vertical-align: middle;
@@ -484,7 +497,7 @@ body.page-car-budget .bx-wrapper .bx-viewport {
   background: #050117;
   text-align: left;
 }
-/* line 110, ../sass/screen.scss */
+/* line 114, ../sass/screen.scss */
 #page > footer > .col {
   box-sizing: border-box;
   float: left;
@@ -493,12 +506,12 @@ body.page-car-budget .bx-wrapper .bx-viewport {
   padding: 10px;
 }
 @media all and (max-width: 600px) {
-  /* line 110, ../sass/screen.scss */
+  /* line 114, ../sass/screen.scss */
   #page > footer > .col {
     width: 50%;
   }
 }
-/* line 123, ../sass/screen.scss */
+/* line 127, ../sass/screen.scss */
 #page div.copyright {
   color: #F6FFF2;
   background: #050117;

@@ -20,6 +20,10 @@
     width: 100%;
   }
 
+  @include tablet {
+    width: 100%;
+  }
+
   width: 960px;
   margin: 0 auto;
 
