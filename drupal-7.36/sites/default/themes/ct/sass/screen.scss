@@ -29,34 +29,42 @@
 
   >header {
     background: $p3-color;
-    min-height: 130px;
+    min-height: $padding;
     position: relative;
 
     .cm_cct_logo {
       @include inline-block;
+      box-sizing: border-box;
       color: $p1-color;
-      width: 400px;
-      margin: 15px;
+      width: grid(480);
+      padding: $padding;
 
       >.image {
         float: left;
-        width: 100px;
+        width: grid(200);
+
+        img {
+          width: 100%;
+          height: auto;
+        }
       }
 
       >.site_name {
         font-size: $biggest-font-size;
         font-weight: bolder;
         float: left;
-        height: 50px - 30px;
-        padding-top: 30px;
-        width: 300px;
+        width: grid(740);
+        padding-top: grid(60);
       }
 
       >.site_slogan {
         font-size: $smaller-font-size;
         float: left;
-        height:50px;
-        width: 300px;
+        width: grid(740);
+      }
+
+      @include cell {
+        width: grid(960);
       }
     }
 
@@ -65,9 +73,6 @@
       @include border-top-left-radius;
 
       background:  adjust-lightness($p3-color, 20);
-      background-image: url('/misc/menu-collapsed.png');
-      background-repeat: no-repeat;
-      background-position: ($padding * 2) ($padding);
       bottom: 0;
       right: 0;
       padding: $padding;
@@ -75,6 +80,10 @@
 
       @include cell {
         @include border-radius(0);
+
+        background-image: url('/misc/menu-collapsed.png');
+        background-repeat: no-repeat;
+        background-position: ($padding * 2) ($padding);
         display: block;
         padding-left: $padding * 3;
         position: relative;
@@ -147,7 +156,7 @@
 
   >main {
     background: $p1-color;
-    min-height: 200px;
+    min-height: $padding;
   }
 
   >footer {
