@@ -5,6 +5,7 @@
 
 @import "compass/reset";
 @import "partial/variable";
+@import "partial/mixin";
 @import "compass";
 @import "partial/media";
 @import "partial/base";
@@ -81,15 +82,22 @@
       @include cell {
         @include border-radius(0);
 
-        background-image: url('/misc/menu-collapsed.png');
-        background-repeat: no-repeat;
-        background-position: ($padding * 2) ($padding);
+        cursor: pointer;
         display: block;
         padding-left: $padding * 3;
+        @include ionic-icon("\f10a", adjust-lightness($p3-color, -20), $biggest-font-size);
+        &:before {
+          padding: $padding * 2 / 3;
+          position: absolute;
+          left: 0 ;
+          top: 0;
+        }
         position: relative;
 
         &.show {
-          background-image: url('/misc/menu-expanded.png');
+          &:before {
+            content: "\f104";
+          }
           a {
             display: block;
           }
@@ -137,7 +145,6 @@
         position: relative;
 
         &.show {
-          background-image: url('/misc/menu-expanded.png');
           li {
             display: block;
           }
@@ -187,3 +194,13 @@
   }
 }
 
+.back_to_top {
+  cursor: pointer;
+  display: none;
+  position: fixed;
+  right: $padding;
+  bottom: $padding;
+  opacity: 0.8;
+
+  @include ionic-icon("\f10d", adjust-lightness($p3-color, -20), $biggest-font-size * 4);
+}
