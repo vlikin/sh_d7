@@ -1,0 +1,39 @@
+.cm_cct_map_text {
+  @include inline-block;
+
+  width: grid(960);
+  clear: both;
+
+  .map {
+    background: green;
+    box-sizing: border-box;
+    width: grid(480);
+    height: 300px;
+    float: left;
+
+    @include cell {
+      width: grid(960);
+    }
+  }
+
+  .text {
+    box-sizing: border-box;
+    padding: $padding;
+    text-align: justify;
+    width: grid(480);
+    float: left;
+
+    @include cell {
+      width: grid(960);
+    }
+  }
+
+  &.right {
+    .map {
+      float: right;
+    }
+    .text {
+      float: right;
+    }
+  }
+}
