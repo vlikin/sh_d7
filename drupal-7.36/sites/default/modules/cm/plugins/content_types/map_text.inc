@@ -88,6 +88,15 @@ function cm_cct_map_text_edit_form($form, &$form_state) {
   hide($form['override_title_markup']);
 
   $form['#tree'] = TRUE;
+  $form['#attached'] = [
+    'js' => [
+      [
+        'data' => 'https://maps.googleapis.com/maps/api/js?callback=Drupal.behaviors.cm_cct_map_text.attach',
+        'type' => 'external'
+      ],
+      drupal_get_path('module', 'cm') . '/js/cct/map_text.js'
+    ]
+  ];
   $form['settings'] = [
     '#type' => 'fieldset',
     '#title' => t('Image'),
