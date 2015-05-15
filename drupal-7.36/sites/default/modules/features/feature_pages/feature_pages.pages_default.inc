@@ -257,7 +257,7 @@ function feature_pages_default_page_manager_handlers() {
     $pane->configuration = array(
       'admin_title' => '',
       'title' => '',
-      'body' => '<p><img src="/sites/default/files/images/technologies/d8.png" height="183" width="240"></p>',
+      'body' => '<p><img src="/sites/default/files/images/technologies/d8.png" class="cell-img" height="183" width="240"></p>',
       'format' => 'full_html',
       'substitute' => 1,
     );
@@ -349,6 +349,52 @@ function feature_pages_default_page_manager_handlers() {
     $display->content['new-5bc69160-b3d8-4d79-9cd7-5856442d8895'] = $pane;
     $display->panels['header'][0] = 'new-5bc69160-b3d8-4d79-9cd7-5856442d8895';
     $pane = new stdClass();
+    $pane->pid = 'new-6b1839ae-2ce1-4dc7-a849-64f984723f96';
+    $pane->panel = 'header';
+    $pane->type = 'logo';
+    $pane->subtype = 'logo';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'return' => 'Finish',
+      'cancel' => 'Cancel',
+      'override_title' => 0,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+      'vertical_tabs__active_tab' => 'edit-site-slogan',
+      'image' => array(
+        'path' => '/sites/default/files/images/logo.png',
+        'style' => 'thumbnail',
+      ),
+      'image[path]' => '',
+      'browse' => 'Browse',
+      'site_name' => array(
+        'en' => 'Shelepen',
+        'ru' => 'Шелепень',
+        'uk' => 'Шелепень',
+      ),
+      'site_slogan' => array(
+        'en' => 'A Rough Road Leads to the Stars',
+        'ru' => 'Путь к звёздам лежит через тернии',
+        'uk' => 'Тернистий шлях веде до зірок',
+      ),
+      'form_build_id' => 'form-j8N6Jc639gLiAE783qX2L98LmqeGqVLqigDsKp2UCho',
+      'form_token' => 'Bev4AukodxUdXRA36Sd8roAewUGuqXkYjz-jYATDWyc',
+      'form_id' => 'cm_cct_logo_edit_form',
+      'op' => 'Finish',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = '6b1839ae-2ce1-4dc7-a849-64f984723f96';
+    $display->content['new-6b1839ae-2ce1-4dc7-a849-64f984723f96'] = $pane;
+    $display->panels['header'][1] = 'new-6b1839ae-2ce1-4dc7-a849-64f984723f96';
+    $pane = new stdClass();
     $pane->pid = 'new-70f2264d-ded3-4727-8b86-084b8a01d3a4';
     $pane->panel = 'header';
     $pane->type = 'menu';
@@ -400,62 +446,16 @@ function feature_pages_default_page_manager_handlers() {
           'path' => 'car_budget',
           'title' => array(
             'en' => 'Car budget',
-            'ru' => 'Автомобильный бюджет',
-            'uk' => 'Автомобільний бюджет',
+            'ru' => 'Авто бюджет',
+            'uk' => 'Авто бюджет',
           ),
           'weight' => '-10',
         ),
         'items__active_tab' => 'edit-items-3',
       ),
-      'form_build_id' => 'form-kEo5kMSSMo3gYqbH6CLsZAKYJRd3ND_rGAg2vzn6wIs',
-      'form_token' => 'rbYS-ahVwcwGsvgIfz7R7Rj9YAu5IFJCfPGL8D7dXnA',
+      'form_build_id' => 'form-pp0G2kET0wYoBofmpg6_tGtedXHO7tIArvCdqA4wq08',
+      'form_token' => 'jAa-Q_gNyQ6EEhrl1-Ld4FwPdJowjJU5esBWntd0zI8',
       'form_id' => 'cm_cct_menu_edit_form',
-      'op' => 'Finish',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 1;
-    $pane->locks = array();
-    $pane->uuid = '70f2264d-ded3-4727-8b86-084b8a01d3a4';
-    $display->content['new-70f2264d-ded3-4727-8b86-084b8a01d3a4'] = $pane;
-    $display->panels['header'][1] = 'new-70f2264d-ded3-4727-8b86-084b8a01d3a4';
-    $pane = new stdClass();
-    $pane->pid = 'new-6b1839ae-2ce1-4dc7-a849-64f984723f96';
-    $pane->panel = 'header';
-    $pane->type = 'logo';
-    $pane->subtype = 'logo';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'return' => 'Finish',
-      'cancel' => 'Cancel',
-      'override_title' => 0,
-      'override_title_text' => '',
-      'override_title_heading' => 'h2',
-      'vertical_tabs__active_tab' => 'edit-site-slogan',
-      'image' => array(
-        'path' => '/sites/default/files/images/logo.png',
-        'style' => 'thumbnail',
-      ),
-      'image[path]' => '',
-      'browse' => 'Browse',
-      'site_name' => array(
-        'en' => 'Shelepen',
-        'ru' => 'Шелепень',
-        'uk' => 'Шелепень',
-      ),
-      'site_slogan' => array(
-        'en' => 'A Rough Road Leads to the Stars',
-        'ru' => 'Путь к звёздам лежит через тернии',
-        'uk' => 'Тернистий шлях веде до зірок',
-      ),
-      'form_build_id' => 'form-j8N6Jc639gLiAE783qX2L98LmqeGqVLqigDsKp2UCho',
-      'form_token' => 'Bev4AukodxUdXRA36Sd8roAewUGuqXkYjz-jYATDWyc',
-      'form_id' => 'cm_cct_logo_edit_form',
       'op' => 'Finish',
     );
     $pane->cache = array();
@@ -466,9 +466,9 @@ function feature_pages_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 2;
     $pane->locks = array();
-    $pane->uuid = '6b1839ae-2ce1-4dc7-a849-64f984723f96';
-    $display->content['new-6b1839ae-2ce1-4dc7-a849-64f984723f96'] = $pane;
-    $display->panels['header'][2] = 'new-6b1839ae-2ce1-4dc7-a849-64f984723f96';
+    $pane->uuid = '70f2264d-ded3-4727-8b86-084b8a01d3a4';
+    $display->content['new-70f2264d-ded3-4727-8b86-084b8a01d3a4'] = $pane;
+    $display->panels['header'][2] = 'new-70f2264d-ded3-4727-8b86-084b8a01d3a4';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -1207,66 +1207,62 @@ Ukraine is a member of the United Nation Organization and takes part in the work
     $display->content['new-294adc3b-66cb-47df-9ea4-853a95d751e5'] = $pane;
     $display->panels['content'][0] = 'new-294adc3b-66cb-47df-9ea4-853a95d751e5';
     $pane = new stdClass();
-    $pane->pid = 'new-bb194754-bf97-4492-b2a1-ffa552cc2b9b';
+    $pane->pid = 'new-d690e690-4862-48a4-8adc-aa8c3e855926';
     $pane->panel = 'content';
-    $pane->type = 'image_text';
-    $pane->subtype = 'image_text';
+    $pane->type = 'map_text';
+    $pane->subtype = 'map_text';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'return' => 'Finish',
-      'cancel' => 'Cancel',
+      'buttons' => array(
+        'return' => 'Finish',
+        'cancel' => 'Cancel',
+      ),
       'override_title' => 0,
       'override_title_text' => '',
       'override_title_heading' => 'h2',
-      'vertical_tabs__active_tab' => 'edit-block-text',
-      'image' => array(
-        'path' => '/sites/default/files/images/google_map_oficce.png',
-        'style' => '3x4-2',
+      'settings' => array(
+        'zoom' => '12',
+        'lat' => '51.5014184',
+        'lng' => '31.310354',
+        'marker' => '/sites/default/files/images/logo.png',
         'side' => 'right',
       ),
-      'image[path]' => '/sites/default/files/images/google_map_oficce.png',
+      'settings[marker]' => '/sites/default/files/images/logo.png',
       'browse' => 'Browse',
-      'block_title' => array(
-        'en' => 'How to find us?',
-        'ru' => 'Как нас найти?',
-        'uk' => 'Як нас знайти?',
+      'vertical_tabs' => array(
+        'vertical_tabs__active_tab' => 'edit-en',
       ),
-      'block_text' => array(
-        'en' => array(
+      'en' => array(
+        'text' => array(
           'value' => 'We work remotely, at the moment.
- 
 Address of the previous office:
-
 Chernigiv Oblpotrebsoyuz
-
 14038, Chernigiv, Victory Avenue, 139, office 702.',
           'format' => 'filtered_html',
         ),
-        'ru' => array(
-          'value' => 'На данный момент работаем удаленно. 
-
+      ),
+      'ru' => array(
+        'text' => array(
+          'value' => 'На данный момент работаем удаленно.
 Адрес предыдущего офиса:
-
 Черниговский облпотребсоюз
-
-14038,     Чернигов,   проспект Победы, 139, офис 702.',
+14038, Чернигов, проспект Победы, 139, офис 702.',
           'format' => 'filtered_html',
         ),
-        'uk' => array(
-          'value' => 'На даний час працюємо віддалено. 
-
+      ),
+      'uk' => array(
+        'text' => array(
+          'value' => 'На даний час працюємо віддалено.
 Адреса попереднього офісу:
-
 Чернігівська облспоживспілка
-
 14038,Чернігів,проспект Перемоги, 139, офіс 702.',
           'format' => 'filtered_html',
         ),
       ),
-      'form_build_id' => 'form-WHfQXcY_C-XsURHW7Izy9ivE4ZJYYZyxnRdGe3nc_mg',
-      'form_token' => 'f5aimW02RIkTlpKsYbwo4YaAtbvC5E1i78eAew9ayjQ',
-      'form_id' => 'cm_cct_image_text_edit_form',
+      'form_build_id' => 'form-sX_NY4tGv1aOvfqlvpxi5sS1tQpWJnxlQPn-GaUBDE8',
+      'form_token' => '-FN68QkSMXWqmi_La07edUVoMCOG_n86UVE3wOOZAzg',
+      'form_id' => 'cm_cct_map_text_edit_form',
       'op' => 'Finish',
     );
     $pane->cache = array();
@@ -1275,9 +1271,9 @@ Chernigiv Oblpotrebsoyuz
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $pane->uuid = 'bb194754-bf97-4492-b2a1-ffa552cc2b9b';
-    $display->content['new-bb194754-bf97-4492-b2a1-ffa552cc2b9b'] = $pane;
-    $display->panels['content'][1] = 'new-bb194754-bf97-4492-b2a1-ffa552cc2b9b';
+    $pane->uuid = 'd690e690-4862-48a4-8adc-aa8c3e855926';
+    $display->content['new-d690e690-4862-48a4-8adc-aa8c3e855926'] = $pane;
+    $display->panels['content'][1] = 'new-d690e690-4862-48a4-8adc-aa8c3e855926';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
