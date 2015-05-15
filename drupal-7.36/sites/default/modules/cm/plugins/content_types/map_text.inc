@@ -8,8 +8,8 @@
  * by the system that includes this file.
  */
 $plugin = array (
-  'title' => t('Map'),
-  'description' => t('It is the multilingual text box.'),
+  'title' => t('Map text'),
+  'description' => t('It is the multilingual Map -Text box.'),
   'single' => FALSE,
   'cct' => array('cm_cct_map_text'),
   'render callback' => 'cm_cct_map_text_render',
@@ -34,9 +34,6 @@ function cm_cct_map_text_render($subtype, $conf, $args, $context) {
         'cm_cct_map_text',
         $conf['settings']['side']
       ],
-      'data-lat' => floatval($conf['settings']['lat']),
-      'data-lng' => floatval($conf['settings']['lng']),
-      'data-marker' => $conf['settings']['marker'],
     ],
     '#attached' => [
       'js' => [
@@ -50,7 +47,11 @@ function cm_cct_map_text_render($subtype, $conf, $args, $context) {
     'map' => [
       '#type' => 'container',
       '#attributes' => [
-        'class' => ['map']
+        'class' => ['map'],
+        'data-zoom' => floatval($conf['settings']['zoom']),
+        'data-lat' => floatval($conf['settings']['lat']),
+        'data-lng' => floatval($conf['settings']['lng']),
+        'data-marker' => $conf['settings']['marker'],
       ]
     ],
     'text' => [
@@ -92,6 +93,11 @@ function cm_cct_map_text_edit_form($form, &$form_state) {
     '#title' => t('Image'),
     '#tree' => TRUE,
     '#group' => 'vertical_tabs',
+    'zoom' => [
+      '#type' => 'textfield',
+      '#title' => t('Zoom'),
+      '#default_value' => $values['settings']['zoom'],
+    ],
     'lat' => [
       '#type' => 'textfield',
       '#title' => t('Lat'),
@@ -100,7 +106,7 @@ function cm_cct_map_text_edit_form($form, &$form_state) {
     'lng' => [
       '#type' => 'textfield',
       '#title' => t('Lat'),
-      '#default_value' => $values['settings']['lng'],
+      '#default_value' => $values['settings']['lng'], 
     ],
     'marker' => [
       '#type' => 'cm_imce',

@@ -1,3 +1,12 @@
+.panels-ipe-portlet-wrapper {
+  .cm_cct_map_text {
+    .map {
+    //display: none;
+    }
+  }
+}
+
+
 .cm_cct_map_text {
   @include inline-block;
 
