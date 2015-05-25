@@ -17,6 +17,7 @@ $plugin = array (
   'admin info' => 'cm_fb_comments_admin_info',
   'icon' => 'icon.png',
   'category' => 'Shelepen',
+  'all contexts' => TRUE,
 );
 
 /**
@@ -27,12 +28,13 @@ function cm_fb_comments_render($subtype, $conf, $args, $context) {
   $langcode = $language->language;
 
   _cm_init_facebook_sdk();
-  $block = new stdClass();
+  $block = new stdClass();  
+  $href = ctools_context_keyword_substitute($conf['href'], array(), $context);
   $block->content = [
     '#type' => 'container',
     '#attributes' => [
       'class' => ['cm_fb_comments', 'fb-comments'],
-      'data-href' => $conf['href'],
+      'data-href' => $href,
       'data-numposts' => $conf['numposts'],
       'data-colorscheme' => $conf['colorscheme'],
       'data-width' => $conf['width']
@@ -60,10 +62,10 @@ function cm_fb_comments_admin_info($subtype, $conf, $contexts) {
 function cm_fb_comments_edit_form($form, &$form_state) {
   $values = $form_state['conf'];
 
-  hide($form['override_title']);
-  hide($form['override_title_text']);
-  hide($form['override_title_heading']);
-  hide($form['override_title_markup']);
+  //hide($form['override_title']);
+  //hide($form['override_title_text']);
+  //hide($form['override_title_heading']);
+  //hide($form['override_title_markup']);
 
   $form['#tree'] = TRUE;
   $form['numposts'] = [
