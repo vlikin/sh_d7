@@ -124,4 +124,8 @@ function cm_cct_menu_edit_form($form, &$form_state) {
  */
 function cm_cct_menu_edit_form_submit($form, &$form_state) {
   $form_state['conf'] = $form_state['values'];
+  //unset($form_state['conf']['items']['list__active_tab']);
+  $form_state['conf']['items'] = array_filter($form_state['conf']['items'], 'is_array');
+  uasort($form_state['conf']['items'], 'drupal_sort_weight');
+  $form_state['conf']['items'] = array_values($form_state['conf']['items']);
 }
