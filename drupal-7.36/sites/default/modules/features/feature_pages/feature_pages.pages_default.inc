@@ -37,6 +37,7 @@ function feature_pages_default_page_manager_handlers() {
     'style_settings' => array(
       'default' => NULL,
       'middle' => NULL,
+      'content' => NULL,
     ),
   );
   $display->cache = array();
@@ -75,6 +76,41 @@ function feature_pages_default_page_manager_handlers() {
     $display->content['new-47c57255-a79b-4f3e-a958-45d0086a7936'] = $pane;
     $display->panels['content'][0] = 'new-47c57255-a79b-4f3e-a958-45d0086a7936';
     $pane = new stdClass();
+    $pane->pid = 'new-5e914be3-b947-40ac-bdf1-f1262cd6b908';
+    $pane->panel = 'content';
+    $pane->type = 'fb_comments';
+    $pane->subtype = 'fb_comments';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'buttons' => array(
+        'return' => 'Finish',
+        'cancel' => 'Cancel',
+      ),
+      'override_title' => 0,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+      'numposts' => '5',
+      'href' => 'http://shelepen.com.ua/node/%node:nid',
+      'colorscheme' => 'light',
+      'width' => '100%',
+      'form_build_id' => 'form-0oyDbmWtaPfQ6Jp4H4x_p5ZhgoTEfNG9feQkeQB1VCo',
+      'form_token' => 'n1nhcsC5a-fZvUygtVkpmDSQu3iKpZgck9Ontz7hSCI',
+      'form_id' => 'cm_fb_comments_edit_form',
+      'op' => 'Finish',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = '5e914be3-b947-40ac-bdf1-f1262cd6b908';
+    $display->content['new-5e914be3-b947-40ac-bdf1-f1262cd6b908'] = $pane;
+    $display->panels['content'][1] = 'new-5e914be3-b947-40ac-bdf1-f1262cd6b908';
+    $pane = new stdClass();
     $pane->pid = 'new-33ab83ab-e251-4cbd-ac8b-5a46d4520e84';
     $pane->panel = 'content';
     $pane->type = 'nnn';
@@ -100,11 +136,11 @@ function feature_pages_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 2;
     $pane->locks = array();
     $pane->uuid = '33ab83ab-e251-4cbd-ac8b-5a46d4520e84';
     $display->content['new-33ab83ab-e251-4cbd-ac8b-5a46d4520e84'] = $pane;
-    $display->panels['content'][1] = 'new-33ab83ab-e251-4cbd-ac8b-5a46d4520e84';
+    $display->panels['content'][2] = 'new-33ab83ab-e251-4cbd-ac8b-5a46d4520e84';
   $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -413,35 +449,25 @@ function feature_pages_default_page_manager_handlers() {
       'items' => array(
         0 => array(
           'enabled' => 1,
-          'path' => 'we_are',
-          'title' => array(
-            'en' => 'We are',
-            'ru' => 'О нас',
-            'uk' => 'Про нас',
-          ),
-          'weight' => '-10',
-        ),
-        1 => array(
-          'enabled' => 1,
-          'path' => 'contacts',
-          'title' => array(
-            'en' => 'Contacts',
-            'ru' => 'Контакты',
-            'uk' => 'Контакти',
-          ),
-          'weight' => '-10',
-        ),
-        2 => array(
-          'enabled' => 1,
           'path' => '<front>',
           'title' => array(
             'en' => 'Notes',
             'ru' => 'Записки',
             'uk' => 'Нотатки',
           ),
-          'weight' => '-10',
+          'weight' => '0',
         ),
-        3 => array(
+        1 => array(
+          'enabled' => 1,
+          'path' => 'we_are',
+          'title' => array(
+            'en' => 'We are',
+            'ru' => 'О нас',
+            'uk' => 'Про нас',
+          ),
+          'weight' => '1',
+        ),
+        2 => array(
           'enabled' => 1,
           'path' => 'car_budget',
           'title' => array(
@@ -449,12 +475,21 @@ function feature_pages_default_page_manager_handlers() {
             'ru' => 'Авто бюджет',
             'uk' => 'Авто бюджет',
           ),
-          'weight' => '-10',
+          'weight' => '1',
         ),
-        'items__active_tab' => 'edit-items-3',
+        3 => array(
+          'enabled' => 1,
+          'path' => 'contacts',
+          'title' => array(
+            'en' => 'Contacts',
+            'ru' => 'Контакты',
+            'uk' => 'Контакти',
+          ),
+          'weight' => '3',
+        ),
       ),
-      'form_build_id' => 'form-pp0G2kET0wYoBofmpg6_tGtedXHO7tIArvCdqA4wq08',
-      'form_token' => 'jAa-Q_gNyQ6EEhrl1-Ld4FwPdJowjJU5esBWntd0zI8',
+      'form_build_id' => 'form-i7mXmmsLq_afnSn36Av_lfAUcvzD4yXsvOKJLmEmo_w',
+      'form_token' => '4aX5r1GtAz_AyzUQ3Dme8utefca1ZQQ2ml3O_Cv_-64',
       'form_id' => 'cm_cct_menu_edit_form',
       'op' => 'Finish',
     );
@@ -1098,6 +1133,39 @@ Ukraine is a member of the United Nation Organization and takes part in the work
     $pane->uuid = '8b0567e1-9dfa-47c7-8548-df93f80fb41e';
     $display->content['new-8b0567e1-9dfa-47c7-8548-df93f80fb41e'] = $pane;
     $display->panels['content'][2] = 'new-8b0567e1-9dfa-47c7-8548-df93f80fb41e';
+    $pane = new stdClass();
+    $pane->pid = 'new-47253910-824d-4847-beff-0e023614d6e9';
+    $pane->panel = 'content';
+    $pane->type = 'fb_comments';
+    $pane->subtype = 'fb_comments';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'buttons' => array(
+        'return' => 'Finish',
+        'cancel' => 'Cancel',
+      ),
+      'override_title' => 0,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+      'numposts' => '20',
+      'href' => 'http://shelepen.com.ua/car_budget',
+      'colorscheme' => 'light',
+      'width' => '100%',
+      'form_build_id' => 'form-NdAenbrmGtOiASCRn6Tjp2c0ev5loqeHCt82LBeI6Mc',
+      'form_token' => '7hRSEtHf3AaDUueO0iwuE11AwiNkw9GG-fxkofWGT4o',
+      'form_id' => 'cm_fb_comments_edit_form',
+      'op' => 'Finish',
+    );
+    $pane->cache = array();
+    $pane->style = array();
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 3;
+    $pane->locks = array();
+    $pane->uuid = '47253910-824d-4847-beff-0e023614d6e9';
+    $display->content['new-47253910-824d-4847-beff-0e023614d6e9'] = $pane;
+    $display->panels['content'][3] = 'new-47253910-824d-4847-beff-0e023614d6e9';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = 'new-04ca5c69-ff9a-44e7-a567-b7a78afffce3';
   $handler->conf['display'] = $display;
