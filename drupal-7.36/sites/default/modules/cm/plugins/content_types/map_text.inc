@@ -47,7 +47,8 @@ function cm_cct_map_text_render($subtype, $conf, $args, $context) {
     'map' => [
       '#type' => 'container',
       '#attributes' => [
-        'class' => ['map'],
+        'class' => ['map', 'ct_resize'],
+        'data-ct_resize' => '4x3',
         'data-zoom' => floatval($conf['settings']['zoom']),
         'data-lat' => floatval($conf['settings']['lat']),
         'data-lng' => floatval($conf['settings']['lng']),

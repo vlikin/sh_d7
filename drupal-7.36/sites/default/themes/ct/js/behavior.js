@@ -1,5 +1,23 @@
 (function ($) {
-  Drupal.behaviors.imce_element = {
+  Drupal.behaviors.ct_resize = {
+    attach: function (context, settings) {
+      var resize_div = function() {
+        $('.ct_resize').each(function(index, object) {
+          var div = $(object);
+          var ratios = $(object).attr('data-ct_resize').split('x');
+          var ratio = ratios[1] / ratios[0];
+          div.height(div.width() * ratio )
+        });
+      };
+      resize_div();
+
+      $(window).resize(function() {
+        resize_div();
+      });
+    }
+  };
+
+  Drupal.behaviors.ct_menus = {
     attach: function (context, settings) {
       $('.language-switcher-locale-url, .cm_cct_menu', context).click(function(event) {
         $(this).toggleClass('show');
@@ -11,7 +29,7 @@
     }
   };
 
-  Drupal.behaviors.back_to_top = {
+  Drupal.behaviors.ct_back_to_top = {
     attach: function (context, settings) {
       var back_to_top = jQuery('<div />')
         .addClass('back_to_top')
