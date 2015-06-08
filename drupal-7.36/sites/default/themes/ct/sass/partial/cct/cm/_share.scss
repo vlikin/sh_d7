@@ -1,0 +1,28 @@
+.cm_cct_share {
+  @include inline-block;
+  background: gray;
+  width: grid(960);
+
+  .icon {
+    ion-xbox:before{
+    display:inline-block;
+    font-family:"Ionicons";
+    speak:none;
+    font-style:normal;
+    font-weight:normal;
+    font-variant:normal;
+    text-transform:none;
+    text-rendering:auto;
+    line-height:1;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale
+
+    &.facebook {
+      content:"\f243"
+    }
+
+    &.twitter {
+      content:"\f243"
+    }
+  }
+}
