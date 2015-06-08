@@ -31,21 +31,22 @@ function cm_cct_share_render($subtype, $conf, $args, $context) {
       'class' => ['cm_cct_share']
     ],
     'facebook' => [
-      '#markup' => l('Facebook', 'http://www.facebook.com/sharer/sharer.php', [
+      '#markup' => l('', 'http://www.facebook.com/sharer/sharer.php', [
         'attributes' => [
           'target' => '_blank',
-          'class' => 'facebook'
+          'class' => ['facebook', 'icon'],
         ],
         'query' => [
-          'u' => url(current_path(), ['absolute' => TRUE])
+          'u' => url(current_path(), ['absolute' => TRUE]),
+          't' => drupal_get_title()
         ]
       ])
     ],
     'twitter' => [
-      '#markup' => l('Twitter', 'https://twitter.com/intent/tweet', [
+      '#markup' => l('', 'https://twitter.com/intent/tweet', [
         'attributes' => [
           'target' => '_blank',
-          'class' => 'twitter',
+          'class' => ['twitter', 'icon'],
         ],
         'query' => [
           'url' => url(current_path(), ['absolute' => TRUE]),

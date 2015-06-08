@@ -1,28 +1,26 @@
 .cm_cct_share {
   @include inline-block;
-  background: gray;
   width: grid(960);
+  text-align: right;
 
   .icon {
-    ion-xbox:before{
-    display:inline-block;
-    font-family:"Ionicons";
-    speak:none;
-    font-style:normal;
-    font-weight:normal;
-    font-variant:normal;
-    text-transform:none;
-    text-rendering:auto;
-    line-height:1;
-    -webkit-font-smoothing:antialiased;
-    -moz-osx-font-smoothing:grayscale
+    @include ionic-icon("\f239", adjust-lightness($p3-color, -20), $biggest-font-size * 2);
+    content: '';
+    padding: $padding;
+    &:hover:before {
+      color: adjust-lightness($p3-color, 20);
+    }
 
     &.facebook {
-      content:"\f243"
+      &:before {
+        content: "\f231";
+      }
     }
 
     &.twitter {
-      content:"\f243"
+      &:before {
+        content: "\f243";
+      }
     }
   }
 }
