@@ -55,6 +55,11 @@ function cm_cct_map_text_render($subtype, $conf, $args, $context) {
         'data-marker' => $conf['settings']['marker'],
       ]
     ],
+    'title' => [
+      '#type' => 'container',
+      '#attributes' => ['class' => 'title'],
+      'text' => ['#markup' => check_plain($conf[$langcode]['title'])],
+    ],
     'text' => [
       '#type' => 'container',
       '#attributes' => ['class' => 'text'],
@@ -141,6 +146,10 @@ function cm_cct_map_text_edit_form($form, &$form_state) {
       '#type' => 'fieldset',
       '#title' => $lang->name,
       '#group' => 'vertical_tabs',
+      'title' => [
+        '#type' => 'textfield',
+        '#default_value' => $values[$langcode]['title'],
+      ],
       'text' => [
         '#type' => 'text_format',
         '#format' => $values[$langcode]['text']['format'],
