@@ -22,8 +22,7 @@
   <tr>
     <td colspan="2"><?= $content['footer_block_1'] ?></td>
     <td colspan="2"><?= $content['footer_block_2'] ?></td>
-    <td colspan="2"><?= $content['footer_block_3'] ?></td>
-    <td colspan="2"><?= $content['footer_block_4'] ?></td>
+    <td colspan="4"><?= $content['footer_block_3'] ?></td>
   </tr>
   <tr>
     <td colspan="8"><?= $content['copyright'] ?></td></tr>

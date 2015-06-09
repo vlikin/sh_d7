@@ -12,6 +12,7 @@
 @import "partial/cct/cm/image_text";
 @import "partial/cct/cm/map_text";
 @import "partial/cct/cm/share";
+@import "partial/cct/cm/text";
 @import "partial/typography";
 @import "partial/node";
 @import "partial/media";
@@ -179,13 +180,19 @@
     >.col {
       box-sizing: border-box;
       float: left;
-      min-height: grid(100);
+      min-height: 100px;
       width: grid(240);
       padding: $padding;
 
       @include cell {
         width: grid(480);
       }
+    }
+
+    >.col-480 {
+      float: left;
+      min-height: 100px;
+      width: grid(480);
     }
   }
 
