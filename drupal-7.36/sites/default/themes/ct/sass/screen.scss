@@ -193,6 +193,10 @@
       float: left;
       min-height: 100px;
       width: grid(480);
+
+      @include cell {
+        width: grid(960);
+      }
     }
   }
 
@@ -209,7 +213,7 @@
   position: fixed;
   right: $padding;
   bottom: $padding;
-  opacity: 0.8;
+  opacity: 0.6;
 
   @include ionic-icon("\f10d", adjust-lightness($p3-color, -20), $biggest-font-size * 4);
 }

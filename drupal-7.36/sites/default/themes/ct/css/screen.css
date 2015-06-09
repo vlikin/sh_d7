@@ -712,21 +712,27 @@ body.page-car-budget .bx-wrapper .bx-viewport {
   min-height: 100px;
   width: 50%;
 }
-/* line 199, ../sass/screen.scss */
+@media all and (max-width: 600px) {
+  /* line 192, ../sass/screen.scss */
+  #page > footer > .col-480 {
+    width: 100%;
+  }
+}
+/* line 203, ../sass/screen.scss */
 #page div.copyright {
   color: #F6FFF2;
   background: #050117;
   padding: 0.5em;
 }
 
-/* line 206, ../sass/screen.scss */
+/* line 210, ../sass/screen.scss */
 .back_to_top {
   cursor: pointer;
   display: none;
   position: fixed;
   right: 0.5em;
   bottom: 0.5em;
-  opacity: 0.8;
+  opacity: 0.6;
 }
 /* line 2, ../sass/partial/_mixin.scss */
 .back_to_top:before {
