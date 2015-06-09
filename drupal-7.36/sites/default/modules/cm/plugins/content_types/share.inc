@@ -21,8 +21,17 @@ $plugin = array (
  * It renders the content type.
  */
 function cm_cct_share_render($subtype, $conf, $args, $context) {
-  global $language;
+  global $language, $base_url;
   $langcode = $language->language;
+
+  $alias = db_select('url_alias', 'u')
+    ->fields('u', ['pid', 'source'])
+    ->condition('source', current_path())
+    ->condition('language', $langcode)
+    ->execute()
+    ->fetchAssoc();
+
+  $current_short_url = $base_url . '/' . 's/' . $alias['pid'];
 
   $block = new stdClass();
   $block->content = [
@@ -37,7 +46,7 @@ function cm_cct_share_render($subtype, $conf, $args, $context) {
           'class' => ['facebook', 'icon'],
         ],
         'query' => [
-          'u' => url(current_path(), ['absolute' => TRUE]),
+          'u' => $current_short_url,
           't' => drupal_get_title()
         ]
       ])
@@ -49,7 +58,7 @@ function cm_cct_share_render($subtype, $conf, $args, $context) {
           'class' => ['twitter', 'icon'],
         ],
         'query' => [
-          'url' => url(current_path(), ['absolute' => TRUE]),
+          'url' => $current_short_url,
           'text' => drupal_get_title()
         ]
       ]),
