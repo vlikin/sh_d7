@@ -20,7 +20,7 @@ function cm_menu() {
 
   $items['s/%'] = array(
     'page callback' => 'cm_shorten_callback',
-    'page arguments' => array('1'),
+    'page arguments' => array(1),
     'access callback' => TRUE,
   );
 
