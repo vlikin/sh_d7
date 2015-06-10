@@ -76,6 +76,25 @@ function feature_pages_default_page_manager_handlers() {
     $display->content['new-47c57255-a79b-4f3e-a958-45d0086a7936'] = $pane;
     $display->panels['content'][0] = 'new-47c57255-a79b-4f3e-a958-45d0086a7936';
     $pane = new stdClass();
+    $pane->pid = 'new-83612ec6-1971-4d4b-9ff2-580afe6e3baf';
+    $pane->panel = 'content';
+    $pane->type = 'share';
+    $pane->subtype = 'share';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = '83612ec6-1971-4d4b-9ff2-580afe6e3baf';
+    $display->content['new-83612ec6-1971-4d4b-9ff2-580afe6e3baf'] = $pane;
+    $display->panels['content'][1] = 'new-83612ec6-1971-4d4b-9ff2-580afe6e3baf';
+    $pane = new stdClass();
     $pane->pid = 'new-5e914be3-b947-40ac-bdf1-f1262cd6b908';
     $pane->panel = 'content';
     $pane->type = 'fb_comments';
@@ -105,11 +124,11 @@ function feature_pages_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 2;
     $pane->locks = array();
     $pane->uuid = '5e914be3-b947-40ac-bdf1-f1262cd6b908';
     $display->content['new-5e914be3-b947-40ac-bdf1-f1262cd6b908'] = $pane;
-    $display->panels['content'][1] = 'new-5e914be3-b947-40ac-bdf1-f1262cd6b908';
+    $display->panels['content'][2] = 'new-5e914be3-b947-40ac-bdf1-f1262cd6b908';
     $pane = new stdClass();
     $pane->pid = 'new-33ab83ab-e251-4cbd-ac8b-5a46d4520e84';
     $pane->panel = 'content';
@@ -123,10 +142,10 @@ function feature_pages_default_page_manager_handlers() {
         'cancel' => 'Cancel',
       ),
       'override_title' => 1,
-      'override_title_text' => 'Last notes',
+      'override_title_text' => 'Последние записи',
       'override_title_heading' => 'h2',
-      'form_build_id' => 'form-E2pw8Hk7bTofN3B2YcHvJFNeARn85wAk6BO9-N8JTRU',
-      'form_token' => '8fB8fdtH9rR38uPFUp3dynk-j5iY_r6PdY0fZxJjdLk',
+      'form_build_id' => 'form-3LvKRDllzgcMjcYKHd_nN6KPPbgTmTopsFhGRM6p8rE',
+      'form_token' => '5HTGkDaGVVchp1IYO_UbRn-UkEEGTZ46UskM8wZQSXI',
       'form_id' => 'cm_cct_nnn_edit_form',
       'op' => 'Finish',
     );
@@ -136,11 +155,11 @@ function feature_pages_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 2;
+    $pane->position = 3;
     $pane->locks = array();
     $pane->uuid = '33ab83ab-e251-4cbd-ac8b-5a46d4520e84';
     $display->content['new-33ab83ab-e251-4cbd-ac8b-5a46d4520e84'] = $pane;
-    $display->panels['content'][2] = 'new-33ab83ab-e251-4cbd-ac8b-5a46d4520e84';
+    $display->panels['content'][3] = 'new-33ab83ab-e251-4cbd-ac8b-5a46d4520e84';
   $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -310,7 +329,7 @@ function feature_pages_default_page_manager_handlers() {
     $display->panels['footer_block_1'][0] = 'new-e048f540-a0de-4e0b-baf0-7952e042fd48';
     $pane = new stdClass();
     $pane->pid = 'new-9ec5ba8c-f611-4936-b5a5-7ff7b83aec1b';
-    $pane->panel = 'footer_block_2';
+    $pane->panel = 'footer_block_3';
     $pane->type = 'text';
     $pane->subtype = 'text';
     $pane->shown = TRUE;
@@ -359,7 +378,7 @@ function feature_pages_default_page_manager_handlers() {
     $pane->locks = array();
     $pane->uuid = '9ec5ba8c-f611-4936-b5a5-7ff7b83aec1b';
     $display->content['new-9ec5ba8c-f611-4936-b5a5-7ff7b83aec1b'] = $pane;
-    $display->panels['footer_block_2'][0] = 'new-9ec5ba8c-f611-4936-b5a5-7ff7b83aec1b';
+    $display->panels['footer_block_3'][0] = 'new-9ec5ba8c-f611-4936-b5a5-7ff7b83aec1b';
     $pane = new stdClass();
     $pane->pid = 'new-5bc69160-b3d8-4d79-9cd7-5856442d8895';
     $pane->panel = 'header';
@@ -595,7 +614,7 @@ function feature_pages_default_page_manager_pages() {
       ),
       'block_text' => array(
         'en' => array(
-          'value' => 'Hello! “Shelepen” is a small ukrainian company, located in Chernigiv, Ukraine. We are founders  (Viktor, Elena) of the company. We are also employeers of the company. We are persons of different branches of life and can consult you how to create and support your business in wide world of Internet.  Yes, we create web sites by ourselves, from one side. From another side we investigate your business togather and create tools for your business, support it and modify it under changable conditions. So we earn money by making your business efficient. We almost always use open source tecknolodgies. It helps us to work legally. It reduces money usage. Regards, Viktor and Elena',
+          'value' => 'Hello! “Shelepen” is a small ukrainian company, located in Chernigiv, Ukraine. We are founders  (Viktor, Elena) of the company. We are also employers of the company. We are persons of different branches of life and can consult you how to create and support your business in wide world of Internet.  Yes, we create web sites by ourselves, from one side. From another side we investigate your business together and create tools for your business, support it and modify it under changable conditions. So we earn money by making your business efficient. We almost always use open source technologies. It helps us to work legally. It reduces money usage. Regards, Viktor and Elena',
           'format' => 'filtered_html',
         ),
         'ru' => array(
@@ -607,8 +626,8 @@ function feature_pages_default_page_manager_pages() {
           'format' => 'filtered_html',
         ),
       ),
-      'form_build_id' => 'form-6vBcc_cHozfm14pIwx3DueJMR7bTdySBXkaoHBjQSo4',
-      'form_token' => 'iODV9cGlTyJRpAwXMinaJVjzdHzYi1E4mcFUQ8qYjQk',
+      'form_build_id' => 'form-zusItJPtW2DZNwe6WK2rd-ZvjDVAuKJk2xeeF8LIytw',
+      'form_token' => 'EPvxfQUmsK0iTSvCcRS1G8CAmTHjUlibMuZGrnvhMZc',
       'form_id' => 'cm_cct_image_text_edit_form',
       'op' => 'Finish',
     );
@@ -750,17 +769,17 @@ function feature_pages_default_page_manager_pages() {
       'image[path]' => '/sites/default/files/images/chernigiv.jpg',
       'browse' => 'Browse',
       'block_title' => array(
-        'en' => 'Chernigiv',
+        'en' => 'Chernihiv',
         'ru' => 'Чернигов',
         'uk' => 'Чернігів',
       ),
       'block_text' => array(
         'en' => array(
-          'value' => 'Chernigiv is the capital of the northern region of Ukraine, is situated on the right (western) bank of the Desna River 89 miles (144 km) north of the Ukrainian capital Kyiv along the international highway Odessa – St.Petersburg.
+          'value' => 'Chernihiv is the capital of the northern region of Ukraine, is situated on the right (western) bank of the Desna River 89 miles (144 km) north of the Ukrainian capital Kyiv along the international highway Odessa – St.Petersburg.
 
-Present-day Chernigiv is an important industrial center of Ukraine. Main industries of Chernigiv are chemical and food. There are 34 industrial plants in the city (2006), a worsted-cloth mill, bread making plant, meat and poultry plants.
+Present-day Chernihiv is an important industrial center of Ukraine. Main industries of Chernihiv are chemical and food. There are 34 industrial plants in the city (2006), a worsted-cloth mill, bread making plant, meat and poultry plants.
 
-Among the ancient churches of Chernigiv there are the following: Assumption church of Yeletsky monastery (12th century), Trinity church of Trinity-Ilyinsky monastery (17th century) and Savior-Transfiguration church built in 11th century as well as Boris and Gleb church (12th century).',
+Among the ancient churches of Chernihiv there are the following: Assumption church of Yeletsky monastery (12th century), Trinity church of Trinity-Ilyinsky monastery (17th century) and Savior-Transfiguration church built in 11th century as well as Boris and Gleb church (12th century).',
           'format' => 'filtered_html',
         ),
         'ru' => array(
@@ -782,8 +801,8 @@ Among the ancient churches of Chernigiv there are the following: Assumption chur
           'format' => 'filtered_html',
         ),
       ),
-      'form_build_id' => 'form-JP4QTXsUBSEZbHdPtqzCbWRVKLuCAiDqYawhF5kIrO0',
-      'form_token' => 'f5aimW02RIkTlpKsYbwo4YaAtbvC5E1i78eAew9ayjQ',
+      'form_build_id' => 'form-yYl0raR4ourr072KxWs-aFORrgAOEpkw6nsQ0STe1Io',
+      'form_token' => 'UHkOS-FKnm01J4K5-Yv6qfSX7mHl17AY82qfoydd928',
       'form_id' => 'cm_cct_image_text_edit_form',
       'op' => 'Finish',
     );
@@ -1233,10 +1252,10 @@ Ukraine is a member of the United Nation Organization and takes part in the work
       'override_title' => 0,
       'override_title_text' => '',
       'override_title_heading' => 'h2',
-      'vertical_tabs__active_tab' => 'edit-block-text',
+      'vertical_tabs__active_tab' => 'edit-image',
       'image' => array(
         'path' => '/sites/default/files/images/office.jpg',
-        'style' => '3x4-2',
+        'style' => '16x9-2',
         'side' => 'left',
       ),
       'image[path]' => '/sites/default/files/images/office.jpg',
@@ -1248,20 +1267,20 @@ Ukraine is a member of the United Nation Organization and takes part in the work
       ),
       'block_text' => array(
         'en' => array(
-          'value' => '<p style="text-align: justify;">Viktor:</p><p style="text-align: center;">&nbsp;</p><p>email: viktor.likin@gmail.com;</p><p>&nbsp;</p><p>phone: +38(063)8867177;</p><p>&nbsp;</p><p>Skype: vlikin;</p><p>&nbsp;</p><p style="text-align: justify;">Elena:</p><p style="text-align: center;">&nbsp;</p><p>email: pogodaelena@gmail.com;</p><p>&nbsp;</p><p>phone: +38(063)4191476;</p><p>&nbsp;</p><p>Skype: s10061988.</p>',
+          'value' => '<p style="text-align: justify;">Viktor:</p><p style="text-align: center;">&nbsp;</p><p>email: viktor.likin@gmail.com;</p><p>phone: +38(063)8867177;</p><p>Skype: vlikin;</p><p>&nbsp;</p><p style="text-align: justify;">Elena:</p><p style="text-align: center;">&nbsp;</p><p>email: pogodaelena@gmail.com;</p><p>phone: +38(063)4191476;</p><p>Skype: s10061988.</p>',
           'format' => 'full_html',
         ),
         'ru' => array(
-          'value' => '<p style="text-align: justify;">Виктор:</p><p style="text-align: center;">&nbsp;</p><p>email: viktor.likin@gmail.com;</p><p>&nbsp;</p><p>телефон: +38(063)8867177;</p><p>&nbsp;</p><p>Skype: vlikin;</p><p>&nbsp;</p><p style="text-align: justify;">Елена:</p><p style="text-align: center;">&nbsp;</p><p>email: pogodaelena@gmail.com;</p><p>&nbsp;</p><p>телефон: +38(063)4191476;</p><p>&nbsp;</p><p>Skype: s10061988.</p>',
+          'value' => '<p style="text-align: justify;">Виктор:</p><p style="text-align: center;">&nbsp;</p><p>email: viktor.likin@gmail.com;</p><p>телефон: +38(063)8867177;</p><p>Skype: vlikin;</p><p>&nbsp;</p><p style="text-align: justify;">Елена:</p><p style="text-align: center;">&nbsp;</p><p>email: pogodaelena@gmail.com;</p><p>телефон: +38(063)4191476;</p><p>Skype: s10061988.</p>',
           'format' => 'full_html',
         ),
         'uk' => array(
-          'value' => '<p style="text-align: justify;">Віктор:</p><p style="text-align: center;">&nbsp;</p><p>email: viktor.likin@gmail.com;</p><p>&nbsp;</p><p>телефон: +38(063)8867177;</p><p>&nbsp;</p><p>Skype: vlikin;</p><p>&nbsp;</p><p style="text-align: justify;">Олена:</p><p style="text-align: center;">&nbsp;</p><p>email: pogodaelena@gmail.com;</p><p>&nbsp;</p><p>телефон: +38(063)4191476;</p><p>&nbsp;</p><p>Skype: s10061988.</p>',
+          'value' => '<p style="text-align: justify;">Віктор:</p><p style="text-align: center;">&nbsp;</p><p>email: viktor.likin@gmail.com;</p><p>телефон: +38(063)8867177;</p><p>Skype: vlikin;</p><p>&nbsp;</p><p style="text-align: justify;">Олена:</p><p style="text-align: center;">&nbsp;</p><p>email: pogodaelena@gmail.com;</p><p>телефон: +38(063)4191476;</p><p>Skype: s10061988.</p>',
           'format' => 'full_html',
         ),
       ),
-      'form_build_id' => 'form-J3akC0uEV_jQd5J63u616IEkQv80Y6OK6CNTbY4Sdvs',
-      'form_token' => 'f5aimW02RIkTlpKsYbwo4YaAtbvC5E1i78eAew9ayjQ',
+      'form_build_id' => 'form-FbHg5woQX3HBacxyWvZTmsAYMMFq3Y9sObbudODsDA0',
+      'form_token' => 'Utg8fGhZBlpwZtao9p42diQK8O2HMfwLwy-Jmj9POIY',
       'form_id' => 'cm_cct_image_text_edit_form',
       'op' => 'Finish',
     );
@@ -1299,37 +1318,28 @@ Ukraine is a member of the United Nation Organization and takes part in the work
       'settings[marker]' => '/sites/default/files/images/logo.png',
       'browse' => 'Browse',
       'vertical_tabs' => array(
-        'vertical_tabs__active_tab' => 'edit-en',
+        'vertical_tabs__active_tab' => 'edit-uk',
       ),
       'en' => array(
         'text' => array(
-          'value' => 'We work remotely, at the moment.
-Address of the previous office:
-Chernigiv Oblpotrebsoyuz
-14038, Chernigiv, Victory Avenue, 139, office 702.',
-          'format' => 'filtered_html',
+          'value' => '<p>We work remotely, at the moment.</p><p>&nbsp;</p><p>Address of the previous office:</p><p>&nbsp;</p><p>Chernihiv Oblpotrebsoyuz 14038, Chernihiv, Victory Avenue, 139, office 702.</p>',
+          'format' => 'full_html',
         ),
       ),
       'ru' => array(
         'text' => array(
-          'value' => 'На данный момент работаем удаленно.
-Адрес предыдущего офиса:
-Черниговский облпотребсоюз
-14038, Чернигов, проспект Победы, 139, офис 702.',
-          'format' => 'filtered_html',
+          'value' => '<p>На данный момент работаем удаленно.</p><p>&nbsp;</p><p>Адрес предыдущего офиса:</p><p>&nbsp;</p><p>Черниговский облпотребсоюз 14038, Чернигов, проспект Победы, 139, офис 702.</p>',
+          'format' => 'full_html',
         ),
       ),
       'uk' => array(
         'text' => array(
-          'value' => 'На даний час працюємо віддалено.
-Адреса попереднього офісу:
-Чернігівська облспоживспілка
-14038,Чернігів,проспект Перемоги, 139, офіс 702.',
-          'format' => 'filtered_html',
+          'value' => '<p>На даний час працюємо віддалено.</p><p>&nbsp;</p><p>Адреса попереднього офісу:</p><p>&nbsp;</p><p>Чернігівська облспоживспілка 14038, Чернігів, проспект Перемоги, 139, офіс 702.</p>',
+          'format' => 'full_html',
         ),
       ),
-      'form_build_id' => 'form-sX_NY4tGv1aOvfqlvpxi5sS1tQpWJnxlQPn-GaUBDE8',
-      'form_token' => '-FN68QkSMXWqmi_La07edUVoMCOG_n86UVE3wOOZAzg',
+      'form_build_id' => 'form-Mr_77my99tBPIoxWkT0PS7u45PtGMIjdC5knEHEyseo',
+      'form_token' => 'ZdEl2oamlZBCZWAWrmpJHzhhi7MuyNxXLK1LZgy-MuE',
       'form_id' => 'cm_cct_map_text_edit_form',
       'op' => 'Finish',
     );
