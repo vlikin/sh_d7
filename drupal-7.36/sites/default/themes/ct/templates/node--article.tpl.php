@@ -28,6 +28,8 @@
         hide($content['links']);
         print render($content);
       ?>
+
+      <?php print render($content['links']['node']); ?>
     </div>
   </div>
 </div>

@@ -25,6 +25,19 @@
     }
   }
 
+  .title {
+    box-sizing: border-box;
+    font-weight: bold;
+    font-size: $big-font-size;
+    padding: $padding;
+    width: grid(480);
+    float: left;
+
+    @include cell {
+      width: grid(960);
+    }
+  }
+
   .text {
     box-sizing: border-box;
     padding: $padding;

@@ -59,12 +59,18 @@
         float: left;
         width: grid(740);
         padding-top: grid(60);
+        >p {
+          padding-left: $padding;
+        }
       }
 
       >.site_slogan {
         font-size: $smaller-font-size;
         float: left;
         width: grid(740);
+        >p {
+          padding-left: $padding;
+        }
       }
 
       @include cell {

@@ -41,6 +41,8 @@ a {
 
 input {
   border: solid 1px $p3-color;
+  width: grid(960);
+  box-sizing: content-box;
 
   &[type=button], &[type=submit] {
     font-weight: bold;
@@ -58,6 +60,7 @@ input {
 
 .button {
   @include inline-block;
+  width: auto;
   border: solid 1px $p3-color;
   font-weight: bold;
   color: $p1-color;
@@ -69,4 +72,22 @@ input {
   &:hover {
     background: adjust-lightness($p3-color, -20);
   }
+}
+
+
+.grid-480 {
+  width: grid(480);
+}
+
+.ct-float-left {
+  float: left;
+}
+
+.ct-float-right {
+  float: left;
+}
+
+.ct-padding {
+  padding: $padding;
+  box-sizing: border-box;
 }
