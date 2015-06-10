@@ -42,7 +42,7 @@ a {
 input {
   border: solid 1px $p3-color;
   width: grid(960);
-  box-sizing: content-box;
+  box-sizing: border-box;
 
   &[type=button], &[type=submit] {
     @include inline-block;
