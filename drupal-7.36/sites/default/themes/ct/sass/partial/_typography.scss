@@ -45,7 +45,9 @@ input {
   box-sizing: content-box;
 
   &[type=button], &[type=submit] {
+    @include inline-block;
     font-weight: bold;
+    width: auto;
     color: $p1-color;
     background: $p3-color;
     margin-right: $padding;
