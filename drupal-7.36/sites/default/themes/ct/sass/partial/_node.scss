@@ -4,9 +4,11 @@
   .image-container {
     float: left;
     width: grid(480);
+    margin: 0 $padding $padding 0;
 
     @include cell {
       width: grid(960);
+      margin: 0;
 
       img {
         width: grid(960);
@@ -22,36 +24,22 @@
     }
   }
 
-  .text-container {
-    box-sizing: border-box;
-    float: left;
+  h2 {
+    font-size: $bigger-font-size;
+    font-weight: bold;
+    padding-bottom: $padding;
+  }
+
+  .submitted {
+    color: adjust-lightness($p2-color, 20);
+    font-size: $smaller-font-size;
     padding: $padding;
-    width: grid(480);
-
-    @include cell {
-      width: grid(960);
-    }
-
-    >h2 {
-      font-size: $bigger-font-size;
-      font-weight: bold;
-      padding-bottom: $padding;
-    }
-
-    >.submitted {
-      color: adjust-lightness($p2-color, 20);
-      font-size: $smaller-font-size;
-      padding: $padding;
-    }
   }
 
   &:nth-child(2n) {
     .image-container {
       float: right;
-    }
-
-    .text-container {
-      float: right;
+      margin: 0 0 $padding $padding;
     }
   }
 

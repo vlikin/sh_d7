@@ -8,7 +8,6 @@
   <div class="image-container">
     <?= render($content['field_image']) ?>
   </div>
-  <div class="text-container">
     <?php print render($title_prefix); ?>
       <h2<?php print $title_attributes; ?>>
         <a href="<?= $node_url ?>"><?= $title ?></a>
@@ -28,8 +27,7 @@
         hide($content['links']);
         print render($content);
       ?>
-
       <?php print render($content['links']['node']); ?>
     </div>
-  </div>
+
 </div>
