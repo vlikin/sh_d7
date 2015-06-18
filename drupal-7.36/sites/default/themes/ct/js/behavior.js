@@ -19,6 +19,9 @@
 
   Drupal.behaviors.ct_menus = {
     attach: function (context, settings) {
+      if ($('.cm_cct_menu a.active', context).length == 0) {
+        $('.cm_cct_menu a', context).first().show();
+      }
       $('.language-switcher-locale-url, .cm_cct_menu', context).click(function(event) {
         $(this).toggleClass('show');
       });

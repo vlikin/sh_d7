@@ -626,6 +626,7 @@ body.page-car-budget .bx-wrapper .bx-viewport {
     cursor: pointer;
     display: block;
     padding-left: 1.5em;
+    min-height: 1em;
     position: relative;
   }
   /* line 2, ../sass/partial/_mixin.scss */
@@ -645,45 +646,45 @@ body.page-car-budget .bx-wrapper .bx-viewport {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-  /* line 99, ../sass/screen.scss */
+  /* line 100, ../sass/screen.scss */
   #page > header .cm_cct_menu:before, #page > header .language-switcher-locale-url:before {
     padding: 0.33333em;
     position: absolute;
     left: 0;
     top: 0;
   }
-  /* line 108, ../sass/screen.scss */
+  /* line 109, ../sass/screen.scss */
   #page > header .cm_cct_menu.show:before, #page > header .show.language-switcher-locale-url:before {
     content: "\f104";
   }
-  /* line 111, ../sass/screen.scss */
+  /* line 112, ../sass/screen.scss */
   #page > header .cm_cct_menu.show a, #page > header .show.language-switcher-locale-url a {
     display: block;
   }
-  /* line 116, ../sass/screen.scss */
+  /* line 117, ../sass/screen.scss */
   #page > header .cm_cct_menu a, #page > header .language-switcher-locale-url a {
     display: none;
   }
-  /* line 119, ../sass/screen.scss */
+  /* line 120, ../sass/screen.scss */
   #page > header .cm_cct_menu a.active, #page > header .language-switcher-locale-url a.active {
     display: block;
   }
 }
-/* line 125, ../sass/screen.scss */
+/* line 126, ../sass/screen.scss */
 #page > header .cm_cct_menu a, #page > header .language-switcher-locale-url a {
   color: #050117;
   margin-right: 0.5em;
   text-decoration: none;
 }
-/* line 130, ../sass/screen.scss */
+/* line 131, ../sass/screen.scss */
 #page > header .cm_cct_menu a:last-child, #page > header .language-switcher-locale-url a:last-child {
   margin: 0;
 }
-/* line 134, ../sass/screen.scss */
+/* line 135, ../sass/screen.scss */
 #page > header .cm_cct_menu a:hover, #page > header .language-switcher-locale-url a:hover, #page > header .cm_cct_menu a.active, #page > header .language-switcher-locale-url a.active {
   color: #F6FFF2;
 }
-/* line 140, ../sass/screen.scss */
+/* line 141, ../sass/screen.scss */
 #page > header .language-switcher-locale-url {
   -moz-border-radius-topleft: 0;
   -webkit-border-top-left-radius: 0;
@@ -694,7 +695,7 @@ body.page-car-budget .bx-wrapper .bx-viewport {
   bottom: auto;
   top: 0;
 }
-/* line 147, ../sass/screen.scss */
+/* line 148, ../sass/screen.scss */
 #page > header .language-switcher-locale-url li {
   display: inline-block;
   vertical-align: middle;
@@ -703,7 +704,7 @@ body.page-car-budget .bx-wrapper .bx-viewport {
   *display: inline;
 }
 @media all and (max-width: 600px) {
-  /* line 140, ../sass/screen.scss */
+  /* line 141, ../sass/screen.scss */
   #page > header .language-switcher-locale-url {
     -moz-border-radius: 0;
     -webkit-border-radius: 0;
@@ -712,25 +713,25 @@ body.page-car-budget .bx-wrapper .bx-viewport {
     padding-left: 1.5em;
     position: relative;
   }
-  /* line 158, ../sass/screen.scss */
+  /* line 159, ../sass/screen.scss */
   #page > header .language-switcher-locale-url.show li {
     display: block;
   }
-  /* line 163, ../sass/screen.scss */
+  /* line 164, ../sass/screen.scss */
   #page > header .language-switcher-locale-url li {
     display: none;
   }
-  /* line 166, ../sass/screen.scss */
+  /* line 167, ../sass/screen.scss */
   #page > header .language-switcher-locale-url li.active {
     display: block;
   }
 }
-/* line 174, ../sass/screen.scss */
+/* line 175, ../sass/screen.scss */
 #page > main {
   background: #F6FFF2;
   min-height: 0.5em;
 }
-/* line 179, ../sass/screen.scss */
+/* line 180, ../sass/screen.scss */
 #page > footer {
   display: inline-block;
   vertical-align: middle;
@@ -743,7 +744,7 @@ body.page-car-budget .bx-wrapper .bx-viewport {
   background: #050117;
   text-align: left;
 }
-/* line 187, ../sass/screen.scss */
+/* line 188, ../sass/screen.scss */
 #page > footer > .col {
   box-sizing: border-box;
   float: left;
@@ -752,31 +753,31 @@ body.page-car-budget .bx-wrapper .bx-viewport {
   padding: 0.5em;
 }
 @media all and (max-width: 600px) {
-  /* line 187, ../sass/screen.scss */
+  /* line 188, ../sass/screen.scss */
   #page > footer > .col {
     width: 50%;
   }
 }
-/* line 199, ../sass/screen.scss */
+/* line 200, ../sass/screen.scss */
 #page > footer > .col-480 {
   float: left;
   min-height: 100px;
   width: 50%;
 }
 @media all and (max-width: 600px) {
-  /* line 199, ../sass/screen.scss */
+  /* line 200, ../sass/screen.scss */
   #page > footer > .col-480 {
     width: 100%;
   }
 }
-/* line 210, ../sass/screen.scss */
+/* line 211, ../sass/screen.scss */
 #page div.copyright {
   color: #F6FFF2;
   background: #050117;
   padding: 0.5em;
 }
 
-/* line 217, ../sass/screen.scss */
+/* line 218, ../sass/screen.scss */
 .back_to_top {
   cursor: pointer;
   display: none;

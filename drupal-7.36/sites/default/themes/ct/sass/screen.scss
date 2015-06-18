@@ -95,6 +95,7 @@
         cursor: pointer;
         display: block;
         padding-left: $padding * 3;
+        min-height: $font-size;
         @include ionic-icon("\f10a", adjust-lightness($p3-color, -20), $biggest-font-size);
         &:before {
           padding: $padding * 2 / 3;
