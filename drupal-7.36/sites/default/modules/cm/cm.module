@@ -31,15 +31,18 @@ function cm_menu() {
  * Implements menu callback for - s/% .
  */
 function cm_shorten_callback($pid) {
-  global $language;
-
   $alias = db_select('url_alias', 'u')
-    ->fields('u', ['pid', 'source'])
+    ->fields('u', ['pid', 'source', 'language'])
     ->condition('pid', $pid)
     ->execute()
     ->fetchAssoc();
 
-  drupal_goto($alias['source']);
+  $redirect_to = $alias['language'] . '/' .$alias['source'];
+  $languages = language_list();
+  $language = $languages[$alias['language']];
+  drupal_goto($alias['source'], [
+    'language' => $language
+  ]);
 }
 
 /**
