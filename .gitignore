@@ -1,4 +1,5 @@
 *node_modules*
 *sass-cache*
+*.vagrant*
 /drupal-7.36/sites/all/drush/www-data@shelepen.com.ua
 /nbproject/*
