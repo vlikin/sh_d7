@@ -1,0 +1,15 @@
+# variables
+vagrant_domain: vagrant
+
+project_name: d7_shelepen
+mysql_root_db_pass: root
+install: true
+develop: true
+
+site_db_user: "root"
+site_db_pass: "{{ mysql_root_db_pass }}"
+site_db_name: "{{ project_name }}"
+site_name: "{{ project_name }}"
+site_user: "admin"
+site_pass: "admin"
+site_path: /var/www/{{ project_name }}/public_html/sites/default
