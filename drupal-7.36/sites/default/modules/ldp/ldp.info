@@ -1,0 +1,8 @@
+name = LinkedIn Drupal Pane
+description = It provides LinkedIn Pane for Panels.
+version = VERSION
+package = Custom
+core = 7.x
+
+dependencies[] = panels
+dependencies[] = page_manager

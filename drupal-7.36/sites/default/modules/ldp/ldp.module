@@ -1,0 +1,25 @@
+<?php
+/**
+ * @file The main module file.
+ */
+
+/**
+ * Implements hook_ctools_plugin_directory().
+ */
+function ldp_ctools_plugin_directory($module, $plugin) {
+  if (in_array($module, array('ctools', 'panels')) && !empty($plugin)) {
+    return 'plugins/' . $plugin;
+  }
+}
+
+/**
+ * Implements hook_help.
+ */
+function ldp_help($path, $arg) {
+  if ($path == 'admin/help#ldp') {
+    return t('This is a test task to get a job as a Drupal developer. '
+      . 'It provides the reusable panel pane, which adds a LinkedIn member '
+      . 'profile to any number of panel pages, a customer wants.'
+    );
+  }
+}
