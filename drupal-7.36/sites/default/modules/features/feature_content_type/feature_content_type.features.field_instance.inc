@@ -66,7 +66,7 @@ function feature_content_type_field_default_field_instances() {
         'module' => 'image',
         'settings' => array(
           'image_link' => '',
-          'image_style' => '3x4-4',
+          'image_style' => '16x9-2',
         ),
         'type' => 'image',
         'weight' => -1,
@@ -76,7 +76,7 @@ function feature_content_type_field_default_field_instances() {
         'module' => 'image',
         'settings' => array(
           'image_link' => 'content',
-          'image_style' => '3x4-2',
+          'image_style' => '16x9-2',
         ),
         'type' => 'image',
         'weight' => -1,

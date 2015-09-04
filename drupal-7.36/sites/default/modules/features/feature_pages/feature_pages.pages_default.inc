@@ -60,7 +60,7 @@ function feature_pages_default_page_manager_handlers() {
       'identifier' => '',
       'link' => 1,
       'leave_node_title' => 1,
-      'build_mode' => 'teaser',
+      'build_mode' => 'full',
       'context' => 'argument_entity_id:node_1',
       'override_title_heading' => 'h2',
     );
@@ -303,16 +303,16 @@ function feature_pages_default_page_manager_handlers() {
     $display->content['new-110104fe-1fb5-4fc2-8aae-88f0189035ea'] = $pane;
     $display->panels['copyright'][0] = 'new-110104fe-1fb5-4fc2-8aae-88f0189035ea';
     $pane = new stdClass();
-    $pane->pid = 'new-e048f540-a0de-4e0b-baf0-7952e042fd48';
+    $pane->pid = 'new-bcea767e-a7c1-4474-8d46-12f0fd93c58c';
     $pane->panel = 'footer_block_1';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'admin_title' => '',
+      'admin_title' => 'Drupal',
       'title' => '',
-      'body' => '<p><img src="/sites/default/files/images/technologies/d8.png" class="cell-img" height="183" width="240"></p>',
+      'body' => '<p><img src="/sites/default/files/images/d8_for_site.svg" style="width: 100%; height: auto;" class="cell-img" height="366" width="480"></p>',
       'format' => 'full_html',
       'substitute' => 1,
     );
@@ -324,9 +324,34 @@ function feature_pages_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $pane->uuid = 'e048f540-a0de-4e0b-baf0-7952e042fd48';
-    $display->content['new-e048f540-a0de-4e0b-baf0-7952e042fd48'] = $pane;
-    $display->panels['footer_block_1'][0] = 'new-e048f540-a0de-4e0b-baf0-7952e042fd48';
+    $pane->uuid = 'bcea767e-a7c1-4474-8d46-12f0fd93c58c';
+    $display->content['new-bcea767e-a7c1-4474-8d46-12f0fd93c58c'] = $pane;
+    $display->panels['footer_block_1'][0] = 'new-bcea767e-a7c1-4474-8d46-12f0fd93c58c';
+    $pane = new stdClass();
+    $pane->pid = 'new-da5be6ab-98e7-41bf-b4f2-6630077f3a9f';
+    $pane->panel = 'footer_block_2';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => '',
+      'title' => '',
+      'body' => '<p><img src="/sites/default/files/images/flower_leaf_size.svg" style="width: 100%; height: auto;" class="cell-img" height="366" width="480"></p>',
+      'format' => 'full_html',
+      'substitute' => 1,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'da5be6ab-98e7-41bf-b4f2-6630077f3a9f';
+    $display->content['new-da5be6ab-98e7-41bf-b4f2-6630077f3a9f'] = $pane;
+    $display->panels['footer_block_2'][0] = 'new-da5be6ab-98e7-41bf-b4f2-6630077f3a9f';
     $pane = new stdClass();
     $pane->pid = 'new-9ec5ba8c-f611-4936-b5a5-7ff7b83aec1b';
     $pane->panel = 'footer_block_3';
@@ -599,10 +624,10 @@ function feature_pages_default_page_manager_pages() {
       'override_title' => 0,
       'override_title_text' => '',
       'override_title_heading' => 'h2',
-      'vertical_tabs__active_tab' => 'edit-block-text',
+      'vertical_tabs__active_tab' => 'edit-image',
       'image' => array(
         'path' => '/sites/default/files/images/we_are.jpg',
-        'style' => '3x4-2',
+        'style' => '16x9-2',
         'side' => 'left',
       ),
       'image[path]' => '/sites/default/files/images/we_are.jpg',
@@ -626,8 +651,8 @@ function feature_pages_default_page_manager_pages() {
           'format' => 'filtered_html',
         ),
       ),
-      'form_build_id' => 'form-zusItJPtW2DZNwe6WK2rd-ZvjDVAuKJk2xeeF8LIytw',
-      'form_token' => 'EPvxfQUmsK0iTSvCcRS1G8CAmTHjUlibMuZGrnvhMZc',
+      'form_build_id' => 'form-dJCXC6JpyLsu4IPlr8KrUr9WvQ_uhuTHLSOfcSDfkZs',
+      'form_token' => 'hd3alsXRV_9cicWKcPvySvCb4Tbw1XM34U2_YS9lbYw',
       'form_id' => 'cm_cct_image_text_edit_form',
       'op' => 'Finish',
     );
@@ -760,10 +785,10 @@ function feature_pages_default_page_manager_pages() {
       'override_title' => 0,
       'override_title_text' => '',
       'override_title_heading' => 'h2',
-      'vertical_tabs__active_tab' => 'edit-block-text',
+      'vertical_tabs__active_tab' => 'edit-image',
       'image' => array(
         'path' => '/sites/default/files/images/chernigiv.jpg',
-        'style' => '3x4-2',
+        'style' => '16x9-2',
         'side' => 'right',
       ),
       'image[path]' => '/sites/default/files/images/chernigiv.jpg',
@@ -801,8 +826,8 @@ Among the ancient churches of Chernihiv there are the following: Assumption chur
           'format' => 'filtered_html',
         ),
       ),
-      'form_build_id' => 'form-yYl0raR4ourr072KxWs-aFORrgAOEpkw6nsQ0STe1Io',
-      'form_token' => 'UHkOS-FKnm01J4K5-Yv6qfSX7mHl17AY82qfoydd928',
+      'form_build_id' => 'form-ts9vOwbet0IkDalavqEgBGcuUoWNUkpa0ENIOCfoIho',
+      'form_token' => 'hd3alsXRV_9cicWKcPvySvCb4Tbw1XM34U2_YS9lbYw',
       'form_id' => 'cm_cct_image_text_edit_form',
       'op' => 'Finish',
     );
@@ -830,10 +855,10 @@ Among the ancient churches of Chernihiv there are the following: Assumption chur
       'override_title' => 0,
       'override_title_text' => '',
       'override_title_heading' => 'h2',
-      'vertical_tabs__active_tab' => 'edit-block-title',
+      'vertical_tabs__active_tab' => 'edit-image',
       'image' => array(
         'path' => '/sites/default/files/images/ukraine.jpg',
-        'style' => '3x4-2',
+        'style' => '16x9-2',
         'side' => 'left',
       ),
       'image[path]' => '/sites/default/files/images/ukraine.jpg',
@@ -877,8 +902,8 @@ Ukraine is a member of the United Nation Organization and takes part in the work
           'format' => 'filtered_html',
         ),
       ),
-      'form_build_id' => 'form-lVg355TpbhDIEfLC6iQ6hLX3CrXwC4Gw_ZSb942-pnw',
-      'form_token' => 'iODV9cGlTyJRpAwXMinaJVjzdHzYi1E4mcFUQ8qYjQk',
+      'form_build_id' => 'form-IYTK2pGpvvI-WTAtB0cy8mgf72LMsRH9Qwv4Csh8tEM',
+      'form_token' => 'hd3alsXRV_9cicWKcPvySvCb4Tbw1XM34U2_YS9lbYw',
       'form_id' => 'cm_cct_image_text_edit_form',
       'op' => 'Finish',
     );
@@ -960,10 +985,10 @@ Ukraine is a member of the United Nation Organization and takes part in the work
       'override_title' => 0,
       'override_title_text' => '',
       'override_title_heading' => 'h2',
-      'vertical_tabs__active_tab' => 'edit-block-text',
+      'vertical_tabs__active_tab' => 'edit-image',
       'image' => array(
         'path' => '/sites/default/files/car_budget/site_icon.png',
-        'style' => '3x4-2',
+        'style' => '16x9-2',
         'side' => 'left',
       ),
       'image[path]' => '/sites/default/files/car_budget/site_icon.png',
@@ -987,8 +1012,8 @@ Ukraine is a member of the United Nation Organization and takes part in the work
           'format' => 'full_html',
         ),
       ),
-      'form_build_id' => 'form-TyIB_MqxTkRGItCVEK4t7d82wh1_agouk1iga8SzLa4',
-      'form_token' => 'bXBNaaVhDlGp0k2qSKS_YhHRSrGYS_O0skLJoO6cMvg',
+      'form_build_id' => 'form-ICoFfgsQCL2oBVD2s18OUc6XfJtkUehsHP5eWILQlYo',
+      'form_token' => 'hd3alsXRV_9cicWKcPvySvCb4Tbw1XM34U2_YS9lbYw',
       'form_id' => 'cm_cct_image_text_edit_form',
       'op' => 'Finish',
     );

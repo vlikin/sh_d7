@@ -10,19 +10,19 @@
 function feature_content_type_node_info() {
   $items = array(
     'article' => array(
-      'name' => t('Article'),
+      'name' => t('Статья'),
       'base' => 'node_content',
-      'description' => t('Use <em>articles</em> for time-sensitive content like news, press releases or blog posts.'),
+      'description' => t('Статья — это документ, который обычно используется для новостей, анонсов и любых других сообщений, для которых не задействованы другие типы документов. Этот тип документа также используют для ведения персонального блога. По умолчанию, документы этого типа выводятся на первую страницу сайта и их разрешено комментировать.'),
       'has_title' => '1',
-      'title_label' => t('Title'),
+      'title_label' => t('Заголовок'),
       'help' => '',
     ),
     'page' => array(
-      'name' => t('Basic page'),
+      'name' => t('Основная страница'),
       'base' => 'node_content',
-      'description' => t('Use <em>basic pages</em> for your static content, such as an \'About us\' page.'),
+      'description' => t('Используйте <em>основная страница</em>для статичного контента с редко изменяемой информацией, например страницы \'О сайте\'.'),
       'has_title' => '1',
-      'title_label' => t('Title'),
+      'title_label' => t('Заголовок'),
       'help' => '',
     ),
   );
