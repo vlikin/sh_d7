@@ -3,6 +3,12 @@
  * @file Contains helpers.
  */
 
+function _bxslider_get_increment_key() {
+  static $index = 0;
+
+  return 'bxslider-key-' . $index++;
+}
+
 function _bxslider_settings_form($values) {
   $form = array();
 

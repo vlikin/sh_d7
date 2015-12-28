@@ -459,7 +459,7 @@ input[type=button]:hover, input[type=submit]:hover {
 }
 
 /* line 1, ../sass/partial/_node.scss */
-.node.node-article {
+.node {
   display: inline-block;
   vertical-align: middle;
   *vertical-align: auto;
@@ -467,53 +467,53 @@ input[type=button]:hover, input[type=submit]:hover {
   *display: inline;
 }
 /* line 4, ../sass/partial/_node.scss */
-.node.node-article .image-container {
+.node .image-container {
   float: left;
   width: 50%;
   margin: 0 0.5em 0.5em 0;
 }
 @media all and (max-width: 600px) {
   /* line 4, ../sass/partial/_node.scss */
-  .node.node-article .image-container {
+  .node .image-container {
     width: 100%;
     margin: 0;
   }
   /* line 13, ../sass/partial/_node.scss */
-  .node.node-article .image-container img {
+  .node .image-container img {
     width: 100%;
     height: auto;
   }
 }
 @media all and (min-width: 601px) and (max-width: 959px) {
   /* line 20, ../sass/partial/_node.scss */
-  .node.node-article .image-container img {
+  .node .image-container img {
     width: 100%;
     height: auto;
   }
 }
 /* line 27, ../sass/partial/_node.scss */
-.node.node-article h2 {
+.node h2 {
   font-size: 1.1em;
   font-weight: bold;
   padding-bottom: 0.5em;
 }
 /* line 33, ../sass/partial/_node.scss */
-.node.node-article .submitted {
+.node .submitted {
   color: #1a0579;
   font-size: 0.9em;
   padding: 0.5em;
 }
 /* line 40, ../sass/partial/_node.scss */
-.node.node-article:nth-child(2n) .image-container {
+.node:nth-child(2n) .image-container {
   float: right;
   margin: 0 0 0.5em 0.5em;
 }
 /* line 46, ../sass/partial/_node.scss */
-.node.node-article .links.inline {
+.node .links.inline {
   display: block;
 }
 /* line 49, ../sass/partial/_node.scss */
-.node.node-article .links.inline li {
+.node .links.inline li {
   float: right;
 }
 
