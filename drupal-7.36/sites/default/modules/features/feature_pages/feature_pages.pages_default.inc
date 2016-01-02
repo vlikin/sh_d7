@@ -1257,6 +1257,7 @@ Ukraine is a member of the United Nation Organization and takes part in the work
     'style_settings' => array(
       'default' => NULL,
       'middle' => NULL,
+      'content' => NULL,
     ),
   );
   $display->cache = array();
@@ -1310,7 +1311,9 @@ Ukraine is a member of the United Nation Organization and takes part in the work
       'op' => 'Finish',
     );
     $pane->cache = array();
-    $pane->style = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 0;
@@ -1369,7 +1372,9 @@ Ukraine is a member of the United Nation Organization and takes part in the work
       'op' => 'Finish',
     );
     $pane->cache = array();
-    $pane->style = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 1;
@@ -1377,6 +1382,29 @@ Ukraine is a member of the United Nation Organization and takes part in the work
     $pane->uuid = 'd690e690-4862-48a4-8adc-aa8c3e855926';
     $display->content['new-d690e690-4862-48a4-8adc-aa8c3e855926'] = $pane;
     $display->panels['content'][1] = 'new-d690e690-4862-48a4-8adc-aa8c3e855926';
+    $pane = new stdClass();
+    $pane->pid = 'new-4b5d4b8d-8279-4868-832d-54414cc3add3';
+    $pane->panel = 'content';
+    $pane->type = 'contact';
+    $pane->subtype = 'contact';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 2;
+    $pane->locks = array();
+    $pane->uuid = '4b5d4b8d-8279-4868-832d-54414cc3add3';
+    $display->content['new-4b5d4b8d-8279-4868-832d-54414cc3add3'] = $pane;
+    $display->panels['content'][2] = 'new-4b5d4b8d-8279-4868-832d-54414cc3add3';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
