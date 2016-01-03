@@ -28,6 +28,79 @@ function cm_menu() {
 }
 
 /**
+ * Implements hook_field_formatter_info().
+ */
+function cm_field_formatter_info() {
+  return array(
+    'cm_single_image_formatter' => array (
+      'label' => t('Single Image'),
+      'field types' => array ('image'),
+      'settings'  => array (
+        'image_style' => 'large',
+        'position' => 0
+      ),
+    ),
+  );
+}
+
+/**
+ * Implements hook_field_formatter_settings_summary().
+ */
+function cm_field_formatter_settings_summary($field, $instance, $view_mode) {
+  $display = $instance['display'][$view_mode];
+  $settings = $display['settings'];
+  $summary = t('imageStyle=@imageStyle, position=@position', array(
+    '@imageStyle' => $settings['image_style'],
+    '@position' => $settings['position']
+  ));
+
+  return $summary;
+}
+
+/**
+ * Implements hook_field_formatter_settings_form.
+ */
+function cm_field_formatter_settings_form($field, $instance, $view_mode, $form, &$form_state) {
+  $display = $instance['display'][$view_mode];
+  $settings = $display['settings'];
+
+
+  $style_options = [];
+  foreach(image_styles() as $key => $style) {
+    $style_options[$key] = $style['label'];
+  }
+  $element = [];
+  $element['image_style'] = [
+    '#title' => t('Image style'),
+    '#type' => 'select',
+    '#options' => $style_options,
+    '#default_value' => $settings['image_style'] ? $settings['image_style'] : 'large',
+  ];
+  $element['position'] = [
+    '#title' => t('Position'),
+    '#type' => 'textfield',
+    '#default_value' => $settings['position'] ? $settings['position'] : 0,
+  ];
+
+  return $element;
+}
+
+/**
+ * Implements hook_field_formatter_view().
+ */
+function cm_field_formatter_view($entity_type, $entity, $field, $instance, $langcode, $items, $display) {
+  $settings = $display['settings']; // get the settings
+
+  return  [
+    '#theme' => 'image_formatter',
+    '#item' => [
+      'uri' => $items[$settings['position']]['uri'],
+    ],
+    '#image_style' => $settings['image_style'],
+  ];
+}
+
+/**
  * Implements menu callback for - s/% .
  */
 function cm_shorten_callback($pid) {
@@ -43,6 +116,16 @@ function cm_shorten_callback($pid) {
   drupal_goto($alias['source'], [
     'language' => $language
   ]);
+}
+
+/**
+* Implements hook_entity_info_alter().
+*/
+function cm_entity_info_alter(&$entity_info) {
+  $entity_info['node']['view modes']['popup'] = array(
+    'label' => t('Popup'),
+    'custom settings' => TRUE,
+  );
 }
 
 /**
@@ -78,7 +161,7 @@ function cm_test_form() {
 function cm_element_info() {
   return array (
     'cm_imce' => array(
-      '#input' => TRUE, 
+      '#input' => TRUE,
       '#process' => array('cm_imce_element_process'),
       '#example_attribute' => 'Something extra',
       '#theme_wrappers' => array('form_element'),

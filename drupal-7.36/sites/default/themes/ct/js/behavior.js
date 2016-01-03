@@ -1,4 +1,35 @@
 (function ($) {
+  Drupal.ct = Drupal.ct || {};
+  Drupal.ct.popup = function(options) {
+    var _this = this;
+    this.dom = {
+      blanket: $('<div />', {class: 'ct-popup-blanket'}),
+      box_out: $('<div />', {class: 'ct-popup-box-out'}),
+      box: $('<div />', {class: 'box'}),
+      iframe: $('<iframe />', {src: options.src, class: 'frame'}),
+      closeButton: $('<div />', {class: 'close-button'})
+    };
+    this.dom.blanket.prependTo('body');
+    this.dom.box_out.prependTo('body');
+    this.dom.box
+      .append(this.dom.closeButton)
+      .append(this.dom.iframe)
+      .prependTo(this.dom.box_out);
+
+    this.removeThis = function () {
+      this.dom.box_out.remove();
+      this.dom.blanket.remove();
+      delete this;
+    }
+
+    this.dom.closeButton
+      .bind('click', function() {
+        _this.removeThis();
+      })
+
+  }
+
+
   Drupal.behaviors.ct_resize = {
     attach: function (context, settings) {
       var resize_div = function() {

@@ -23,6 +23,101 @@ function bxslider_menu() {
 }
 
 /**
+ * Implements hook_field_formatter_info().
+ */
+function bxslider_field_formatter_info() {
+  return [
+    'bxslider_formatter' => [
+      'label' => t('bxSlider'),
+      'field types' => ['image'],
+      'settings'  => [
+        'click_event' => '',
+        'image_style' => 'large',
+        'bxslider' => []
+      ],
+    ],
+  ];
+}
+
+/**
+ * Implements hook_field_formatter_settings_form.
+ */
+function bxslider_field_formatter_settings_form($field, $instance, $view_mode, $form, &$form_state) {
+  $display = $instance['display'][$view_mode];
+  $settings = $display['settings'];
+
+
+  $style_options = [];
+  foreach(image_styles() as $key => $style) {
+    $style_options[$key] = $style['label'];
+  }
+  $element = [];
+  $element['image_style'] = [
+    '#title' => t('Image style'),
+    '#type' => 'select',
+    '#options' => $style_options,
+    '#default_value' => $settings['image_style'] ? $settings['image_style'] : 'large',
+  ];
+  $element['click_event'] = [
+    '#title' => t('Click event'),
+    '#type' => 'textfield',
+    '#default_value' => $settings['click_event'] ? $settings['click_event'] : '',
+  ];
+  $element['bxslider'] = array (
+    '#type' => 'fieldset',
+    '#title' => t('Settings'),
+    '#collapsible' => TRUE,
+    '#collapsed' => TRUE,
+  ) + _bxslider_settings_form($settings['bxslider']);
+
+  return $element;
+}
+
+/**
+ * Implements hook_field_formatter_settings_summary().
+ */
+function bxslider_field_formatter_settings_summary($field, $instance, $view_mode) {
+  $display = $instance['display'][$view_mode];
+  $settings = $display['settings'];
+  $summary = t('imageStyle=@imageStyle, slideWidth=@slideWidth, slideMargin=@slideMargin', array(
+    '@imageStyle' => $settings['image_style'],
+    '@slideWidth' => $settings['bxslider']['slideWidth'],
+    '@slideMargin' => $settings['bxslider']['slideMargin'],
+  ));
+
+  return $summary;
+}
+
+/**
+ * Implements hook_field_formatter_view().
+ */
+function bxslider_field_formatter_view($entity_type, $entity, $field, $instance, $langcode, $items, $display) {
+  $element = array(); // Initialize the var
+  $settings = $display['settings']; // get the settings
+
+  $render_items = [];
+  foreach ($items as $item) {
+    $render_items[] = [
+      '#type' => 'container',
+      '#attributes' => [
+        'onclick' => $settings['click_event'],
+      ],
+      'image' => [
+        '#theme' => 'image_formatter',
+        '#item' => [
+          'uri' => $item['uri']
+        ],
+        '#image_style' => $settings['image_style'],
+      ]
+    ];
+  }
+  $source = _bxslider_get_render_source($render_items, $settings['bxslider'], _bxslider_get_increment_key());
+
+  return $source;
+}
+
+
+/**
  * Implements hook_theme().
  */
 function bxslider_theme() {

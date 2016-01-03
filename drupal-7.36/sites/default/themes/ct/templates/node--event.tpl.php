@@ -4,9 +4,11 @@
  */
 ?>
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
-  <div class="image-container">
-    <?= render($content['field_image']) ?>
-  </div>
+  <?php if ($view_mode == 'teaser'): ?>
+    <div class="image-container">
+      <?= render($content['field_image']) ?>
+    </div>
+  <?php endif ?>
   <?php print render($title_prefix); ?>
     <h2<?php print $title_attributes; ?>>
       <a href="<?= $node_url ?>"><?= $title ?></a>

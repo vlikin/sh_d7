@@ -1,0 +1,11 @@
+.bxslider img {
+  width: 100%;
+  height: auto;
+}
+
+.bx-wrapper .bx-viewport {
+  left: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}

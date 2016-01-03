@@ -17,6 +17,14 @@ function feature_content_type_node_info() {
       'title_label' => t('Заголовок'),
       'help' => '',
     ),
+    'event' => array(
+      'name' => t('Событие'),
+      'base' => 'node_content',
+      'description' => t('Какое-нибудь событие, которое проходило в опрделенное время в определённом месте, которое можно отметить фотографиями и описанием.'),
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
     'page' => array(
       'name' => t('Основная страница'),
       'base' => 'node_content',

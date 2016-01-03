@@ -1,5 +1,6 @@
-.node.node-article {
+.node {
   @include inline-block;
+  background: white;
 
   .image-container {
     float: left;
@@ -27,7 +28,6 @@
   h2 {
     font-size: $bigger-font-size;
     font-weight: bold;
-    padding-bottom: $padding;
   }
 
   .submitted {
