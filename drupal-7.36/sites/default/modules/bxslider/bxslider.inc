@@ -72,6 +72,12 @@ function _bxslider_get_render_source($items, $settings, $ukey='ukey') {
       'library' => array (
         array ('bxslider', 'bxslider'),
       ),
+      'css' => [
+        [
+          'data' => drupal_get_path('module', 'bxslider') . '/css/style.css',
+          'type' => 'file',
+        ],
+      ],
       'js' => array (
         array (
           'data' => drupal_get_path('module', 'bxslider') . '/js/behaviors.js',

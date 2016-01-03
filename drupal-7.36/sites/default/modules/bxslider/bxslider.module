@@ -26,16 +26,17 @@ function bxslider_menu() {
  * Implements hook_field_formatter_info().
  */
 function bxslider_field_formatter_info() {
-  return array(
-    'bxslider_formatter' => array (
+  return [
+    'bxslider_formatter' => [
       'label' => t('bxSlider'),
-      'field types' => array ('image'),
-      'settings'  => array (
+      'field types' => ['image'],
+      'settings'  => [
+        'click_event' => '',
         'image_style' => 'large',
-        'bxslider' => array ()
-      ),
-    ),
-  );
+        'bxslider' => []
+      ],
+    ],
+  ];
 }
 
 /**
@@ -56,6 +57,11 @@ function bxslider_field_formatter_settings_form($field, $instance, $view_mode, $
     '#type' => 'select',
     '#options' => $style_options,
     '#default_value' => $settings['image_style'] ? $settings['image_style'] : 'large',
+  ];
+  $element['click_event'] = [
+    '#title' => t('Click event'),
+    '#type' => 'textfield',
+    '#default_value' => $settings['click_event'] ? $settings['click_event'] : '',
   ];
   $element['bxslider'] = array (
     '#type' => 'fieldset',
@@ -92,11 +98,17 @@ function bxslider_field_formatter_view($entity_type, $entity, $field, $instance,
   $render_items = [];
   foreach ($items as $item) {
     $render_items[] = [
-      '#theme' => 'image_formatter',
-      '#item' => [
-        'uri' => $item['uri']
+      '#type' => 'container',
+      '#attributes' => [
+        'onclick' => $settings['click_event'],
       ],
-      '#image_style' => $settings['image_style'],
+      'image' => [
+        '#theme' => 'image_formatter',
+        '#item' => [
+          'uri' => $item['uri']
+        ],
+        '#image_style' => $settings['image_style'],
+      ]
     ];
   }
   $source = _bxslider_get_render_source($render_items, $settings['bxslider'], _bxslider_get_increment_key());

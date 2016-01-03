@@ -119,6 +119,16 @@ function cm_shorten_callback($pid) {
 }
 
 /**
+* Implements hook_entity_info_alter().
+*/
+function cm_entity_info_alter(&$entity_info) {
+  $entity_info['node']['view modes']['popup'] = array(
+    'label' => t('Popup'),
+    'custom settings' => TRUE,
+  );
+}
+
+/**
  * Implements hook_form_alter.
  */
 function cm_form_alter(&$form, &$form_state, $form_id) {

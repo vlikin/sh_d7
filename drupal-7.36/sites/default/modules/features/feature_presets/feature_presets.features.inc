@@ -10,6 +10,51 @@
 function feature_presets_image_default_styles() {
   $styles = array();
 
+  // Exported image style: 16x9-1.
+  $styles['16x9-1'] = array(
+    'label' => '16x9-1',
+    'effects' => array(
+      6 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 960,
+          'height' => 540,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  // Exported image style: 16x9-2.
+  $styles['16x9-2'] = array(
+    'label' => '16x9-2',
+    'effects' => array(
+      5 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 480,
+          'height' => 270,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  // Exported image style: 16x9-4.
+  $styles['16x9-4'] = array(
+    'label' => '16x9-4',
+    'effects' => array(
+      7 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 240,
+          'height' => 135,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
   // Exported image style: 3x4-2.
   $styles['3x4-2'] = array(
     'label' => '3x4-2',

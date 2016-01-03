@@ -1,6 +1,18 @@
+Drupal.events = Drupal.events || {};
+
+Drupal.events.bxslider_on_item_click = function(_this) {
+  $this = jQuery(_this);
+  var dom = $this.closest('.bxslider');
+  var bxslider = dom.data('instance');
+  var href = location.href;
+  href = href + '?popup=1';
+  Drupal.ct.popup({src: href});
+};
+
 (function ($) {
   Drupal.behaviors.bxslider = {
     attach: function (context, settings) {
+      Drupal.settings.bxslider.instances = Drupal.settings.bxslider.instances || [];
       $('.bxslider:not(.bxslider-processed)', context)
       .addClass('bxslider-processed')
       .each(function() {
@@ -14,7 +26,9 @@
           var key = property_list[index];
           settings[key] = parseInt(settings[key]);
         }
-        dom.bxSlider(settings);
+        var instance = dom.bxSlider(settings);
+        Drupal.settings.bxslider.instances.push(instance);
+        dom.data('instance', instance);
       });
     }
   };
