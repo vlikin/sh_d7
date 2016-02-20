@@ -29,6 +29,16 @@
 
   }
 
+  Drupal.events.bxslider_on_item_click = function(_this) {
+    $this = jQuery(_this);
+    var dom = $this.closest('.bxslider');
+    var bxslider = dom.data('instance');
+    var href = location.href;
+    var index = $this.data('index');
+    href = href + '?popup=1' + '&imageIndex=' + index;
+
+    Drupal.ct.popup({src: href});
+  };
 
   Drupal.behaviors.ct_resize = {
     attach: function (context, settings) {

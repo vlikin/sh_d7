@@ -96,11 +96,12 @@ function bxslider_field_formatter_view($entity_type, $entity, $field, $instance,
   $settings = $display['settings']; // get the settings
 
   $render_items = [];
-  foreach ($items as $item) {
+  foreach ($items as $index => $item) {
     $render_items[] = [
       '#type' => 'container',
       '#attributes' => [
         'onclick' => $settings['click_event'],
+        'data-index' => $index
       ],
       'image' => [
         '#theme' => 'image_formatter',
