@@ -13,9 +13,9 @@
  * fdr sql-sync --no-cache @v2s.dev @v2s.local
  * fdr sql-sync --no-cache @v2s.local @v2s.dev
  *
- * Receives login link that does not require the password. 
+ * Receives login link that does not require the password.
  * dr @v2s.dev uli
- * 
+ *
  * Make backup.
  * cd backups
  * dr @v2s.local archive-dump --destination=./snelnl-last.tar.gz
@@ -44,7 +44,7 @@ $aliases['local'] = array(
         'password' => '',
         'port' => '',
         'host' => 'localhost',
-        'database' => 'v2_shelepen', 
+        'database' => 'v2_shelepen',
       ),
     ),
   ),
@@ -59,6 +59,35 @@ $aliases['local'] = array(
 //this is the alias for the remote development site
 
 // Remote Drupal Path.
+$RURL = 'v2.shelepen.com.ua';
+$aliases['dev'] = array(
+  'root' => $DP,
+  'uri' => $RURL,
+  'remote-host' => $RURL,
+  'remote-user' => 'www-data',
+  'ssh-options' => '-i ' . __DIR__ . '/www-data@shelepen.com.ua',
+  'databases' => array (
+    'default' => array (
+      'default' => array (
+        'database' => 'v2_shelepen',
+        'username' => 'root',
+        'password' => '',
+        'host' => 'localhost',
+        'port' => '',
+        'driver' => 'mysql',
+        'prefix' => '',
+      ),
+    ),
+  ),
+  'path-aliases' => array (
+    '%drush-script' => '/home/www-data/github/drush/drush',
+    '%dump-dir' => realpath($DP . '/../backups'),
+    '%files' => $DP . '/sites/' . $URI . '/files',
+    '%sites' => $DP . '/sites/',
+  )
+);
+
+// Prod.
 $RURL = 'v2.shelepen.com.ua';
 $aliases['dev'] = array(
   'root' => $DP,
