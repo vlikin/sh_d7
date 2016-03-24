@@ -9,6 +9,7 @@
 @import "compass";
 @import "partial/media";
 @import "partial/base";
+@import "partial/site_icon-font";
 @import "partial/field";
 @import "partial/cct/cm/image_text";
 @import "partial/cct/cm/map_text";
@@ -74,6 +75,10 @@
         >p {
           padding-left: $padding;
         }
+
+        @include cell {
+          display: none;
+        }
       }
 
       @include cell {
@@ -90,6 +95,11 @@
       right: 0;
       position: absolute;
 
+      a {
+        padding: $padding;
+        display: inline-block;
+      }
+
       @include cell {
         @include border-radius(0);
         cursor: pointer;
@@ -99,12 +109,9 @@
         min-height: $font-size;
         padding: 0;
         margin: 0;
-
         position: relative;
 
         a {
-          width: auto;
-          margin: $padding * 2;
           overflow: hidden;
         }
 
@@ -227,5 +234,14 @@
   bottom: $padding;
   opacity: 0.6;
 
-  @include ionic-icon("\f10d", adjust-lightness($p3-color, -20), $biggest-font-size * 4);
+
+  &::before {
+    color: adjust-lightness($p3-color, -20);
+    height: $biggest-font-size * 4;
+    width: $biggest-font-size * 4;
+    font-family: site_icon;
+    font-size: $biggest-font-size * 4;
+    content: $font-site_icon-content-menu-up;
+  }
+
 }

@@ -7,7 +7,7 @@ body.page-node {
       width: grid(960);
       .image-container {
         float: right;
-        margin: 0 0 $padding $padding;
+        margin: 0 0 0 $padding;
       }
 
       .text-container {
@@ -16,6 +16,7 @@ body.page-node {
       &:nth-child(2n) {
         .image-container {
           float: left;
+          margin: 0 $padding 0 0;
         }
       }
     }

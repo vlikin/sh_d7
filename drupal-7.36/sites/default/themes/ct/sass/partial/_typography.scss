@@ -63,6 +63,7 @@ h2 {
 a {
   color: $p3-color;
   text-decoration: none;
+  display: inline-block;
 
   &:hover {
     color: $p4-color;

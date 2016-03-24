@@ -3,13 +3,24 @@
   width: grid(960);
   background: white;
 
+  .node-readmore {
+    display: inline-block;
+    padding: $padding;
+
+    @include cell {
+      padding: $padding * 2;
+    }
+  }
+
   .image-container {
     float: left;
     width: grid(480);
-    margin: 0 $padding $padding 0;
+    padding: 0 $padding $padding 0;
+    box-sizing: border-box;
 
     @include cell {
       width: grid(960);
+      padding: 0;
       margin: 0;
 
       img {
@@ -29,6 +40,13 @@
   h2 {
     font-size: $bigger-font-size;
     font-weight: bold;
+    display: inline-block;
+    width: grid(480);
+    box-sizing: border-box;
+
+    @include cell {
+      width: grid(960);
+    }
   }
 
   .submitted {
@@ -40,7 +58,11 @@
   &:nth-child(2n) {
     .image-container {
       float: right;
-      margin: 0 0 $padding $padding;
+      padding: 0 0 $padding $padding;
+
+      @include cell {
+        padding: 0;
+      }
     }
   }
 

@@ -1,4 +1,4 @@
-<?php 
+<?php
 /**
  * @file It containes the LOGO content type.
  */
@@ -29,7 +29,7 @@ function cm_cct_logo_render($subtype, $conf, $args, $context) {
   $block = new stdClass();
   $block->content = [
     '#type' => 'container',
-    '#prefix' => '<a href="' . url('/') . '">',
+    '#prefix' => '<a href="' . url('/') . '" style="display:inline">',
     '#suffix' => '</a>',
     '#attributes' => [
       'class' => ['cm_cct_logo']
