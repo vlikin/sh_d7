@@ -74,6 +74,11 @@ a {
   }
 }
 
+p {
+  text-align: justify;
+  padding: $padding;
+}
+
 input {
   border: solid 1px $p3-color;
   width: grid(960);

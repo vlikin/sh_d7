@@ -431,12 +431,18 @@ a:visited {
 }
 
 /* line 77, ../sass/partial/_typography.scss */
+p {
+  text-align: justify;
+  padding: 0.5em;
+}
+
+/* line 82, ../sass/partial/_typography.scss */
 input {
   border: solid 1px #0048D8;
   width: 100%;
   box-sizing: border-box;
 }
-/* line 82, ../sass/partial/_typography.scss */
+/* line 87, ../sass/partial/_typography.scss */
 input[type=button], input[type=submit] {
   display: inline-block;
   vertical-align: middle;
@@ -451,12 +457,12 @@ input[type=button], input[type=submit] {
   padding: 0.5em;
   cursor: pointer;
 }
-/* line 92, ../sass/partial/_typography.scss */
+/* line 97, ../sass/partial/_typography.scss */
 input[type=button]:hover, input[type=submit]:hover {
   background: #002672;
 }
 
-/* line 98, ../sass/partial/_typography.scss */
+/* line 103, ../sass/partial/_typography.scss */
 .button {
   display: inline-block;
   vertical-align: middle;
@@ -472,33 +478,33 @@ input[type=button]:hover, input[type=submit]:hover {
   padding: 0.5em;
   cursor: pointer;
 }
-/* line 109, ../sass/partial/_typography.scss */
+/* line 114, ../sass/partial/_typography.scss */
 .button:hover {
   background: #002672;
 }
 
-/* line 114, ../sass/partial/_typography.scss */
+/* line 119, ../sass/partial/_typography.scss */
 .grid-480 {
   width: 50%;
 }
 
-/* line 118, ../sass/partial/_typography.scss */
+/* line 123, ../sass/partial/_typography.scss */
 .ct-float-left {
   float: left;
 }
 
-/* line 122, ../sass/partial/_typography.scss */
+/* line 127, ../sass/partial/_typography.scss */
 .ct-float-right {
   float: left;
 }
 
-/* line 126, ../sass/partial/_typography.scss */
+/* line 131, ../sass/partial/_typography.scss */
 .ct-padding {
   padding: 0.5em;
   box-sizing: border-box;
 }
 
-/* line 131, ../sass/partial/_typography.scss */
+/* line 136, ../sass/partial/_typography.scss */
 .element-invisible {
   display: none;
 }
