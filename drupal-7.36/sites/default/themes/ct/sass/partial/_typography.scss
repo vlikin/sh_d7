@@ -72,6 +72,11 @@ a {
   &:visited {
     color: $p3-color;
   }
+
+  @include cell {
+    padding: $padding;
+  }
+
 }
 
 p {

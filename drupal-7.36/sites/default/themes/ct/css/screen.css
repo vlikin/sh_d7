@@ -429,20 +429,26 @@ a:hover {
 a:visited {
   color: #0048D8;
 }
+@media all and (max-width: 600px) {
+  /* line 63, ../sass/partial/_typography.scss */
+  a {
+    padding: 0.5em;
+  }
+}
 
-/* line 77, ../sass/partial/_typography.scss */
+/* line 82, ../sass/partial/_typography.scss */
 p {
   text-align: justify;
   padding: 0.5em;
 }
 
-/* line 82, ../sass/partial/_typography.scss */
+/* line 87, ../sass/partial/_typography.scss */
 input {
   border: solid 1px #0048D8;
   width: 100%;
   box-sizing: border-box;
 }
-/* line 87, ../sass/partial/_typography.scss */
+/* line 92, ../sass/partial/_typography.scss */
 input[type=button], input[type=submit] {
   display: inline-block;
   vertical-align: middle;
@@ -457,12 +463,12 @@ input[type=button], input[type=submit] {
   padding: 0.5em;
   cursor: pointer;
 }
-/* line 97, ../sass/partial/_typography.scss */
+/* line 102, ../sass/partial/_typography.scss */
 input[type=button]:hover, input[type=submit]:hover {
   background: #002672;
 }
 
-/* line 103, ../sass/partial/_typography.scss */
+/* line 108, ../sass/partial/_typography.scss */
 .button {
   display: inline-block;
   vertical-align: middle;
@@ -478,33 +484,33 @@ input[type=button]:hover, input[type=submit]:hover {
   padding: 0.5em;
   cursor: pointer;
 }
-/* line 114, ../sass/partial/_typography.scss */
+/* line 119, ../sass/partial/_typography.scss */
 .button:hover {
   background: #002672;
 }
 
-/* line 119, ../sass/partial/_typography.scss */
+/* line 124, ../sass/partial/_typography.scss */
 .grid-480 {
   width: 50%;
 }
 
-/* line 123, ../sass/partial/_typography.scss */
+/* line 128, ../sass/partial/_typography.scss */
 .ct-float-left {
   float: left;
 }
 
-/* line 127, ../sass/partial/_typography.scss */
+/* line 132, ../sass/partial/_typography.scss */
 .ct-float-right {
   float: left;
 }
 
-/* line 131, ../sass/partial/_typography.scss */
+/* line 136, ../sass/partial/_typography.scss */
 .ct-padding {
   padding: 0.5em;
   box-sizing: border-box;
 }
 
-/* line 136, ../sass/partial/_typography.scss */
+/* line 141, ../sass/partial/_typography.scss */
 .element-invisible {
   display: none;
 }
@@ -570,29 +576,33 @@ input[type=button]:hover, input[type=submit]:hover {
   .node h2 {
     width: 100%;
   }
+  /* line 50, ../sass/partial/_node.scss */
+  .node h2 a {
+    padding: 0;
+  }
 }
-/* line 52, ../sass/partial/_node.scss */
+/* line 56, ../sass/partial/_node.scss */
 .node .submitted {
   color: #1a0579;
   font-size: 0.9em;
   padding: 0.5em;
 }
-/* line 59, ../sass/partial/_node.scss */
+/* line 63, ../sass/partial/_node.scss */
 .node:nth-child(2n) .image-container {
   float: right;
   padding: 0 0 0.5em 0.5em;
 }
 @media all and (max-width: 600px) {
-  /* line 59, ../sass/partial/_node.scss */
+  /* line 63, ../sass/partial/_node.scss */
   .node:nth-child(2n) .image-container {
     padding: 0;
   }
 }
-/* line 69, ../sass/partial/_node.scss */
+/* line 73, ../sass/partial/_node.scss */
 .node .links.inline {
   display: block;
 }
-/* line 72, ../sass/partial/_node.scss */
+/* line 76, ../sass/partial/_node.scss */
 .node .links.inline li {
   float: right;
 }

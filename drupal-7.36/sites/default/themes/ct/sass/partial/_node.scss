@@ -46,6 +46,10 @@
 
     @include cell {
       width: grid(960);
+
+      a {
+        padding: 0;
+      }
     }
   }
 
