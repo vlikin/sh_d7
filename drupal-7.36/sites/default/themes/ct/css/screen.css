@@ -814,7 +814,7 @@ body.page-car-budget .bx-wrapper .bx-viewport {
 }
 /* line 98, ../sass/screen.scss */
 #page > header .cm_cct_menu a, #page > header .language-switcher-locale-url a {
-  padding: 0.5em;
+  padding: 1em;
   display: inline-block;
 }
 @media all and (max-width: 600px) {
