@@ -1,6 +1,7 @@
 .node {
   @include inline-block;
   width: grid(960);
+  position: relative;
   background: white;
 
   .node-readmore {
@@ -54,9 +55,26 @@
   }
 
   .submitted {
+    @include inline-block;
+    box-sizing: border-box;
+    padding: $padding;
+    margin: 0;
+    width: grid(480);
     color: adjust-lightness($p2-color, 20);
     font-size: $smaller-font-size;
-    padding: $padding;
+
+    @include cell {
+      width: grid(960);
+    };
+  }
+
+  div.content {
+    @include inline-block;
+    width: grid(480);
+
+    @include cell {
+      width: grid(960);
+    };
   }
 
   &:nth-child(2n) {
@@ -76,5 +94,16 @@
     li {
       float: right;
     }
+  }
+}
+
+.node.node-event.node.node-view-mode-full, .node.node-event.node.node-view-mode-popup{
+  .content {
+    position: relative;
+    width: grid(960);
+  }
+
+  .image-container {
+    width: grid(960);
   }
 }

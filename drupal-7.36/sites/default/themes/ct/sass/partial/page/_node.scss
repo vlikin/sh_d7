@@ -15,14 +15,22 @@ body.page-node {
       div.submitted {
         @include inline-block;
         box-sizing: border-box;
-        padding: padding;
+        padding: $padding;
         margin: 0;
         width: grid(480);
+
+        @include cell {
+          width: grid(960);
+        };
       }
 
       div.content {
         @include inline-block;
         width: grid(480);
+
+        @include cell {
+          width: grid(960);
+        };
       }
 
       .text-container {

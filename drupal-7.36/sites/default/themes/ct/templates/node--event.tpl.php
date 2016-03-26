@@ -3,7 +3,7 @@
  * @file Overrides node--artcle.tpl.php
  */
 ?>
-<div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
+<div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix node-view-mode-<?= $view_mode ?>"<?php print $attributes; ?>>
   <?php if ($view_mode == 'teaser'): ?>
     <div class="image-container">
       <?= render($content['field_image']) ?>

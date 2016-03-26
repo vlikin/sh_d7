@@ -520,6 +520,11 @@ input[type=button]:hover, input[type=submit]:hover {
   display: none;
 }
 
+/* line 145, ../sass/partial/_typography.scss */
+.item-list ul.pager {
+  background: transparent;
+}
+
 /* line 1, ../sass/partial/_node.scss */
 .node {
   display: inline-block;
@@ -528,20 +533,21 @@ input[type=button]:hover, input[type=submit]:hover {
   *zoom: 1;
   *display: inline;
   width: 100%;
+  position: relative;
   background: white;
 }
-/* line 6, ../sass/partial/_node.scss */
+/* line 7, ../sass/partial/_node.scss */
 .node .node-readmore {
   display: inline-block;
   padding: 0.5em;
 }
 @media all and (max-width: 600px) {
-  /* line 6, ../sass/partial/_node.scss */
+  /* line 7, ../sass/partial/_node.scss */
   .node .node-readmore {
     padding: 1em;
   }
 }
-/* line 15, ../sass/partial/_node.scss */
+/* line 16, ../sass/partial/_node.scss */
 .node .image-container {
   float: left;
   width: 50%;
@@ -549,26 +555,26 @@ input[type=button]:hover, input[type=submit]:hover {
   box-sizing: border-box;
 }
 @media all and (max-width: 600px) {
-  /* line 15, ../sass/partial/_node.scss */
+  /* line 16, ../sass/partial/_node.scss */
   .node .image-container {
     width: 100%;
     padding: 0;
     margin: 0;
   }
-  /* line 26, ../sass/partial/_node.scss */
+  /* line 27, ../sass/partial/_node.scss */
   .node .image-container img {
     width: 100%;
     height: auto;
   }
 }
 @media all and (min-width: 601px) and (max-width: 959px) {
-  /* line 33, ../sass/partial/_node.scss */
+  /* line 34, ../sass/partial/_node.scss */
   .node .image-container img {
     width: 100%;
     height: auto;
   }
 }
-/* line 40, ../sass/partial/_node.scss */
+/* line 41, ../sass/partial/_node.scss */
 .node h2 {
   font-size: 1.1em;
   font-weight: bold;
@@ -577,39 +583,78 @@ input[type=button]:hover, input[type=submit]:hover {
   box-sizing: border-box;
 }
 @media all and (max-width: 600px) {
-  /* line 40, ../sass/partial/_node.scss */
+  /* line 41, ../sass/partial/_node.scss */
   .node h2 {
     width: 100%;
   }
-  /* line 50, ../sass/partial/_node.scss */
+  /* line 51, ../sass/partial/_node.scss */
   .node h2 a {
     padding: 0;
   }
 }
-/* line 56, ../sass/partial/_node.scss */
+/* line 57, ../sass/partial/_node.scss */
 .node .submitted {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  box-sizing: border-box;
+  padding: 0.5em;
+  margin: 0;
+  width: 50%;
   color: #1a0579;
   font-size: 0.9em;
-  padding: 0.5em;
 }
-/* line 63, ../sass/partial/_node.scss */
+@media all and (max-width: 600px) {
+  /* line 57, ../sass/partial/_node.scss */
+  .node .submitted {
+    width: 100%;
+  }
+}
+/* line 71, ../sass/partial/_node.scss */
+.node div.content {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  width: 50%;
+}
+@media all and (max-width: 600px) {
+  /* line 71, ../sass/partial/_node.scss */
+  .node div.content {
+    width: 100%;
+  }
+}
+/* line 81, ../sass/partial/_node.scss */
 .node:nth-child(2n) .image-container {
   float: right;
   padding: 0 0 0.5em 0.5em;
 }
 @media all and (max-width: 600px) {
-  /* line 63, ../sass/partial/_node.scss */
+  /* line 81, ../sass/partial/_node.scss */
   .node:nth-child(2n) .image-container {
     padding: 0;
   }
 }
-/* line 73, ../sass/partial/_node.scss */
+/* line 91, ../sass/partial/_node.scss */
 .node .links.inline {
   display: block;
 }
-/* line 76, ../sass/partial/_node.scss */
+/* line 94, ../sass/partial/_node.scss */
 .node .links.inline li {
   float: right;
+}
+
+/* line 101, ../sass/partial/_node.scss */
+.node.node-event.node.node-view-mode-full .content, .node.node-event.node.node-view-mode-popup .content {
+  position: relative;
+  width: 100%;
+}
+/* line 106, ../sass/partial/_node.scss */
+.node.node-event.node.node-view-mode-full .image-container, .node.node-event.node.node-view-mode-popup .image-container {
+  width: 100%;
 }
 
 /* line 1, ../sass/partial/_popup.scss */
@@ -720,11 +765,17 @@ body.page-node .pane-nnn .node div.submitted {
   *zoom: 1;
   *display: inline;
   box-sizing: border-box;
-  padding: padding;
+  padding: 0.5em;
   margin: 0;
   width: 50%;
 }
-/* line 23, ../sass/partial/page/_node.scss */
+@media all and (max-width: 600px) {
+  /* line 15, ../sass/partial/page/_node.scss */
+  body.page-node .pane-nnn .node div.submitted {
+    width: 100%;
+  }
+}
+/* line 27, ../sass/partial/page/_node.scss */
 body.page-node .pane-nnn .node div.content {
   display: inline-block;
   vertical-align: middle;
@@ -733,11 +784,17 @@ body.page-node .pane-nnn .node div.content {
   *display: inline;
   width: 50%;
 }
-/* line 28, ../sass/partial/page/_node.scss */
+@media all and (max-width: 600px) {
+  /* line 27, ../sass/partial/page/_node.scss */
+  body.page-node .pane-nnn .node div.content {
+    width: 100%;
+  }
+}
+/* line 36, ../sass/partial/page/_node.scss */
 body.page-node .pane-nnn .node .text-container {
   float: right;
 }
-/* line 32, ../sass/partial/page/_node.scss */
+/* line 40, ../sass/partial/page/_node.scss */
 body.page-node .pane-nnn .node:nth-child(2n) .image-container {
   float: left;
   margin: 0 0 0 0;
