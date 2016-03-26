@@ -25,6 +25,11 @@
     width: grid(480);
     float: left;
 
+    p {
+      padding: 0;
+      margin: 0;
+    }
+
     @include cell {
       width: grid(960);
     }

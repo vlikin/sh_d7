@@ -40,44 +40,63 @@
     min-height: $padding;
     position: relative;
 
-    .cm_cct_logo {
+    .cm-cct-logo--wrapper {
+      padding: 0;
+      margin: 0;
+
       @include inline-block;
+      position: relative;
       box-sizing: border-box;
-      color: $p1-color;
       width: grid(480);
-      padding: $padding;
 
-      >.image {
-        float: left;
-        width: grid(200);
-
-        img {
-          width: 100%;
-          height: auto;
-        }
+      p {
+        padding: 0;
       }
 
-      >.site_name {
-        font-size: $biggest-font-size;
-        font-weight: bolder;
-        float: left;
-        width: grid(740);
-        padding-top: grid(60);
-        >p {
-          padding-left: $padding;
-        }
-      }
+      .cm_cct_logo {
+        @include inline-block;
+        box-sizing: border-box;
+        color: $p1-color;
+        width: grid(960);
+        padding: $padding;
 
-      >.site_slogan {
-        font-size: $smaller-font-size;
-        float: left;
-        width: grid(740);
-        >p {
-          padding-left: $padding;
+        >.image {
+          float: left;
+          width: grid(200);
+
+          img {
+            width: 100%;
+            height: auto;
+          }
         }
 
-        @include cell {
-          display: none;
+        >.site_name {
+          font-size: $biggest-font-size;
+          font-weight: bolder;
+          float: left;
+          width: grid(740);
+          padding-top: grid(60);
+
+          @include cell {
+            padding-top: grid(80);
+          }
+
+          >p {
+            padding-left: $padding;
+          }
+        }
+
+        >.site_slogan {
+          font-size: $smaller-font-size;
+          float: left;
+          width: grid(740);
+          >p {
+            padding-left: $padding;
+          }
+
+          @include cell {
+            display: none;
+          }
         }
       }
 

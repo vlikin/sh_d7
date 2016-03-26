@@ -5,9 +5,24 @@ body.page-node {
     .node {
       @include inline-block;
       width: grid(960);
+      position: relative;
+
       .image-container {
         float: right;
-        margin: 0 0 0 $padding;
+        margin: 0 0 0 0;
+      }
+
+      div.submitted {
+        @include inline-block;
+        box-sizing: border-box;
+        padding: padding;
+        margin: 0;
+        width: grid(480);
+      }
+
+      div.content {
+        @include inline-block;
+        width: grid(480);
       }
 
       .text-container {
@@ -16,7 +31,7 @@ body.page-node {
       &:nth-child(2n) {
         .image-container {
           float: left;
-          margin: 0 $padding 0 0;
+          margin: 0 0 0 0;
         }
       }
     }
