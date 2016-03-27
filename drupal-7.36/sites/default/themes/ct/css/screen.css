@@ -442,22 +442,23 @@ a:visited {
 @media all and (max-width: 600px) {
   /* line 63, ../sass/partial/_typography.scss */
   a {
+    font-size: 1.1em;
     padding: 0.5em;
   }
 }
 
-/* line 82, ../sass/partial/_typography.scss */
+/* line 83, ../sass/partial/_typography.scss */
 p {
   text-align: justify;
 }
 
-/* line 86, ../sass/partial/_typography.scss */
+/* line 87, ../sass/partial/_typography.scss */
 input {
   border: solid 1px #0048D8;
   width: 100%;
   box-sizing: border-box;
 }
-/* line 91, ../sass/partial/_typography.scss */
+/* line 92, ../sass/partial/_typography.scss */
 input[type=button], input[type=submit] {
   display: inline-block;
   vertical-align: middle;
@@ -472,12 +473,12 @@ input[type=button], input[type=submit] {
   padding: 0.5em;
   cursor: pointer;
 }
-/* line 101, ../sass/partial/_typography.scss */
+/* line 102, ../sass/partial/_typography.scss */
 input[type=button]:hover, input[type=submit]:hover {
   background: #002672;
 }
 
-/* line 107, ../sass/partial/_typography.scss */
+/* line 108, ../sass/partial/_typography.scss */
 .button {
   display: inline-block;
   vertical-align: middle;
@@ -493,38 +494,38 @@ input[type=button]:hover, input[type=submit]:hover {
   padding: 0.5em;
   cursor: pointer;
 }
-/* line 118, ../sass/partial/_typography.scss */
+/* line 119, ../sass/partial/_typography.scss */
 .button:hover {
   background: #002672;
 }
 
-/* line 123, ../sass/partial/_typography.scss */
+/* line 124, ../sass/partial/_typography.scss */
 .grid-480 {
   width: 50%;
 }
 
-/* line 127, ../sass/partial/_typography.scss */
+/* line 128, ../sass/partial/_typography.scss */
 .ct-float-left {
   float: left;
 }
 
-/* line 131, ../sass/partial/_typography.scss */
+/* line 132, ../sass/partial/_typography.scss */
 .ct-float-right {
   float: left;
 }
 
-/* line 135, ../sass/partial/_typography.scss */
+/* line 136, ../sass/partial/_typography.scss */
 .ct-padding {
   padding: 0.5em;
   box-sizing: border-box;
 }
 
-/* line 140, ../sass/partial/_typography.scss */
+/* line 141, ../sass/partial/_typography.scss */
 .element-invisible {
   display: none;
 }
 
-/* line 144, ../sass/partial/_typography.scss */
+/* line 145, ../sass/partial/_typography.scss */
 .item-list ul.pager {
   background: transparent;
 }

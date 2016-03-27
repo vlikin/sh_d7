@@ -74,6 +74,7 @@ a {
   }
 
   @include cell {
+    font-size: $bigger-font-size;
     padding: $padding;
   }
 
