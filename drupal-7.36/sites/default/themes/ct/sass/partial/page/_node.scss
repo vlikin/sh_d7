@@ -9,7 +9,8 @@ body.page-node {
 
       .image-container {
         float: right;
-        margin: 0 0 0 0;
+        margin: 0;
+        padding: 0;
       }
 
       div.submitted {
@@ -36,10 +37,12 @@ body.page-node {
       .text-container {
         float: right;
       }
+
       &:nth-child(2n) {
         .image-container {
           float: left;
-          margin: 0 0 0 0;
+          margin: 0;
+          padding: 0;
         }
       }
     }

@@ -197,6 +197,11 @@ ul.primary.tabs li a {
   padding-left: 0.5em;
 }
 
+/* line 14, ../sass/partial/_field.scss */
+.field-type-text-with-summary {
+  padding: 0.5em;
+}
+
 /* line 1, ../sass/partial/cct/cm/_image_text.scss */
 .cm_cct_image_text {
   display: inline-block;
@@ -444,16 +449,15 @@ a:visited {
 /* line 82, ../sass/partial/_typography.scss */
 p {
   text-align: justify;
-  padding: 0.5em;
 }
 
-/* line 87, ../sass/partial/_typography.scss */
+/* line 86, ../sass/partial/_typography.scss */
 input {
   border: solid 1px #0048D8;
   width: 100%;
   box-sizing: border-box;
 }
-/* line 92, ../sass/partial/_typography.scss */
+/* line 91, ../sass/partial/_typography.scss */
 input[type=button], input[type=submit] {
   display: inline-block;
   vertical-align: middle;
@@ -468,12 +472,12 @@ input[type=button], input[type=submit] {
   padding: 0.5em;
   cursor: pointer;
 }
-/* line 102, ../sass/partial/_typography.scss */
+/* line 101, ../sass/partial/_typography.scss */
 input[type=button]:hover, input[type=submit]:hover {
   background: #002672;
 }
 
-/* line 108, ../sass/partial/_typography.scss */
+/* line 107, ../sass/partial/_typography.scss */
 .button {
   display: inline-block;
   vertical-align: middle;
@@ -489,38 +493,38 @@ input[type=button]:hover, input[type=submit]:hover {
   padding: 0.5em;
   cursor: pointer;
 }
-/* line 119, ../sass/partial/_typography.scss */
+/* line 118, ../sass/partial/_typography.scss */
 .button:hover {
   background: #002672;
 }
 
-/* line 124, ../sass/partial/_typography.scss */
+/* line 123, ../sass/partial/_typography.scss */
 .grid-480 {
   width: 50%;
 }
 
-/* line 128, ../sass/partial/_typography.scss */
+/* line 127, ../sass/partial/_typography.scss */
 .ct-float-left {
   float: left;
 }
 
-/* line 132, ../sass/partial/_typography.scss */
+/* line 131, ../sass/partial/_typography.scss */
 .ct-float-right {
   float: left;
 }
 
-/* line 136, ../sass/partial/_typography.scss */
+/* line 135, ../sass/partial/_typography.scss */
 .ct-padding {
   padding: 0.5em;
   box-sizing: border-box;
 }
 
-/* line 141, ../sass/partial/_typography.scss */
+/* line 140, ../sass/partial/_typography.scss */
 .element-invisible {
   display: none;
 }
 
-/* line 145, ../sass/partial/_typography.scss */
+/* line 144, ../sass/partial/_typography.scss */
 .item-list ul.pager {
   background: transparent;
 }
@@ -755,9 +759,10 @@ body.page-node .pane-nnn .node {
 /* line 10, ../sass/partial/page/_node.scss */
 body.page-node .pane-nnn .node .image-container {
   float: right;
-  margin: 0 0 0 0;
+  margin: 0;
+  padding: 0;
 }
-/* line 15, ../sass/partial/page/_node.scss */
+/* line 16, ../sass/partial/page/_node.scss */
 body.page-node .pane-nnn .node div.submitted {
   display: inline-block;
   vertical-align: middle;
@@ -770,12 +775,12 @@ body.page-node .pane-nnn .node div.submitted {
   width: 50%;
 }
 @media all and (max-width: 600px) {
-  /* line 15, ../sass/partial/page/_node.scss */
+  /* line 16, ../sass/partial/page/_node.scss */
   body.page-node .pane-nnn .node div.submitted {
     width: 100%;
   }
 }
-/* line 27, ../sass/partial/page/_node.scss */
+/* line 28, ../sass/partial/page/_node.scss */
 body.page-node .pane-nnn .node div.content {
   display: inline-block;
   vertical-align: middle;
@@ -785,19 +790,20 @@ body.page-node .pane-nnn .node div.content {
   width: 50%;
 }
 @media all and (max-width: 600px) {
-  /* line 27, ../sass/partial/page/_node.scss */
+  /* line 28, ../sass/partial/page/_node.scss */
   body.page-node .pane-nnn .node div.content {
     width: 100%;
   }
 }
-/* line 36, ../sass/partial/page/_node.scss */
+/* line 37, ../sass/partial/page/_node.scss */
 body.page-node .pane-nnn .node .text-container {
   float: right;
 }
-/* line 40, ../sass/partial/page/_node.scss */
+/* line 42, ../sass/partial/page/_node.scss */
 body.page-node .pane-nnn .node:nth-child(2n) .image-container {
   float: left;
-  margin: 0 0 0 0;
+  margin: 0;
+  padding: 0;
 }
 
 /* line 2, ../sass/partial/page/_car_budget.scss */
