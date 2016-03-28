@@ -1,5 +1,6 @@
 .node {
   @include inline-block;
+  width: grid(960);
   background: white;
 
   .image-container {

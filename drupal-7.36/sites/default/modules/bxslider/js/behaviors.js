@@ -1,14 +1,5 @@
 Drupal.events = Drupal.events || {};
 
-Drupal.events.bxslider_on_item_click = function(_this) {
-  $this = jQuery(_this);
-  var dom = $this.closest('.bxslider');
-  var bxslider = dom.data('instance');
-  var href = location.href;
-  href = href + '?popup=1';
-  Drupal.ct.popup({src: href});
-};
-
 (function ($) {
   Drupal.behaviors.bxslider = {
     attach: function (context, settings) {

@@ -86,6 +86,28 @@ function cm_field_formatter_settings_form($field, $instance, $view_mode, $form, 
 }
 
 /**
+ * Implements hook_field_attach_view_alter.
+ */
+function cm_field_attach_view_alter(&$output, $context) {
+  // It sets the current slide only for the Popup page.
+  $get = drupal_get_query_parameters();
+  if (!array_key_exists('popup', $get)) {
+    return;
+  }
+  foreach ($output as $field_name => &$field) {
+    if (array_key_exists('#ukey', $field)) {
+      $ukey = $field['#ukey'];
+      foreach ($field['#attached']['js'] as &$attachment) {
+        if ($attachment['type'] == 'setting' && array_key_exists('bxslider', $attachment['data'])) {
+          $bxslider = &$attachment['data']['bxslider']['formatter'][$ukey];
+          $bxslider['startSlide'] = $get['imageIndex'];
+        }
+      }
+    }
+  }
+}
+
+/**
  * Implements hook_field_formatter_view().
  */
 function cm_field_formatter_view($entity_type, $entity, $field, $instance, $langcode, $items, $display) {

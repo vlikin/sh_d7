@@ -2,7 +2,9 @@ body.page-node {
   .pane-nnn {
     margin-top: $padding * 2;
 
-    .node.node-article {
+    .node {
+      @include inline-block;
+      width: grid(960);
       .image-container {
         float: right;
         margin: 0 0 $padding $padding;

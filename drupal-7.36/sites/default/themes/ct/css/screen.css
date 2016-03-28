@@ -477,54 +477,55 @@ input[type=button]:hover, input[type=submit]:hover {
   *vertical-align: auto;
   *zoom: 1;
   *display: inline;
+  width: 100%;
   background: white;
 }
-/* line 5, ../sass/partial/_node.scss */
+/* line 6, ../sass/partial/_node.scss */
 .node .image-container {
   float: left;
   width: 50%;
   margin: 0 0.5em 0.5em 0;
 }
 @media all and (max-width: 600px) {
-  /* line 5, ../sass/partial/_node.scss */
+  /* line 6, ../sass/partial/_node.scss */
   .node .image-container {
     width: 100%;
     margin: 0;
   }
-  /* line 14, ../sass/partial/_node.scss */
+  /* line 15, ../sass/partial/_node.scss */
   .node .image-container img {
     width: 100%;
     height: auto;
   }
 }
 @media all and (min-width: 601px) and (max-width: 959px) {
-  /* line 21, ../sass/partial/_node.scss */
+  /* line 22, ../sass/partial/_node.scss */
   .node .image-container img {
     width: 100%;
     height: auto;
   }
 }
-/* line 28, ../sass/partial/_node.scss */
+/* line 29, ../sass/partial/_node.scss */
 .node h2 {
   font-size: 1.1em;
   font-weight: bold;
 }
-/* line 33, ../sass/partial/_node.scss */
+/* line 34, ../sass/partial/_node.scss */
 .node .submitted {
   color: #1a0579;
   font-size: 0.9em;
   padding: 0.5em;
 }
-/* line 40, ../sass/partial/_node.scss */
+/* line 41, ../sass/partial/_node.scss */
 .node:nth-child(2n) .image-container {
   float: right;
   margin: 0 0 0.5em 0.5em;
 }
-/* line 46, ../sass/partial/_node.scss */
+/* line 47, ../sass/partial/_node.scss */
 .node .links.inline {
   display: block;
 }
-/* line 49, ../sass/partial/_node.scss */
+/* line 50, ../sass/partial/_node.scss */
 .node .links.inline li {
   float: right;
 }
@@ -614,17 +615,26 @@ input[type=button]:hover, input[type=submit]:hover {
 body.page-node .pane-nnn {
   margin-top: 1em;
 }
-/* line 6, ../sass/partial/page/_node.scss */
-body.page-node .pane-nnn .node.node-article .image-container {
+/* line 5, ../sass/partial/page/_node.scss */
+body.page-node .pane-nnn .node {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  width: 100%;
+}
+/* line 8, ../sass/partial/page/_node.scss */
+body.page-node .pane-nnn .node .image-container {
   float: right;
   margin: 0 0 0.5em 0.5em;
 }
-/* line 11, ../sass/partial/page/_node.scss */
-body.page-node .pane-nnn .node.node-article .text-container {
+/* line 13, ../sass/partial/page/_node.scss */
+body.page-node .pane-nnn .node .text-container {
   float: right;
 }
-/* line 15, ../sass/partial/page/_node.scss */
-body.page-node .pane-nnn .node.node-article:nth-child(2n) .image-container {
+/* line 17, ../sass/partial/page/_node.scss */
+body.page-node .pane-nnn .node:nth-child(2n) .image-container {
   float: left;
 }
 
