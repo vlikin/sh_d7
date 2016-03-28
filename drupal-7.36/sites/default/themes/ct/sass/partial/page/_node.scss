@@ -5,17 +5,44 @@ body.page-node {
     .node {
       @include inline-block;
       width: grid(960);
+      position: relative;
+
       .image-container {
         float: right;
-        margin: 0 0 $padding $padding;
+        margin: 0;
+        padding: 0;
+      }
+
+      div.submitted {
+        @include inline-block;
+        box-sizing: border-box;
+        padding: $padding;
+        margin: 0;
+        width: grid(480);
+
+        @include cell {
+          width: grid(960);
+        };
+      }
+
+      div.content {
+        @include inline-block;
+        width: grid(480);
+
+        @include cell {
+          width: grid(960);
+        };
       }
 
       .text-container {
         float: right;
       }
+
       &:nth-child(2n) {
         .image-container {
           float: left;
+          margin: 0;
+          padding: 0;
         }
       }
     }

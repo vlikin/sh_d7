@@ -4,7 +4,9 @@
   text-align: right;
 
   .icon {
-    @include ionic-icon("\f239", adjust-lightness($p3-color, -20), $biggest-font-size * 2);
+    color: adjust-lightness($p3-color, -20);
+    font-size: $biggest-font-size * 2;
+    font-family: site_icon;
     content: '';
     padding: $padding;
     &:hover:before {
@@ -13,13 +15,13 @@
 
     &.facebook {
       &:before {
-        content: "\f231";
+        content: $font-site_icon-content-facebook;
       }
     }
 
     &.twitter {
       &:before {
-        content: "\f243";
+        content: $font-site_icon-content-twitter;
       }
     }
   }
