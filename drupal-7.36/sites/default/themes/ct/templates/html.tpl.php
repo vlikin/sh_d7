@@ -8,8 +8,8 @@
   <div
     id="ct-body-lock-shadow"
     style="
-      background-color: #111;
-      opacity: 0.65;
+      background-color: #3f7fff;
+      opacity: 0.98;
       *background: none;
       position: fixed;
       z-index: 9001;
@@ -18,9 +18,8 @@
       width: 100%;
       height: 100vh;
   "></div>
-  <img
+  <div
     id="ct-body-lock"
-    src="<?= path_to_theme()  ?>/images/hourglass.svg"
     style="
       position: absolute;
       z-index: 9002;
@@ -28,8 +27,10 @@
       left: 50%;
       width: 120px;
       height: 120px;
-    "
-  />
+      margin: -60px auto auto -60px;
+    ">
+    <?php include path_to_theme() . "/images/hourglass.svg" ?>
+</div>
   <?php print $page_top;?>
   <?php print $page;?>
   <?php print $page_bottom;?>

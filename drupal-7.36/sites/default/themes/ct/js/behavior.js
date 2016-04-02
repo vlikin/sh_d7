@@ -76,10 +76,11 @@
           var $this = $(this);
           if ($this.hasClass('show')) {
             $menu.removeClass('show');
+            $('.cm_cct_menu.show,.language-switcher-locale-url').removeClass('hide');
             return;
           }
-          $('.cm_cct_menu.show').removeClass('show');
-          $(this).addClass('show');
+          $('.cm_cct_menu.show,.language-switcher-locale-url').removeClass('show').addClass('hide');
+          $(this).removeClass('hide').addClass('show');
         });
       });
     }
