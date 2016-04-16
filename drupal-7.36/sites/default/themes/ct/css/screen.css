@@ -156,35 +156,40 @@ ul.primary.tabs li a {
   font-weight: 400;
   font-style: normal;
 }
-/* line 41, ../sass/partial/_site_icon-font.scss */
-.site_icon.facebook:before {
+/* line 44, ../sass/partial/_site_icon-font.scss */
+.site_icon.close-box:before {
   font-family: "site_icon";
   content: "";
 }
-/* line 41, ../sass/partial/_site_icon-font.scss */
-.site_icon.menu-down:before {
+/* line 44, ../sass/partial/_site_icon-font.scss */
+.site_icon.facebook:before {
   font-family: "site_icon";
   content: "";
 }
-/* line 41, ../sass/partial/_site_icon-font.scss */
-.site_icon.menu-left:before {
+/* line 44, ../sass/partial/_site_icon-font.scss */
+.site_icon.menu-down:before {
   font-family: "site_icon";
   content: "";
 }
-/* line 41, ../sass/partial/_site_icon-font.scss */
-.site_icon.menu-right:before {
+/* line 44, ../sass/partial/_site_icon-font.scss */
+.site_icon.menu-left:before {
   font-family: "site_icon";
   content: "";
 }
-/* line 41, ../sass/partial/_site_icon-font.scss */
-.site_icon.menu-up:before {
+/* line 44, ../sass/partial/_site_icon-font.scss */
+.site_icon.menu-right:before {
   font-family: "site_icon";
   content: "";
 }
-/* line 41, ../sass/partial/_site_icon-font.scss */
-.site_icon.twitter:before {
+/* line 44, ../sass/partial/_site_icon-font.scss */
+.site_icon.menu-up:before {
   font-family: "site_icon";
   content: "";
+}
+/* line 44, ../sass/partial/_site_icon-font.scss */
+.site_icon.twitter:before {
+  font-family: "site_icon";
+  content: "";
 }
 
 /* line 2, ../sass/partial/_field.scss */
@@ -362,11 +367,11 @@ ul.primary.tabs li a {
 }
 /* line 17, ../sass/partial/cct/cm/_share.scss */
 .cm_cct_share .icon.facebook:before {
-  content: "";
+  content: "";
 }
 /* line 23, ../sass/partial/cct/cm/_share.scss */
 .cm_cct_share .icon.twitter:before {
-  content: "";
+  content: "";
 }
 
 /* line 1, ../sass/partial/cct/cm/_text.scss */
@@ -559,6 +564,11 @@ input[type=button]:hover, input[type=submit]:hover {
   padding: 0 0.5em 0.5em 0;
   box-sizing: border-box;
 }
+/* line 22, ../sass/partial/_node.scss */
+.node .image-container img {
+  width: 100%;
+  height: auto;
+}
 @media all and (max-width: 600px) {
   /* line 16, ../sass/partial/_node.scss */
   .node .image-container {
@@ -566,20 +576,20 @@ input[type=button]:hover, input[type=submit]:hover {
     padding: 0;
     margin: 0;
   }
-  /* line 27, ../sass/partial/_node.scss */
+  /* line 32, ../sass/partial/_node.scss */
   .node .image-container img {
     width: 100%;
     height: auto;
   }
 }
 @media all and (min-width: 601px) and (max-width: 959px) {
-  /* line 34, ../sass/partial/_node.scss */
+  /* line 39, ../sass/partial/_node.scss */
   .node .image-container img {
     width: 100%;
     height: auto;
   }
 }
-/* line 41, ../sass/partial/_node.scss */
+/* line 46, ../sass/partial/_node.scss */
 .node h2 {
   font-size: 1.1em;
   font-weight: bold;
@@ -588,16 +598,16 @@ input[type=button]:hover, input[type=submit]:hover {
   box-sizing: border-box;
 }
 @media all and (max-width: 600px) {
-  /* line 41, ../sass/partial/_node.scss */
+  /* line 46, ../sass/partial/_node.scss */
   .node h2 {
     width: 100%;
   }
-  /* line 51, ../sass/partial/_node.scss */
+  /* line 56, ../sass/partial/_node.scss */
   .node h2 a {
     padding: 0;
   }
 }
-/* line 57, ../sass/partial/_node.scss */
+/* line 62, ../sass/partial/_node.scss */
 .node .submitted {
   display: inline-block;
   vertical-align: middle;
@@ -612,12 +622,12 @@ input[type=button]:hover, input[type=submit]:hover {
   font-size: 0.9em;
 }
 @media all and (max-width: 600px) {
-  /* line 57, ../sass/partial/_node.scss */
+  /* line 62, ../sass/partial/_node.scss */
   .node .submitted {
     width: 100%;
   }
 }
-/* line 71, ../sass/partial/_node.scss */
+/* line 76, ../sass/partial/_node.scss */
 .node div.content {
   display: inline-block;
   vertical-align: middle;
@@ -627,37 +637,37 @@ input[type=button]:hover, input[type=submit]:hover {
   width: 50%;
 }
 @media all and (max-width: 600px) {
-  /* line 71, ../sass/partial/_node.scss */
+  /* line 76, ../sass/partial/_node.scss */
   .node div.content {
     width: 100%;
   }
 }
-/* line 81, ../sass/partial/_node.scss */
+/* line 86, ../sass/partial/_node.scss */
 .node:nth-child(2n) .image-container {
   float: right;
   padding: 0 0 0.5em 0.5em;
 }
 @media all and (max-width: 600px) {
-  /* line 81, ../sass/partial/_node.scss */
+  /* line 86, ../sass/partial/_node.scss */
   .node:nth-child(2n) .image-container {
     padding: 0;
   }
 }
-/* line 91, ../sass/partial/_node.scss */
+/* line 96, ../sass/partial/_node.scss */
 .node .links.inline {
   display: block;
 }
-/* line 94, ../sass/partial/_node.scss */
+/* line 99, ../sass/partial/_node.scss */
 .node .links.inline li {
   float: right;
 }
 
-/* line 101, ../sass/partial/_node.scss */
+/* line 106, ../sass/partial/_node.scss */
 .node.node-event.node.node-view-mode-full .content, .node.node-event.node.node-view-mode-popup .content {
   position: relative;
   width: 100%;
 }
-/* line 106, ../sass/partial/_node.scss */
+/* line 111, ../sass/partial/_node.scss */
 .node.node-event.node.node-view-mode-full .image-container, .node.node-event.node.node-view-mode-popup .image-container {
   width: 100%;
 }
@@ -716,28 +726,17 @@ input[type=button]:hover, input[type=submit]:hover {
   top: 0.5em;
   right: 0.5em;
 }
-/* line 2, ../sass/partial/_mixin.scss */
+/* line 41, ../sass/partial/_popup.scss */
 .ct-popup-box-out > .box > .close-button:before {
-  color: #002672;
+  font-family: site_icon;
+  content: "";
   font-size: 1.3em;
-  content: "";
-  display: inline-block;
-  font-family: "ionic";
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  text-rendering: auto;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
-/* line 47, ../sass/partial/_popup.scss */
+/* line 52, ../sass/partial/_popup.scss */
 .ct-popup-box-out > .box > .close-button:hover:before {
   color: #3f7fff;
 }
-/* line 51, ../sass/partial/_popup.scss */
+/* line 56, ../sass/partial/_popup.scss */
 .ct-popup-box-out > .box > .frame {
   width: 100%;
   height: 80vh;
@@ -1140,5 +1139,5 @@ body.page-car-budget .bx-wrapper .bx-viewport {
   width: 5.2em;
   font-family: site_icon;
   font-size: 5.2em;
-  content: "";
+  content: "";
 }

@@ -63,7 +63,6 @@
     attach: function (context, settings) {
       $('.cm_cct_menu', context).add('.language-switcher-locale-url').each(function(index, menu) {
         var $menu = $(menu);
-        console.log($('a.active', $menu).length);
         if ($('a.active', $menu).length == 0) {
           $('<a>', {href: '#', class: 'active'})
             .html('Menu')

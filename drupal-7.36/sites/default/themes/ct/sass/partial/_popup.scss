@@ -37,7 +37,12 @@
     margin: 0px auto;
     z-index: 9003;
     >.close-button {
-      @include ionic-icon("\f12a", adjust-lightness($p3-color, -20), $biggest-font-size);
+      //@include ionic-icon("\f12a", adjust-lightness($p3-color, -20), $biggest-font-size);
+      &:before {
+        font-family: site_icon;
+        content: $font-site_icon-content-close-box;
+        font-size: $biggest-font-size;
+      }
       cursor: pointer;
       font-size: $bigger-font-size;
       position: absolute;

@@ -13,27 +13,30 @@
 }
 
 
-  $font-site_icon-content-facebook:"\EA01";
+  $font-site_icon-content-close-box:"\EA01";
 
-  $font-site_icon-content-menu-down:"\EA02";
+  $font-site_icon-content-facebook:"\EA02";
 
-  $font-site_icon-content-menu-left:"\EA03";
+  $font-site_icon-content-menu-down:"\EA03";
 
-  $font-site_icon-content-menu-right:"\EA04";
+  $font-site_icon-content-menu-left:"\EA04";
 
-  $font-site_icon-content-menu-up:"\EA05";
+  $font-site_icon-content-menu-right:"\EA05";
 
-  $font-site_icon-content-twitter:"\EA06";
+  $font-site_icon-content-menu-up:"\EA06";
+
+  $font-site_icon-content-twitter:"\EA07";
 
 
 
 $list: (
-  ("facebook", "\EA01"),
-  ("menu-down", "\EA02"),
-  ("menu-left", "\EA03"),
-  ("menu-right", "\EA04"),
-  ("menu-up", "\EA05"),
-  ("twitter", "\EA06")
+  ("close-box", "\EA01"),
+  ("facebook", "\EA02"),
+  ("menu-down", "\EA03"),
+  ("menu-left", "\EA04"),
+  ("menu-right", "\EA05"),
+  ("menu-up", "\EA06"),
+  ("twitter", "\EA07")
 );
 
 .site_icon {
