@@ -20,15 +20,16 @@
       this.dom.box_out.remove();
       this.dom.blanket.remove();
       delete this;
-    }
+    };
 
     this.dom.closeButton
       .bind('click', function() {
         _this.removeThis();
-      })
+      });
 
   }
 
+  Drupal.events = Drupal.events || {};
   Drupal.events.bxslider_on_item_click = function(_this) {
     $this = jQuery(_this);
     var dom = $this.closest('.bxslider');
@@ -60,16 +61,27 @@
 
   Drupal.behaviors.ct_menus = {
     attach: function (context, settings) {
-      if ($('.cm_cct_menu a.active', context).length == 0) {
-        $('.cm_cct_menu a', context).first().show();
-      }
-      $('.language-switcher-locale-url, .cm_cct_menu', context).click(function(event) {
-        $(this).toggleClass('show');
+      $('.cm_cct_menu', context).add('.language-switcher-locale-url').each(function(index, menu) {
+        var $menu = $(menu);
+        if ($('a.active', $menu).length == 0) {
+          $('<a>', {href: '#', class: 'active'})
+            .html('Menu')
+            .prependTo($menu);
+        }
+        $('a.active', $menu).click(function(event) {
+          event.preventDefault();
+        });
+        $menu.click(function(event) {
+          var $this = $(this);
+          if ($this.hasClass('show')) {
+            $menu.removeClass('show');
+            $('.cm_cct_menu.show,.language-switcher-locale-url').removeClass('hide');
+            return;
+          }
+          $('.cm_cct_menu.show,.language-switcher-locale-url').removeClass('show').addClass('hide');
+          $(this).removeClass('hide').addClass('show');
+        });
       });
-      $('.language-switcher-locale-url li.active a, .cm_cct_menu a.active', context).click(function(event) {
-        event.preventDefault();
-      });
-
     }
   };
 
@@ -78,7 +90,6 @@
       var back_to_top = jQuery('<div />')
         .addClass('back_to_top')
         .click(function () {
-          console.log('click');
           $('html, body').animate({
             scrollTop: 0
           }, 2000);

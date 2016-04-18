@@ -9,6 +9,7 @@
 @import "compass";
 @import "partial/media";
 @import "partial/base";
+@import "partial/site_icon-font";
 @import "partial/field";
 @import "partial/cct/cm/image_text";
 @import "partial/cct/cm/map_text";
@@ -39,40 +40,63 @@
     min-height: $padding;
     position: relative;
 
-    .cm_cct_logo {
+    .cm-cct-logo--wrapper {
+      padding: 0;
+      margin: 0;
+
       @include inline-block;
+      position: relative;
       box-sizing: border-box;
-      color: $p1-color;
       width: grid(480);
-      padding: $padding;
 
-      >.image {
-        float: left;
-        width: grid(200);
-
-        img {
-          width: 100%;
-          height: auto;
-        }
+      p {
+        padding: 0;
       }
 
-      >.site_name {
-        font-size: $biggest-font-size;
-        font-weight: bolder;
-        float: left;
-        width: grid(740);
-        padding-top: grid(60);
-        >p {
-          padding-left: $padding;
-        }
-      }
+      .cm_cct_logo {
+        @include inline-block;
+        box-sizing: border-box;
+        color: $p1-color;
+        width: grid(960);
+        padding: $padding;
 
-      >.site_slogan {
-        font-size: $smaller-font-size;
-        float: left;
-        width: grid(740);
-        >p {
-          padding-left: $padding;
+        >.image {
+          float: left;
+          width: grid(200);
+
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+
+        >.site_name {
+          font-size: $biggest-font-size;
+          font-weight: bolder;
+          float: left;
+          width: grid(740);
+          padding-top: grid(60);
+
+          @include cell {
+            padding-top: grid(80);
+          }
+
+          >p {
+            padding-left: $padding;
+          }
+        }
+
+        >.site_slogan {
+          font-size: $smaller-font-size;
+          float: left;
+          width: grid(740);
+          >p {
+            padding-left: $padding;
+          }
+
+          @include cell {
+            display: none;
+          }
         }
       }
 
@@ -88,29 +112,36 @@
       background:  adjust-lightness($p3-color, 20);
       bottom: 0;
       right: 0;
-      padding: $padding;
       position: absolute;
+
+      &.hide {
+        display: none;
+      }
+
+      a {
+        padding: $padding * 2;
+        display: inline-block;
+      }
 
       @include cell {
         @include border-radius(0);
-
         cursor: pointer;
-        display: block;
-        padding-left: $padding * 3;
+        float: left;
+        display: inline-block;
+        width: 90%;
         min-height: $font-size;
-        @include ionic-icon("\f10a", adjust-lightness($p3-color, -20), $biggest-font-size);
-        &:before {
-          padding: $padding * 2 / 3;
-          position: absolute;
-          left: 0 ;
-          top: 0;
-        }
+        padding: 0;
+        margin: 0;
         position: relative;
 
+        a {
+          overflow: hidden;
+        }
+
         &.show {
-          &:before {
-            content: "\f104";
-          }
+          margin-right: -10%;
+          width: 100%;
+
           a {
             display: block;
           }
@@ -127,12 +158,7 @@
 
       a {
         color: $p2-color;
-        margin-right: $padding;
         text-decoration: none;
-
-        &:last-child {
-          margin: 0;
-        }
 
         &:hover, &.active {
           color: $p1-color;
@@ -147,27 +173,63 @@
       bottom: auto;
       top: 0;
 
-      li {
+      &.hide {
+        display: none;
+      }
+
+      >li {
         @include inline-block;
       }
 
       @include cell {
         @include border-radius(0);
-        display: block;
-        padding-left: $padding * 3;
+        display: inline-block;
+        width: 10%;
+        margin: 0;
+        padding: 0;
+        float: left;
+        text-overflow: hidden;
         position: relative;
 
-        &.show {
-          li {
-            display: block;
-          }
-        }
-
-        li {
+        >li {
           display: none;
 
           &.active {
             display: block;
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            >a {
+              visibility: hidden;
+            }
+
+            &.uk {
+              background-image: url(../images/ua.svg);
+            }
+
+            &.ru {
+              background-image: url(../images/ru.svg);
+            }
+
+            &.en {
+              background-image: url(../images/en.svg);
+            }
+          }
+        }
+
+        &.show {
+          margin-left: -90%;
+          width: 100%;
+          >li {
+            display: block;
+
+            &.active {
+              background-image: none;
+              >a {
+                  display: block;
+                  visibility: visible;
+              }
+            }
           }
         }
       }
@@ -225,5 +287,14 @@
   bottom: $padding;
   opacity: 0.6;
 
-  @include ionic-icon("\f10d", adjust-lightness($p3-color, -20), $biggest-font-size * 4);
+
+  &::before {
+    color: adjust-lightness($p3-color, -20);
+    height: $biggest-font-size * 4;
+    width: $biggest-font-size * 4;
+    font-family: site_icon;
+    font-size: $biggest-font-size * 4;
+    content: $font-site_icon-content-menu-up;
+  }
+
 }
