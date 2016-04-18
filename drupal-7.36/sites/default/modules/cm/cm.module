@@ -248,7 +248,7 @@ function ct_preprocess_html(&$vars) {
         '#tag' => 'meta',
         '#attributes' => array(
           "property" => "og:image",
-          "content" => $image_path . '--changed',
+          "content" => $image_path,
         ),
       );
       drupal_add_html_head($element, 'facebook_share_image');
