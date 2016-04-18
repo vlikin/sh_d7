@@ -9,6 +9,20 @@
 function cm_drush_command() {
  $items = array();
 
+ $items['cm_devconf'] = array(
+   'description' => "Configures the development environmnet.",
+   'callback' => 'drush_cm_devconf',
+   'core' => array('7'),
+   'bootstrap' => DRUSH_BOOTSTRAP_DRUPAL_FULL,
+ );
+
+ $items['cm_prodconf'] = array(
+   'description' => "Configures the production environmnet.",
+   'callback' => 'drush_cm_prodconf',
+   'core' => array('7'),
+   'bootstrap' => DRUSH_BOOTSTRAP_DRUPAL_FULL,
+ );
+
  $items['cm_derivatives'] = array(
    'description' => "Create image derivatives",
    'callback' => 'drush_cm_derivatives',
@@ -23,7 +37,7 @@ function cm_drush_command() {
      ),
      'dir' => array(
        'description' => 'Set to the file path (relative to your public files directory) under which all files will have an image derivative created. Alternatively, set to "public" to just have your public files directory looked into with no recursion. With no option set, the default will run through every single file.',
-     'example_value' => 'field/image',
+       'example_value' => 'field/image',
      ),
    ),
    'examples' => array(
@@ -39,15 +53,57 @@ function cm_drush_command() {
 }
 
 /**
-* Command callback to perform the file migration.
-*
-* The options for this script are styles, exclude and dir. The styles and exclude
-* options will explicitly set or prohibit image styles to be created. The default
-* is that all styles will be used.
-* The dir parameter may be used to specify paths under the public files directory
-* that processing may occur on. The default for this is all paths and the special
-* path "public" will only process the public files directory without recursion.
-*/
+ * Command callback to set the development configuration.
+ */
+function drush_cm_devconf() {
+  variable_set('preprocess_css', 0);
+  variable_set('preprocess_js', 0);
+  variable_set('cache', 0);
+  variable_set('mail_system', [
+    'default-system' => 'DevelMailLog',
+  ]);
+  module_enable(['devel', 'metatag_devel']);
+
+  $permissions = array('access devel information');
+  foreach(array('anonymous user', 'authenticated user') as $role_name) {
+    $role = user_role_load_by_name($role_name);
+    user_role_grant_permissions($role->rid, $permissions);
+  }
+
+  drupal_flush_all_caches();
+}
+
+/**
+ * Command callback to set the production configuration.
+ */
+function drush_cm_prodconf() {
+  variable_set('cache', 1);
+  variable_set('preprocess_css', 1);
+  variable_set('preprocess_js', 1);
+  variable_set('mail_system', [
+    'default-system' => ' SmtpMailSystem',
+  ]);
+  module_disable(['devel', 'metatag_devel']);
+
+  $permissions = array('access devel information');
+  foreach(array('anonymous user', 'authenticated user') as $role_name) {
+    $role = user_role_load_by_name($role_name);
+    user_role_revoke_permissions($role->rid, $permissions);
+  }
+
+  drupal_flush_all_caches();
+}
+
+/**
+  * Command callback to perform the file migration.
+  *
+  * The options for this script are styles, exclude and dir. The styles and exclude
+  * options will explicitly set or prohibit image styles to be created. The default
+  * is that all styles will be used.
+  * The dir parameter may be used to specify paths under the public files directory
+  * that processing may occur on. The default for this is all paths and the special
+  * path "public" will only process the public files directory without recursion.
+  */
  function drush_cm_derivatives() {
 
  if (!module_exists("image")) {
