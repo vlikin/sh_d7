@@ -837,11 +837,17 @@ body.page-car-budget .bx-wrapper .bx-viewport {
 }
 /* line 38, ../sass/screen.scss */
 #page > header {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  width: 100%;
   background: #0048D8;
   min-height: 0.5em;
   position: relative;
 }
-/* line 43, ../sass/screen.scss */
+/* line 45, ../sass/screen.scss */
 #page > header .cm-cct-logo--wrapper {
   padding: 0;
   margin: 0;
@@ -854,11 +860,11 @@ body.page-car-budget .bx-wrapper .bx-viewport {
   box-sizing: border-box;
   width: 50%;
 }
-/* line 52, ../sass/screen.scss */
+/* line 54, ../sass/screen.scss */
 #page > header .cm-cct-logo--wrapper p {
   padding: 0;
 }
-/* line 56, ../sass/screen.scss */
+/* line 58, ../sass/screen.scss */
 #page > header .cm-cct-logo--wrapper .cm_cct_logo {
   display: inline-block;
   vertical-align: middle;
@@ -870,17 +876,17 @@ body.page-car-budget .bx-wrapper .bx-viewport {
   width: 100%;
   padding: 0.5em;
 }
-/* line 63, ../sass/screen.scss */
+/* line 65, ../sass/screen.scss */
 #page > header .cm-cct-logo--wrapper .cm_cct_logo > .image {
   float: left;
   width: 20.83333%;
 }
-/* line 67, ../sass/screen.scss */
+/* line 69, ../sass/screen.scss */
 #page > header .cm-cct-logo--wrapper .cm_cct_logo > .image img {
   width: 100%;
   height: auto;
 }
-/* line 73, ../sass/screen.scss */
+/* line 75, ../sass/screen.scss */
 #page > header .cm-cct-logo--wrapper .cm_cct_logo > .site_name {
   font-size: 1.3em;
   font-weight: bolder;
@@ -889,38 +895,38 @@ body.page-car-budget .bx-wrapper .bx-viewport {
   padding-top: 6.25%;
 }
 @media all and (max-width: 600px) {
-  /* line 73, ../sass/screen.scss */
+  /* line 75, ../sass/screen.scss */
   #page > header .cm-cct-logo--wrapper .cm_cct_logo > .site_name {
     padding-top: 8.33333%;
   }
 }
-/* line 84, ../sass/screen.scss */
+/* line 86, ../sass/screen.scss */
 #page > header .cm-cct-logo--wrapper .cm_cct_logo > .site_name > p {
   padding-left: 0.5em;
 }
-/* line 89, ../sass/screen.scss */
+/* line 91, ../sass/screen.scss */
 #page > header .cm-cct-logo--wrapper .cm_cct_logo > .site_slogan {
   font-size: 0.9em;
   float: left;
   width: 77.08333%;
 }
-/* line 93, ../sass/screen.scss */
+/* line 95, ../sass/screen.scss */
 #page > header .cm-cct-logo--wrapper .cm_cct_logo > .site_slogan > p {
   padding-left: 0.5em;
 }
 @media all and (max-width: 600px) {
-  /* line 89, ../sass/screen.scss */
+  /* line 91, ../sass/screen.scss */
   #page > header .cm-cct-logo--wrapper .cm_cct_logo > .site_slogan {
     display: none;
   }
 }
 @media all and (max-width: 600px) {
-  /* line 43, ../sass/screen.scss */
+  /* line 45, ../sass/screen.scss */
   #page > header .cm-cct-logo--wrapper {
     width: 100%;
   }
 }
-/* line 108, ../sass/screen.scss */
+/* line 110, ../sass/screen.scss */
 #page > header .cm_cct_menu, #page > header .language-switcher-locale-url {
   display: inline-block;
   vertical-align: middle;
@@ -935,17 +941,17 @@ body.page-car-budget .bx-wrapper .bx-viewport {
   right: 0;
   position: absolute;
 }
-/* line 117, ../sass/screen.scss */
+/* line 119, ../sass/screen.scss */
 #page > header .cm_cct_menu.hide, #page > header .hide.language-switcher-locale-url {
   display: none;
 }
-/* line 121, ../sass/screen.scss */
+/* line 123, ../sass/screen.scss */
 #page > header .cm_cct_menu a, #page > header .language-switcher-locale-url a {
   padding: 1em;
   display: inline-block;
 }
 @media all and (max-width: 600px) {
-  /* line 108, ../sass/screen.scss */
+  /* line 110, ../sass/screen.scss */
   #page > header .cm_cct_menu, #page > header .language-switcher-locale-url {
     -moz-border-radius: 0;
     -webkit-border-radius: 0;
@@ -959,38 +965,38 @@ body.page-car-budget .bx-wrapper .bx-viewport {
     margin: 0;
     position: relative;
   }
-  /* line 137, ../sass/screen.scss */
+  /* line 139, ../sass/screen.scss */
   #page > header .cm_cct_menu a, #page > header .language-switcher-locale-url a {
     overflow: hidden;
   }
-  /* line 141, ../sass/screen.scss */
+  /* line 143, ../sass/screen.scss */
   #page > header .cm_cct_menu.show, #page > header .show.language-switcher-locale-url {
     margin-right: -10%;
     width: 100%;
   }
-  /* line 145, ../sass/screen.scss */
+  /* line 147, ../sass/screen.scss */
   #page > header .cm_cct_menu.show a, #page > header .show.language-switcher-locale-url a {
     display: block;
   }
-  /* line 150, ../sass/screen.scss */
+  /* line 152, ../sass/screen.scss */
   #page > header .cm_cct_menu a, #page > header .language-switcher-locale-url a {
     display: none;
   }
-  /* line 153, ../sass/screen.scss */
+  /* line 155, ../sass/screen.scss */
   #page > header .cm_cct_menu a.active, #page > header .language-switcher-locale-url a.active {
     display: block;
   }
 }
-/* line 159, ../sass/screen.scss */
+/* line 161, ../sass/screen.scss */
 #page > header .cm_cct_menu a, #page > header .language-switcher-locale-url a {
   color: #050117;
   text-decoration: none;
 }
-/* line 163, ../sass/screen.scss */
+/* line 165, ../sass/screen.scss */
 #page > header .cm_cct_menu a:hover, #page > header .language-switcher-locale-url a:hover, #page > header .cm_cct_menu a.active, #page > header .language-switcher-locale-url a.active {
   color: #F6FFF2;
 }
-/* line 169, ../sass/screen.scss */
+/* line 171, ../sass/screen.scss */
 #page > header .language-switcher-locale-url {
   -moz-border-radius-topleft: 0;
   -webkit-border-top-left-radius: 0;
@@ -1001,11 +1007,11 @@ body.page-car-budget .bx-wrapper .bx-viewport {
   bottom: auto;
   top: 0;
 }
-/* line 176, ../sass/screen.scss */
+/* line 178, ../sass/screen.scss */
 #page > header .language-switcher-locale-url.hide {
   display: none;
 }
-/* line 180, ../sass/screen.scss */
+/* line 182, ../sass/screen.scss */
 #page > header .language-switcher-locale-url > li {
   display: inline-block;
   vertical-align: middle;
@@ -1014,7 +1020,7 @@ body.page-car-budget .bx-wrapper .bx-viewport {
   *display: inline;
 }
 @media all and (max-width: 600px) {
-  /* line 169, ../sass/screen.scss */
+  /* line 171, ../sass/screen.scss */
   #page > header .language-switcher-locale-url {
     -moz-border-radius: 0;
     -webkit-border-radius: 0;
@@ -1027,57 +1033,57 @@ body.page-car-budget .bx-wrapper .bx-viewport {
     text-overflow: hidden;
     position: relative;
   }
-  /* line 194, ../sass/screen.scss */
+  /* line 196, ../sass/screen.scss */
   #page > header .language-switcher-locale-url > li {
     display: none;
   }
-  /* line 197, ../sass/screen.scss */
+  /* line 199, ../sass/screen.scss */
   #page > header .language-switcher-locale-url > li.active {
     display: block;
     background-size: cover;
     background-repeat: no-repeat;
   }
-  /* line 202, ../sass/screen.scss */
+  /* line 204, ../sass/screen.scss */
   #page > header .language-switcher-locale-url > li.active > a {
     visibility: hidden;
   }
-  /* line 206, ../sass/screen.scss */
+  /* line 208, ../sass/screen.scss */
   #page > header .language-switcher-locale-url > li.active.uk {
     background-image: url(../images/ua.svg);
   }
-  /* line 210, ../sass/screen.scss */
+  /* line 212, ../sass/screen.scss */
   #page > header .language-switcher-locale-url > li.active.ru {
     background-image: url(../images/ru.svg);
   }
-  /* line 214, ../sass/screen.scss */
+  /* line 216, ../sass/screen.scss */
   #page > header .language-switcher-locale-url > li.active.en {
     background-image: url(../images/en.svg);
   }
-  /* line 220, ../sass/screen.scss */
+  /* line 222, ../sass/screen.scss */
   #page > header .language-switcher-locale-url.show {
     margin-left: -90%;
     width: 100%;
   }
-  /* line 223, ../sass/screen.scss */
+  /* line 225, ../sass/screen.scss */
   #page > header .language-switcher-locale-url.show > li {
     display: block;
   }
-  /* line 226, ../sass/screen.scss */
+  /* line 228, ../sass/screen.scss */
   #page > header .language-switcher-locale-url.show > li.active {
     background-image: none;
   }
-  /* line 228, ../sass/screen.scss */
+  /* line 230, ../sass/screen.scss */
   #page > header .language-switcher-locale-url.show > li.active > a {
     display: block;
     visibility: visible;
   }
 }
-/* line 239, ../sass/screen.scss */
+/* line 241, ../sass/screen.scss */
 #page > main {
   background: #F6FFF2;
   min-height: 0.5em;
 }
-/* line 244, ../sass/screen.scss */
+/* line 246, ../sass/screen.scss */
 #page > footer {
   display: inline-block;
   vertical-align: middle;
@@ -1090,7 +1096,7 @@ body.page-car-budget .bx-wrapper .bx-viewport {
   background: #050117;
   text-align: left;
 }
-/* line 252, ../sass/screen.scss */
+/* line 254, ../sass/screen.scss */
 #page > footer > .col {
   box-sizing: border-box;
   float: left;
@@ -1099,31 +1105,31 @@ body.page-car-budget .bx-wrapper .bx-viewport {
   padding: 0.5em;
 }
 @media all and (max-width: 600px) {
-  /* line 252, ../sass/screen.scss */
+  /* line 254, ../sass/screen.scss */
   #page > footer > .col {
     width: 50%;
   }
 }
-/* line 264, ../sass/screen.scss */
+/* line 266, ../sass/screen.scss */
 #page > footer > .col-480 {
   float: left;
   min-height: 100px;
   width: 50%;
 }
 @media all and (max-width: 600px) {
-  /* line 264, ../sass/screen.scss */
+  /* line 266, ../sass/screen.scss */
   #page > footer > .col-480 {
     width: 100%;
   }
 }
-/* line 275, ../sass/screen.scss */
+/* line 277, ../sass/screen.scss */
 #page div.copyright {
   color: #F6FFF2;
   background: #050117;
   padding: 0.5em;
 }
 
-/* line 282, ../sass/screen.scss */
+/* line 284, ../sass/screen.scss */
 .back_to_top {
   cursor: pointer;
   display: none;
@@ -1132,7 +1138,7 @@ body.page-car-budget .bx-wrapper .bx-viewport {
   bottom: 0.5em;
   opacity: 0.6;
 }
-/* line 291, ../sass/screen.scss */
+/* line 293, ../sass/screen.scss */
 .back_to_top::before {
   color: #002672;
   height: 5.2em;

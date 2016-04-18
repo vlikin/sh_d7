@@ -36,6 +36,8 @@
   margin: 0 auto;
 
   >header {
+    @include inline-block;
+    width: 100%;
     background: $p3-color;
     min-height: $padding;
     position: relative;
