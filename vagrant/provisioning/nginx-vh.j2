@@ -1,5 +1,5 @@
 server {
-        server_name {{ project_name }}.{{ vagrant_domain }} www.{{ project_name }}.{{ vagrant_domain }};
+        server_name "~{{ project_name }}\.([0-9]+)\.([0-9]+)\.([0-9]+)\.([0-9]+)\.xip.io$";
         root /var/www/{{ project_name }}/public_html; ## <-- Your only path reference.
  
         # Enable compression, this will help if you have for instance advagg‎ module

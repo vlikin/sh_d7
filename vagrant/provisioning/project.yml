@@ -56,12 +56,6 @@
     - Restart Nginx
   when: install
 
-- name: Creates database for the project.
-  mysql_db:
-    name: "{{ project_name }}"
-    state: present
-  when: install
-
 - name: Updates MySQL root password for all root accounts
   mysql_user:
     name: root
@@ -74,17 +68,52 @@
     - localhost
   when: install
 
+- name: Creates database for the project.
+  mysql_db:
+    login_user: root
+    login_password: "{{ mysql_root_db_pass }}"
+    name: "{{ project_name }}"
+    state: present
+  when: install
+
+- name: Enable folder
+  file:
+    path: "{{ site_path }}"
+    state: directory
+    mode: u+x
+  become: yes
+  become_user: www-data
+  when: install
+
+- name: Installs fresh site.
+  shell: >
+    drush \
+      site-install \
+      standard \
+      --db-url='mysql://root:{{ mysql_root_db_pass }}@localhost/{{ project_name }}' \
+      --site-name=Example \
+      --account-name=admin \
+      --account-pass=admin \
+      -y
+  become: yes
+  become_user: www-data
+  args:
+      chdir: "{{ site_path }}"
+  when: install
+
+
 - name: Drupal database recover.
   shell: drush sqlq --file={{ site_path }}/dumps/vagrant.sql
+  become: yes
+  become_user: www-data
   args:
     chdir: "{{ site_path }}"
-    sudo_user: www-data
   when: install
 
 - name: Install Drupal.
   shell: drush upwd -y {{ site_user }} --password={{ site_pass }}
+  become: yes
+  become_user: www-data
   args:
     chdir: "{{ site_path }}"
-    sudo: yes
-    sudo_user: www-data
   when: install
